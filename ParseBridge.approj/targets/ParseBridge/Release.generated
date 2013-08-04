@@ -31,12 +31,12 @@
     ], 
     "assets": [
         {
-            "asset": "ParseBridge/Default.png", 
-            "target": "Default.png"
-        }, 
-        {
             "asset": "ParseBridge/Default@2x.png", 
             "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "ParseBridge/Default.png", 
+            "target": "Default.png"
         }, 
         {
             "asset": "ParseBridge/Default-568h@2x.png", 

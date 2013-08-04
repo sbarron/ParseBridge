@@ -11,7 +11,7 @@
 -(id)initParseObject:(NSString*)name;
 
 //public void put(String key, Object value)
--(void)putKey:(NSString *)key value:(id)value;
+-(void)forKey:(NSString *)key setObject:(id)value;
 
 // public final void saveEventually()
 -(void)saveEventually;

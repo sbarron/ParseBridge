@@ -12,8 +12,8 @@
     [super initializeJava];
 	
 	[ParseObject registerConstructorWithSelector:@selector(initParseObject:)
-                                       arguments:[NSString classname], nil];
-	
+                                       arguments:[NSString className], nil];
+
 	[ParseObject registerInstanceMethod:@"saveEventually"
                                selector:@selector(saveEventually)
                             returnValue:nil];
@@ -23,14 +23,13 @@
                             returnValue:nil];
                  
     [ParseObject registerInstanceMethod:@"put"
-						selector:@selector(putKey:value:)
+						selector:@selector(forKey:setObject:)
 					 returnValue:nil
-					   arguments:[NSString classname],[JavaObject classname],nil];
+					   arguments:[NSString className],[JavaObject className],nil];
     
 
-	 NSLog(@"ParseObject.h associated with %@", [[ParseObject javaClass] className]);
+	 NSLog(@"Parse Android - ParseObject.h associated with %@", [[ParseObject javaClass] className]);
 }
-
 
 + (NSString *)className
 {

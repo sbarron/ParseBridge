@@ -59,8 +59,11 @@
 #ifdef ANDROID
     NSLog(@"Parse Android - Create Test Object");
 
-    ParseObject* testObject = [[ParseObject alloc] initParseObject:@"TestObject"];
-    [testObject putKey:@"foo" value:@"Androidbar"];
+    ParseObject *testObject = [[ParseObject alloc] initParseObject:@"TestObject"];
+
+    NSLog(@"Test Object: %@", testObject);
+    
+    [testObject forKey:@"foo" setObject:@"Androidbar"];
     [testObject saveInBackground];
 
     NSLog(@"Parse Android - TestObject Saved %@", testObject);
@@ -70,15 +73,11 @@
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     [testObject setObject:@"foo" forKey:@"iOSbar"];
     [testObject saveInBackground];
-    
-    NSLog(@"Parse test ran");
-
 #endif
 }
 
 -(void)initializeParse:(NSDictionary *)launchOptions{
 #ifdef ANDROID
-	
     NSLog(@"Parse Android - Starting Parse init from ParseBridgeAppDelegate");
     AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
     
@@ -87,18 +86,12 @@
     NSLog(@"Parse Android - Finished Android Init");
 
     [self runParseTest];
-
-    AndroidIntent *intent = [AndroidIntent new];
-    [ParseAnalytics trackAppOpened:intent];
-	
 #else
 
     [Parse setApplicationId:@"XbjhMBrAlLtLft6315dt4JXMyUDtMavonqumJA4N"
                   clientKey:@"4apdYK7IaBUtzyiZhobBbRhhpygDiPd2Br0PaX51"];
     
     [self runParseTest];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-	
 #endif
 
 }

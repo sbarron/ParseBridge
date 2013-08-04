@@ -9,7 +9,7 @@
 
 @class AndroidContext;
 
-@interface Parse: JavaObject
+@interface Parse : JavaObject
 
 +(void)init:(AndroidContext*)context applicationId:(NSString *)applicationId clientKey:(NSString *)clientKey;
 
