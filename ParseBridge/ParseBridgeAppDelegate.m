@@ -13,8 +13,6 @@
 #import "ParseUser.h"
 #import "ParseAnalytics.h"
 #import "ParseFacebookUtils.h"
-//#import "ParseException.h"
-//#import "LogInCallBack.h"
 #import "ParseObject.h"
 #import "ParseManager.h"
 #import <BridgeKit/AndroidActivity.h>
@@ -24,7 +22,7 @@
 #endif
 #import <FacebookSDK/FacebookSDK.h>
 
-@implementation HelloJavaAppDelegate
+@implementation ParseBridgeAppDelegate
 
 - (void)dealloc
 {

@@ -100,22 +100,22 @@
 		099CA3AD179B9E8A000F39DD /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				099CA3EF179E4A56000F39DD /* ParseFacebookUtils.m */,
-				099CA3F0179E4A56000F39DD /* ParseFacebookUtils.h */,
+				099CA3F2179E539F000F39DD /* LogInCallBack.h */,
+				099CA3F1179E539F000F39DD /* LogInCallBack.m */,
+				099CA3B5179B9EA2000F39DD /* Parse.h */,
+				099CA3B4179B9EA2000F39DD /* Parse.m */,
 				099CA3AE179B9EA2000F39DD /* ParseAnalytics.h */,
 				099CA3B0179B9EA2000F39DD /* ParseAnalytics.m */,
-				099CA3BA179B9EA2000F39DD /* ParseUser.h */,
-				099CA3B1179B9EA2000F39DD /* ParseUser.m */,
-				099CA3B2179B9EA2000F39DD /* ParseObject.m */,
-				099CA3B3179B9EA2000F39DD /* ParseObject.h */,
-				099CA3B4179B9EA2000F39DD /* Parse.m */,
-				099CA3B5179B9EA2000F39DD /* Parse.h */,
-				099CA3EB179C4F01000F39DD /* ParseQuery.h */,
-				099CA3EC179C4F01000F39DD /* ParseQuery.m */,
-				099CA3F1179E539F000F39DD /* LogInCallBack.m */,
-				099CA3F2179E539F000F39DD /* LogInCallBack.h */,
 				099CA3F6179E547D000F39DD /* ParseException.h */,
 				099CA3F7179E547D000F39DD /* ParseException.m */,
+				099CA3F0179E4A56000F39DD /* ParseFacebookUtils.h */,
+				099CA3EF179E4A56000F39DD /* ParseFacebookUtils.m */,
+				099CA3B3179B9EA2000F39DD /* ParseObject.h */,
+				099CA3B2179B9EA2000F39DD /* ParseObject.m */,
+				099CA3EB179C4F01000F39DD /* ParseQuery.h */,
+				099CA3EC179C4F01000F39DD /* ParseQuery.m */,
+				099CA3BA179B9EA2000F39DD /* ParseUser.h */,
+				099CA3B1179B9EA2000F39DD /* ParseUser.m */,
 			);
 			name = Bridge;
 			sourceTree = "<group>";
