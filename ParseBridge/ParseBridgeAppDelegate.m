@@ -31,14 +31,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[self initializeParse:launchOptions];
-
 #ifdef APPORTABLE
 /*    HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
     [bridgeObject setIntValue:99];
     [bridgeObject setDoubleValue:11.44];
     NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f",
                                                   bridgeObject.intValue, [bridgeObject doubleValue]];*/
+    NSString *result = @"Hello Android!";
 
 #else
     NSString *result = @"Hello iOS!";
@@ -52,7 +51,7 @@
     [alert show];
     [alert release];
 
-
+	[self initializeParse:launchOptions];
 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -103,22 +102,19 @@
 -(void)initializeParse:(NSDictionary *)launchOptions{
 #ifdef ANDROID
 	
-	dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		// Add code here to do background processing
-		NSLog(@"Starting Parse init from appdelegate");
-		AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
-		
-		[Parse init:activity applicationId:@"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj" clientKey:@"9k2ANcaIUf5m9lgzwNzvQdGdqnLid8b5P7RYOXKd"];
+    NSLog(@"Starting Parse init from appdelegate");
+    AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
+    
+    [Parse init:activity applicationId:@"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj" clientKey:@"9k2ANcaIUf5m9lgzwNzvQdGdqnLid8b5P7RYOXKd"];
 	
-		 
-		AndroidIntent *intent = [AndroidIntent new];
-		[ParseAnalytics trackAppOpened:intent];
-		
-		dispatch_async( dispatch_get_main_queue(), ^{
-			NSLog(@"Parse init attempt completed");
-				[self runParseTest];
-		});
-	});
+    
+    AndroidIntent *intent = [AndroidIntent new];
+    [ParseAnalytics trackAppOpened:intent];
+    
+    dispatch_async( dispatch_get_main_queue(), ^{
+        NSLog(@"Parse init attempt completed");
+        [self runParseTest];
+    });
 	
 #else
 

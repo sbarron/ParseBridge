@@ -2,7 +2,7 @@
     "xcode_project": "ParseBridge.xcodeproj", 
     "java_sources": [
         {
-            "source": "java/src/com/apportable/demo/HelloBridge.java", 
+            "source": "java/src/com/parsebridge/parsebridge/ParseManager.java", 
             "language": "unknown"
         }
     ], 
