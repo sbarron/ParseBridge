@@ -57,6 +57,12 @@
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6E65A31A17AEAB4F00924194 /* ParseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseObject.h; sourceTree = "<group>"; };
 		6E65A31B17AEAB4F00924194 /* ParseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseObject.m; sourceTree = "<group>"; };
+		6EB1E38417AEDCFE00BAB150 /* ParseFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseFile.h; sourceTree = "<group>"; };
+		6EB1E38517AEDCFF00BAB150 /* ParseFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseFile.m; sourceTree = "<group>"; };
+		6EB1E38717AEDD4000BAB150 /* ParseGeoPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseGeoPoint.h; sourceTree = "<group>"; };
+		6EB1E38817AEDD4100BAB150 /* ParseGeoPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseGeoPoint.m; sourceTree = "<group>"; };
+		6EB1E38917AEDD6D00BAB150 /* ParseTwitterUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseTwitterUtils.h; sourceTree = "<group>"; };
+		6EB1E38A17AEDD6D00BAB150 /* ParseTwitterUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseTwitterUtils.m; sourceTree = "<group>"; };
 		7A3FC5F817533CA900EF7EE1 /* ParseBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +122,12 @@
 				099CA3EC179C4F01000F39DD /* ParseQuery.m */,
 				099CA3BA179B9EA2000F39DD /* ParseUser.h */,
 				099CA3B1179B9EA2000F39DD /* ParseUser.m */,
+				6EB1E38417AEDCFE00BAB150 /* ParseFile.h */,
+				6EB1E38517AEDCFF00BAB150 /* ParseFile.m */,
+				6EB1E38717AEDD4000BAB150 /* ParseGeoPoint.h */,
+				6EB1E38817AEDD4100BAB150 /* ParseGeoPoint.m */,
+				6EB1E38917AEDD6D00BAB150 /* ParseTwitterUtils.h */,
+				6EB1E38A17AEDD6D00BAB150 /* ParseTwitterUtils.m */,
 			);
 			name = Bridge;
 			sourceTree = "<group>";

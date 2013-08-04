@@ -15,4 +15,12 @@
 - (void)initUser;
 - (bool)isAuthenticated;
 
+/*
+ PFUser
+ + currentUser
+ + enableAutomaticUser
+ - saveInBackground
+ - setObject:(id) forKey:(NSString*)
+ */
+
 @end

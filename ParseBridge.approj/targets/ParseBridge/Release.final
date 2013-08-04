@@ -65,6 +65,11 @@
             "header_path": "ParseBridge-project-headers.hmap", 
             "type": "iquote", 
             "hmap": {
+                "ParseTwitterUtils.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseTwitterUtils.h", 
+                    "key": "ParseTwitterUtils.h"
+                }, 
                 "ParseAnalytics.h": {
                     "prefix": "ParseBridge/", 
                     "suffix": "ParseAnalytics.h", 
@@ -100,6 +105,11 @@
                     "suffix": "ParseException.h", 
                     "key": "ParseException.h"
                 }, 
+                "ParseGeoPoint.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseGeoPoint.h", 
+                    "key": "ParseGeoPoint.h"
+                }, 
                 "ParseUser.h": {
                     "prefix": "ParseBridge/", 
                     "suffix": "ParseUser.h", 
@@ -114,6 +124,11 @@
                     "prefix": "ParseBridge/", 
                     "suffix": "Parse.h", 
                     "key": "Parse.h"
+                }, 
+                "ParseFile.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseFile.h", 
+                    "key": "ParseFile.h"
                 }
             }
         }

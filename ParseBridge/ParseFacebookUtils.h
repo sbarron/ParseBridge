@@ -17,4 +17,14 @@
 
 + (void)logInWithPermissions:(NSArray *)permissions;
 
+/*
+ 
+PFFacebookUtils
++ initiizliaeFacebookWithUrlSchemeSuffix:(NSString*)
++ initializeFacebook
++ handleOpenURL:(NSURL*)
++ isLinkedWithUser:(PFUser*)
++ linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
+*/
+
 @end

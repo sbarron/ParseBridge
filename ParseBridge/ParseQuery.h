@@ -10,4 +10,11 @@
 
 @interface ParseQuery : JavaObject
 
+/****
+ PFQuery
+ + queryWithClassName:(NSString*)
+ + getObjectOfClass:(NSString*) objectId:(NSString*)
+ 
+ */
+
 @end
