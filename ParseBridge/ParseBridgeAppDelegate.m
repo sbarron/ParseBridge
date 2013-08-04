@@ -32,12 +32,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifdef APPORTABLE
-/*    HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
-    [bridgeObject setIntValue:99];
-    [bridgeObject setDoubleValue:11.44];
-    NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f",
-                                                  bridgeObject.intValue, [bridgeObject doubleValue]];*/
-    NSString *result = @"Hello Android!";
+    NSString *result = @"Hello Android!!";
 
 #else
     NSString *result = @"Hello iOS!";
@@ -62,39 +57,21 @@
 
 -(void)runParseTest{
 #ifdef ANDROID
-	dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		// Add code here to do background processing
-		NSLog(@"Parse - Running Parse Object Test Android");
-		
-		//Attempt to initialize Facebook - This should fail
-		[ParseFacebookUtils initializeFacebook:@"11111111111111"];
+    NSLog(@"Parse - Running Parse Object Test Android");
 
+    ParseObject* testObject = [[ParseObject alloc] initParseObject:@"TestObject"];
+    [testObject put:@"foo" :@"Androidbar"];
+    [testObject saveInBackground];
 
-		ParseObject* testObject = [[ParseObject alloc] initParseObject:@"TestObject"];
-		[testObject put:@"foo" :@"Androidbar"];
-		[testObject saveInBackground];
-		NSLog(@"Parse - TestObject %@", testObject);
-		dispatch_async( dispatch_get_main_queue(), ^{
-			// Add code here to update the UI/send notifications based on the
-			// results of the background processing
-			NSLog(@"Parse test ran");
-		});
-	});
+    NSLog(@"Parse - TestObject %@", testObject);
 #else
-	dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		// Add code here to do background processing
-		NSLog(@"Parse - Running Parse Object Test iOS");
-		
-		PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-		[testObject setObject:@"foo" forKey:@"iOSbar"];
-		[testObject saveInBackground];
-		
-		dispatch_async( dispatch_get_main_queue(), ^{
-			// Add code here to update the UI/send notifications based on the
-			// results of the background processing
-			NSLog(@"Parse test ran");
-		});
-	});
+    NSLog(@"Parse - Running Parse Object Test iOS");
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"foo" forKey:@"iOSbar"];
+    [testObject saveInBackground];
+    
+    NSLog(@"Parse test ran");
 
 #endif
 }
@@ -102,35 +79,25 @@
 -(void)initializeParse:(NSDictionary *)launchOptions{
 #ifdef ANDROID
 	
-    NSLog(@"Starting Parse init from appdelegate");
+    NSLog(@"Starting Parse init from ParseBridgeAppDelegate");
     AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
     
-    [Parse init:activity applicationId:@"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj" clientKey:@"9k2ANcaIUf5m9lgzwNzvQdGdqnLid8b5P7RYOXKd"];
-	
-    
+    [Parse init:activity applicationId:@"XbjhMBrAlLtLft6315dt4JXMyUDtMavonqumJA4N" clientKey:@"4apdYK7IaBUtzyiZhobBbRhhpygDiPd2Br0PaX51"];
+
+    NSLog(@"Finished Android Init");
+
+    [self runParseTest];
+
     AndroidIntent *intent = [AndroidIntent new];
     [ParseAnalytics trackAppOpened:intent];
-    
-    dispatch_async( dispatch_get_main_queue(), ^{
-        NSLog(@"Parse init attempt completed");
-        [self runParseTest];
-    });
 	
 #else
 
-	dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		// Add code here to do background processing
-		[Parse setApplicationId:@"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj"
-					  clientKey:@"9k2ANcaIUf5m9lgzwNzvQdGdqnLid8b5P7RYOXKd"];
-					  
-		[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-		//[PFFacebookUtils initializeFacebook];
-		dispatch_async( dispatch_get_main_queue(), ^{
-
-			[self runParseTest];
-			
-		});
-	});
+    [Parse setApplicationId:@"XbjhMBrAlLtLft6315dt4JXMyUDtMavonqumJA4N"
+                  clientKey:@"4apdYK7IaBUtzyiZhobBbRhhpygDiPd2Br0PaX51"];
+    
+    [self runParseTest];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 	
 #endif
 
