@@ -16,7 +16,9 @@
 	NSLog(@"InitializeJava Parse.h bridge");
 	[super initializeJava];
 
-	[Parse registerStaticMethod:@"initialize"	
+    //*- Java: public static void initialize(Context context, String applicationId, String clientKey)
+    //*- Objective-C: +(void)init:(AndroidContext*)context applicationId:(NSString *)applicationId clientKey:(NSString *)clientKey;
+	[Parse registerStaticMethod:@"initialize"
 					   selector:@selector(init:applicationId:clientKey:)
 					returnValue:nil
 					  arguments:[AndroidContext className],[NSString className],[NSString className], nil];

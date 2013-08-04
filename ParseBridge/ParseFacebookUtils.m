@@ -17,16 +17,21 @@
 {
     [super initializeJava];
 
+    //*- Java; public static void initialize(String appId)
+    //*- Objc: + initializeFacebook
 	[ParseFacebookUtils registerStaticMethod:@"initialize"
 								selector:@selector(initializeFacebook:)
 							 returnValue:nil
 							   arguments:[NSString className], NULL];
-				
+
+    //*- ObjC: + isLinkedWithUser:(PFUser*)
 	[ParseFacebookUtils registerStaticMethod:@"isLinked"
 									selector:@selector(isLinkedWithUser:)
 								 returnValue:[JavaClass boolPrimitive]
 								   arguments:[ParseUser className], NULL];
 	
+    //*- Java: public static void link(ParseUser user, Collection<String> permissions, Activity activity, SaveCallback callback)
+    //*- ObjC: + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
     [ParseFacebookUtils registerStaticMethod:@"link"
                                     selector:@selector(linkUser:permissions:block:)
                                  returnValue:nil
@@ -45,19 +50,6 @@
     NSLog(@"ParseFacebookUtils.h associated with %@", [[ParseFacebookUtils javaClass] className]);
 	
 }
-
-/*
- 
- PFFacebookUtils
- //*- public static void initialize(String appId)
- + initializeFacebook
-
- + isLinkedWithUser:(PFUser*)
- 
- //*- public static void link(ParseUser user, Collection<String> permissions, Activity activity, SaveCallback callback)
- + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
- */
-
 
 + (NSString *)className
 {
