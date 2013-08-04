@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "HelloJavaAppDelegate.h"
+#import "ParseBridgeAppDelegate.h"
 
 int main(int argc, char *argv[])
 {

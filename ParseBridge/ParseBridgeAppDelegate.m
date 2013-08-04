@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Apportable. All rights reserved.
 //
 
-#import "HelloJavaAppDelegate.h"
+#import "ParseBridgeAppDelegate.h"
 #ifdef ANDROID
 #import "HelloBridge.h"
 #import "Parse.h"
