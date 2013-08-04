@@ -27,6 +27,11 @@
 								 returnValue:[JavaClass boolPrimitive]
 								   arguments:[ParseUser className], NULL];
 	
+    [ParseFacebookUtils registerStaticMethod:@"link"
+                                    selector:@selector(linkUser:permissions:block:)
+                                 returnValue:nil
+                                   arguments:[ParseUser className], [JavaList className], [AndroidActivity className], nil];
+    
 	[ParseFacebookUtils registerStaticMethod:@"login"
 									selector:@selector(logInWithPermissions:)
 								 returnValue:nil
@@ -40,6 +45,19 @@
     NSLog(@"ParseFacebookUtils.h associated with %@", [[ParseFacebookUtils javaClass] className]);
 	
 }
+
+/*
+ 
+ PFFacebookUtils
+ //*- public static void initialize(String appId)
+ + initializeFacebook
+
+ + isLinkedWithUser:(PFUser*)
+ 
+ //*- public static void link(ParseUser user, Collection<String> permissions, Activity activity, SaveCallback callback)
+ + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
+ */
+
 
 + (NSString *)className
 {

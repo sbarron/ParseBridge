@@ -14,7 +14,6 @@
  PFQuery
  + queryWithClassName:(NSString*)
  + getObjectOfClass:(NSString*) objectId:(NSString*)
- 
  */
 
 @end

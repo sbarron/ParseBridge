@@ -13,13 +13,20 @@
 + (ParseUser*) currentUser; 
 + (void)logOut;
 - (void)initUser;
-- (bool)isAuthenticated;
+- (BOOL)isAuthenticated;
+- (void)forKey:(NSString *)key setObject:(id)value;
 
 /*
  PFUser
+ //public boolean isAuthenticated()
+ - (BOOL)isAuthenticated
+ 
  + currentUser
+ 
  + enableAutomaticUser
+ 
  - saveInBackground
+
  - setObject:(id) forKey:(NSString*)
  */
 

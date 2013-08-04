@@ -14,24 +14,33 @@
 {
     [super initializeJava];
 
-	NSLog(@"ParseQuery bridge init");
+    [ParseQuery registerConstructorWithSelector:@selector(initQuery)
+                                      arguments:[NSString className]];
 	
-	[ParseQuery registerConstructorWithSelector:@selector(initUser)
-									 arguments:nil];
+    [ParseQuery registerStaticMethod:@"getQuery"
+                            selector:@selector(queryWithClassName:)
+                         returnValue:[ParseObject className]
+                           arguments:[NSString className], nil];
 	
-    [ParseQuery registerStaticMethod:@"getCurrentUser"
-						   selector:@selector(currentUser)
-						returnValue:[ParseUser className]
-						  arguments:nil];
-	
-	[ParseQuery registerStaticMethod:@"logOut"
-						   selector:@selector(logOut)
-						returnValue:nil
-						  arguments:nil];
-	
+	[ParseQuery registerStaticMethod:@"get"
+                            selector:@selector(getObjectOfClass:objectId:)
+                         returnValue:[JavaObject className]
+                           arguments:[NSString className], [NSString className], nil];
 	
 	NSLog(@"ParseUser.h associated with %@", [[ParseUser javaClass] className]);
+
+	NSLog(@"ParseQuery bridge init");
 }
+
+/****
+ PFQuery
+
+ //public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
+ + queryWithClassName:(NSString*)
+ 
+ //public T get(String theObjectId) throws ParseException
+ + getObjectOfClass:(NSString*) objectId:(NSString*)
+ */
 
 + (NSString *)className
 {

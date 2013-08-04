@@ -11,20 +11,24 @@
 
 @interface ParseFacebookUtils : JavaObject
 
+/*
+ 
+ PFFacebookUtils
+ + initializeFacebook
+ + isLinkedWithUser:(PFUser*)
+ + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
+ */
+
 + (void)initializeFacebook:(NSString*)appId;
+
++ (void)initializeFacebookWithUrlShemeSuffix:(NSString *)urlSchemeSuffix;
+
++ (BOOL)handleOpenURL:(NSURL *)url;
 
 + (BOOL)isLinkedWithUser:(ParseUser*)user;
 
 + (void)logInWithPermissions:(NSArray *)permissions;
 
-/*
- 
-PFFacebookUtils
-+ initiizliaeFacebookWithUrlSchemeSuffix:(NSString*)
-+ initializeFacebook
-+ handleOpenURL:(NSURL*)
-+ isLinkedWithUser:(PFUser*)
-+ linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
-*/
++ (void)linkUser:(id)user permissions:(NSArray *)permissions block:(id)block;
 
 @end
