@@ -1,6 +1,3 @@
 #ParseBridge Test Project
 
 This is a test project for bridging objective C to Java using Apportable and BridgeKit.
-
-Currently this does not seem to initialize the Parse object correctly though it does build in Apportable.
-  

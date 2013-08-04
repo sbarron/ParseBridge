@@ -57,6 +57,8 @@
 		099DAEB7178FC83E00CBF872 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6E65A31A17AEAB4F00924194 /* ParseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseObject.h; sourceTree = "<group>"; };
+		6E65A31B17AEAB4F00924194 /* ParseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseObject.m; sourceTree = "<group>"; };
 		7A3FC5F817533CA900EF7EE1 /* ParseBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,8 @@
 		099CA3AD179B9E8A000F39DD /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				6E65A31A17AEAB4F00924194 /* ParseObject.h */,
+				6E65A31B17AEAB4F00924194 /* ParseObject.m */,
 				099CA3F2179E539F000F39DD /* LogInCallBack.h */,
 				099CA3F1179E539F000F39DD /* LogInCallBack.m */,
 				099CA3B5179B9EA2000F39DD /* Parse.h */,

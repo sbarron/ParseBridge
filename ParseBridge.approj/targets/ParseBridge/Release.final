@@ -1,0 +1,233 @@
+{
+    "xcode_project": "ParseBridge.xcodeproj", 
+    "java_sources": [
+        {
+            "source": "java/src/com/apportable/demo/HelloBridge.java", 
+            "language": "unknown"
+        }
+    ], 
+    "pchs": [
+        "./ParseBridge/ParseBridge-Prefix.pch"
+    ], 
+    "assets": [
+        {
+            "asset": "ParseBridge/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "ParseBridge/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "ParseBridge/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "ParseBridge/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }
+    ], 
+    "link_flags": [], 
+    "config": {
+        "FEATURES": [
+            "opengles2", 
+            "portrait", 
+            "access_network_state", 
+            "internet"
+        ], 
+        "SHORT_VERSION": "1.0", 
+        "APPLICATION_NAME": "ParseBridge", 
+        "LONG_VERSION": "1.0", 
+        "APPLICATION_IDENTIFIER": "com.apportable.ParseBridge", 
+        "TEMPLATE_VALUES": {
+            "PRODUCT_NAME": "ParseBridge", 
+            "EXECUTABLE_NAME": "ParseBridge"
+        }, 
+        "APPLICATION_FULL_NAME": "ParseBridge"
+    }, 
+    "header_paths": [
+        {
+            "header_path": "ParseBridge-generated-files.hmap", 
+            "type": "iquote", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "ParseBridge-own-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "ParseBridge-all-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "ParseBridge-project-headers.hmap", 
+            "type": "iquote", 
+            "hmap": {
+                "ParseAnalytics.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseAnalytics.h", 
+                    "key": "ParseAnalytics.h"
+                }, 
+                "ParseFacebookUtils.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseFacebookUtils.h", 
+                    "key": "ParseFacebookUtils.h"
+                }, 
+                "ParseObject.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseObject.h", 
+                    "key": "ParseObject.h"
+                }, 
+                "ParseQuery.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseQuery.h", 
+                    "key": "ParseQuery.h"
+                }, 
+                "ParseBridge-Prefix.pch": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridge-Prefix.pch", 
+                    "key": "ParseBridge-Prefix.pch"
+                }, 
+                "ParseBridgeAppDelegate.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridgeAppDelegate.h", 
+                    "key": "ParseBridgeAppDelegate.h"
+                }, 
+                "ParseException.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseException.h", 
+                    "key": "ParseException.h"
+                }, 
+                "ParseUser.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseUser.h", 
+                    "key": "ParseUser.h"
+                }, 
+                "LogInCallBack.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "LogInCallBack.h", 
+                    "key": "LogInCallBack.h"
+                }, 
+                "Parse.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "Parse.h", 
+                    "key": "Parse.h"
+                }
+            }
+        }
+    ], 
+    "modules": [], 
+    "sources": [
+        {
+            "source": "ParseBridge/ParseBridgeAppDelegate.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "ParseBridge/main.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "ParseBridge/ParseException.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/ParseAnalytics.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/ParseObject.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/ParseUser.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/LogInCallBack.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/ParseFacebookUtils.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Parse.m", 
+            "language": "objc"
+        }
+    ], 
+    "version": "1", 
+    "flags": [
+        "-DNS_BLOCK_ASSERTIONS=1", 
+        "-fwritable-strings", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }
+    ], 
+    "infoplists": [
+        "./ParseBridge/ParseBridge-Info.plist"
+    ], 
+    "deps": [
+        "UIKit", 
+        "SystemConfiguration", 
+        "StoreKit", 
+        "Security", 
+        "QuartzCore", 
+        "MobileCoreServices", 
+        "CoreLocation", 
+        "CoreGraphics", 
+        "CFNetwork", 
+        "AudioToolbox", 
+        "UIKit", 
+        "Foundation", 
+        "FacebookSDK", 
+        "Parse"
+    ], 
+    "libs": [
+        "z.1.1.3"
+    ], 
+    "java_sourcepaths": [
+        "java/src"
+    ], 
+    "java_res_dirs": [], 
+    "type": "app", 
+    "java_libs": [
+        "java/libs/Parse-1.3.1.jar"
+    ], 
+    "defines": {
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60000, 
+        "NS_BLOCK_ASSERTIONS": 1
+    }
+}
