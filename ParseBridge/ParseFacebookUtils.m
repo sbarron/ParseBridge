@@ -1,6 +1,6 @@
 //
 //  ParseFacebookUtils.m
-//  FishBalls
+//  ParseBridge
 //
 //  Created by Spencer Barron on 7/7/13.
 //  Copyright (c) 2013 Spencer Barron. All rights reserved.
@@ -15,10 +15,8 @@
 
 + (void)initializeJava
 {
-    // Note: this must be called for any class that registers custom
-    // java apis, without this call the inheritance may not work as expected
     [super initializeJava];
-	//initialize(String appId)
+
 	[ParseFacebookUtils registerStaticMethod:@"initialize"
 								selector:@selector(initializeFacebook:)
 							 returnValue:nil
@@ -38,7 +36,8 @@
 						 selector:@selector(logInWithPermissions)
 					  returnValue:nil
 						arguments:[JavaClass intPrimitive], [JavaClass doublePrimitive], nil];
-	 NSLog(@"ParseFacebookUtils.h associated with %@", [[ParseFacebookUtils javaClass] className]);	
+
+    NSLog(@"ParseFacebookUtils.h associated with %@", [[ParseFacebookUtils javaClass] className]);
 	
 }
 

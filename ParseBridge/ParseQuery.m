@@ -12,9 +12,8 @@
 
 + (void)initializeJava
 {
-    // Note: this must be called for any class that registers custom
-    // java apis, without this call the inheritance may not work as expected
     [super initializeJava];
+
 	NSLog(@"ParseQuery bridge init");
 	
 	[ParseQuery registerConstructorWithSelector:@selector(initUser)
@@ -38,8 +37,5 @@
 {
     return @"com.parse.ParseQuery";
 }
-
-
-
 
 @end

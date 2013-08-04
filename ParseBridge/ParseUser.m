@@ -1,5 +1,7 @@
 //
 //  ParseBridge.m
+//  ParseBridge
+//
 //  Created by Spencer Barron on 7/6/13.
 
 
@@ -7,16 +9,9 @@
 
 @implementation ParseUser
 
-// Any objc properties that are declared should declare dynamic,
-// else automatic property sythesis will override the bridge registrations
-//@dynamic intValue;
-
 + (void)initializeJava
 {
-    // Note: this must be called for any class that registers custom
-    // java apis, without this call the inheritance may not work as expected
     [super initializeJava];
-	NSLog(@"ParseUser bridge init");
 	
 	[ParseUser registerConstructorWithSelector:@selector(initUser)
                                        arguments:nil];
@@ -39,7 +34,5 @@
 {
     return @"com.parse.ParseUser";
 }
-
-
 
 @end

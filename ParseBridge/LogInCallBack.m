@@ -1,5 +1,7 @@
 //
 //  ParseBridge.m
+//  ParseBridge
+//
 //  Created by Spencer Barron on 7/6/13.
 
 
@@ -11,16 +13,14 @@
 
 + (void)initializeJava
 {
-    // Note: this must be called for any class that registers custom
-    // java apis, without this call the inheritance may not work as expected
     [super initializeJava];
-
-		[LogInCallBack registerConstructorWithSelector:@selector(initLoginCallBack)
-                                       arguments:nil];
+    
+    [LogInCallBack registerConstructorWithSelector:@selector(initLoginCallBack)
+                                         arguments:nil];
 	
-		[LogInCallBack registerInstanceMethod:@"done"
-                               selector:@selector(done:error:)
-							  arguments:[ParseUser className], [ParseException className], nil];
+    [LogInCallBack registerInstanceMethod:@"done"
+                                 selector:@selector(done:error:)
+                                arguments:[ParseUser className], [ParseException className], nil];
 	
 }
 

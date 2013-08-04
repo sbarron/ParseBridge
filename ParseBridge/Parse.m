@@ -7,19 +7,15 @@
 //
 
 #import "Parse.h"
-
 #import <BridgeKit/AndroidContext.h>
 
 @implementation Parse
+
 + (void)initializeJava
 {
-
 	NSLog(@"InitializeJava Parse.h bridge");
-	
 	[super initializeJava];
-    // Note: this must be called for any class that registers custom
-    // java apis, without this call the inheritance may not work as expected
-    
+
 	[Parse registerStaticMethod:@"initialize"	
 					   selector:@selector(init:applicationId:clientKey:)
 					returnValue:nil
