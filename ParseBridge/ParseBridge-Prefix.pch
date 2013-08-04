@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'HelloJava' target in the 'HelloJava' project
+// Prefix header for all source files of the 'ParseBridge' target in the 'ParseBridge' project
 //
 
 #import <Availability.h>

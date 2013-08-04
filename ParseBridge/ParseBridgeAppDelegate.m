@@ -1,6 +1,6 @@
 //
-//  HelloJavaAppDelegate.m
-//  HelloJava
+//  ParseBridgeAppDelegate.m
+//  ParseBridge
 //
 //  Created by Collin Jackson on 5/27/13.
 //  Copyright (c) 2013 Apportable. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import "ParseBridgeAppDelegate.h"
 #ifdef ANDROID
-#import "HelloBridge.h"
 #import "Parse.h"
 #import "ParseUser.h"
 #import "ParseAnalytics.h"
@@ -33,12 +32,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	[self initializeParse:launchOptions];
+
 #ifdef APPORTABLE
-    HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
+/*    HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
     [bridgeObject setIntValue:99];
     [bridgeObject setDoubleValue:11.44];
     NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f",
-                                                  bridgeObject.intValue, [bridgeObject doubleValue]];
+                                                  bridgeObject.intValue, [bridgeObject doubleValue]];*/
 
 #else
     NSString *result = @"Hello iOS!";
