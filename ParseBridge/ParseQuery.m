@@ -17,11 +17,16 @@
     [ParseQuery registerConstructorWithSelector:@selector(initQuery)
                                       arguments:[NSString className]];
 	
+
+    //*- Java: public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
+    //*- ObjC: + queryWithClassName:(NSString*)
     [ParseQuery registerStaticMethod:@"getQuery"
                             selector:@selector(queryWithClassName:)
                          returnValue:[ParseObject className]
                            arguments:[NSString className], nil];
 	
+    //*- Java: public T get(String theObjectId) throws ParseException
+    //*- ObjC: + getObjectOfClass:(NSString*) objectId:(NSString*)
 	[ParseQuery registerStaticMethod:@"get"
                             selector:@selector(getObjectOfClass:objectId:)
                          returnValue:[JavaObject className]
@@ -31,16 +36,6 @@
 
 	NSLog(@"ParseQuery bridge init");
 }
-
-/****
- PFQuery
-
- //public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
- + queryWithClassName:(NSString*)
- 
- //public T get(String theObjectId) throws ParseException
- + getObjectOfClass:(NSString*) objectId:(NSString*)
- */
 
 + (NSString *)className
 {
