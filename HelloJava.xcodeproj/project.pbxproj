@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		099DAEA5178FC1E400CBF872 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEA4178FC1E400CBF872 /* FacebookSDK.framework */; };
+		099DAEA8178FC20A00CBF872 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEA7178FC20A00CBF872 /* Parse.framework */; };
+		099DAEAA178FC7FF00CBF872 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */; };
+		099DAEAC178FC80400CBF872 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAB178FC80400CBF872 /* CFNetwork.framework */; };
+		099DAEAE178FC81200CBF872 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAD178FC81200CBF872 /* CoreLocation.framework */; };
+		099DAEB0178FC81E00CBF872 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */; };
+		099DAEB2178FC82800CBF872 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEB1178FC82800CBF872 /* MobileCoreServices.framework */; };
+		099DAEB4178FC83100CBF872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEB3178FC83100CBF872 /* QuartzCore.framework */; };
+		099DAEB6178FC83800CBF872 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEB5178FC83800CBF872 /* Security.framework */; };
+		099DAEB8178FC83E00CBF872 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEB7178FC83E00CBF872 /* StoreKit.framework */; };
+		099DAEBA178FC84300CBF872 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */; };
+		7A3FC5FD17533CA900EF7EE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */; };
+		7A3FC5FF17533CA900EF7EE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */; };
+		7A3FC60117533CA900EF7EE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */; };
+		7A3FC60717533CA900EF7EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A3FC60517533CA900EF7EE1 /* InfoPlist.strings */; };
+		7A3FC60917533CA900EF7EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC60817533CA900EF7EE1 /* main.m */; };
+		7A3FC60D17533CA900EF7EE1 /* HelloJavaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC60C17533CA900EF7EE1 /* HelloJavaAppDelegate.m */; };
+		7A3FC60F17533CA900EF7EE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3FC60E17533CA900EF7EE1 /* Default.png */; };
+		7A3FC61117533CA900EF7EE1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3FC61017533CA900EF7EE1 /* Default@2x.png */; };
+		7A3FC61317533CA900EF7EE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3FC61217533CA900EF7EE1 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		099CA3AE179B9EA2000F39DD /* ParseAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseAnalytics.h; sourceTree = "<group>"; };
+		099CA3B0179B9EA2000F39DD /* ParseAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseAnalytics.m; sourceTree = "<group>"; };
+		099CA3B1179B9EA2000F39DD /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseUser.m; sourceTree = "<group>"; };
+		099CA3B2179B9EA2000F39DD /* ParseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseObject.m; sourceTree = "<group>"; };
+		099CA3B3179B9EA2000F39DD /* ParseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseObject.h; sourceTree = "<group>"; };
+		099CA3B4179B9EA2000F39DD /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parse.m; sourceTree = "<group>"; };
+		099CA3B5179B9EA2000F39DD /* Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parse.h; sourceTree = "<group>"; };
+		099CA3BA179B9EA2000F39DD /* ParseUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseUser.h; sourceTree = "<group>"; };
+		099CA3EB179C4F01000F39DD /* ParseQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseQuery.h; sourceTree = "<group>"; };
+		099CA3EC179C4F01000F39DD /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseQuery.m; sourceTree = "<group>"; };
+		099CA3EF179E4A56000F39DD /* ParseFacebookUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseFacebookUtils.m; sourceTree = "<group>"; };
+		099CA3F0179E4A56000F39DD /* ParseFacebookUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseFacebookUtils.h; sourceTree = "<group>"; };
+		099CA3F1179E539F000F39DD /* LogInCallBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInCallBack.m; sourceTree = "<group>"; };
+		099CA3F2179E539F000F39DD /* LogInCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInCallBack.h; sourceTree = "<group>"; };
+		099CA3F6179E547D000F39DD /* ParseException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseException.h; sourceTree = "<group>"; };
+		099CA3F7179E547D000F39DD /* ParseException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseException.m; sourceTree = "<group>"; };
+		099DAEA4178FC1E400CBF872 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		099DAEA7178FC20A00CBF872 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		099DAEAB178FC80400CBF872 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		099DAEAD178FC81200CBF872 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		099DAEB1178FC82800CBF872 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		099DAEB3178FC83100CBF872 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		099DAEB5178FC83800CBF872 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		099DAEB7178FC83E00CBF872 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7A3FC5F817533CA900EF7EE1 /* HelloJava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloJava.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7A3FC60417533CA900EF7EE1 /* HelloJava-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloJava-Info.plist"; sourceTree = "<group>"; };
+		7A3FC60617533CA900EF7EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7A3FC60817533CA900EF7EE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A3FC60A17533CA900EF7EE1 /* HelloJava-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloJava-Prefix.pch"; sourceTree = "<group>"; };
+		7A3FC60B17533CA900EF7EE1 /* HelloJavaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloJavaAppDelegate.h; sourceTree = "<group>"; };
+		7A3FC60C17533CA900EF7EE1 /* HelloJavaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJavaAppDelegate.m; sourceTree = "<group>"; };
+		7A3FC60E17533CA900EF7EE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7A3FC61017533CA900EF7EE1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7A3FC61217533CA900EF7EE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A3FC5F517533CA900EF7EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099DAEBA178FC84300CBF872 /* SystemConfiguration.framework in Frameworks */,
+				099DAEB8178FC83E00CBF872 /* StoreKit.framework in Frameworks */,
+				099DAEB6178FC83800CBF872 /* Security.framework in Frameworks */,
+				099DAEB4178FC83100CBF872 /* QuartzCore.framework in Frameworks */,
+				099DAEB2178FC82800CBF872 /* MobileCoreServices.framework in Frameworks */,
+				099DAEB0178FC81E00CBF872 /* libz.1.1.3.dylib in Frameworks */,
+				099DAEAE178FC81200CBF872 /* CoreLocation.framework in Frameworks */,
+				7A3FC60117533CA900EF7EE1 /* CoreGraphics.framework in Frameworks */,
+				099DAEAC178FC80400CBF872 /* CFNetwork.framework in Frameworks */,
+				099DAEAA178FC7FF00CBF872 /* AudioToolbox.framework in Frameworks */,
+				7A3FC5FD17533CA900EF7EE1 /* UIKit.framework in Frameworks */,
+				7A3FC5FF17533CA900EF7EE1 /* Foundation.framework in Frameworks */,
+				099DAEA5178FC1E400CBF872 /* FacebookSDK.framework in Frameworks */,
+				099DAEA8178FC20A00CBF872 /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		099CA3AD179B9E8A000F39DD /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				099CA3EF179E4A56000F39DD /* ParseFacebookUtils.m */,
+				099CA3F0179E4A56000F39DD /* ParseFacebookUtils.h */,
+				099CA3AE179B9EA2000F39DD /* ParseAnalytics.h */,
+				099CA3B0179B9EA2000F39DD /* ParseAnalytics.m */,
+				099CA3BA179B9EA2000F39DD /* ParseUser.h */,
+				099CA3B1179B9EA2000F39DD /* ParseUser.m */,
+				099CA3B2179B9EA2000F39DD /* ParseObject.m */,
+				099CA3B3179B9EA2000F39DD /* ParseObject.h */,
+				099CA3B4179B9EA2000F39DD /* Parse.m */,
+				099CA3B5179B9EA2000F39DD /* Parse.h */,
+				099CA3EB179C4F01000F39DD /* ParseQuery.h */,
+				099CA3EC179C4F01000F39DD /* ParseQuery.m */,
+				099CA3F1179E539F000F39DD /* LogInCallBack.m */,
+				099CA3F2179E539F000F39DD /* LogInCallBack.h */,
+				099CA3F6179E547D000F39DD /* ParseException.h */,
+				099CA3F7179E547D000F39DD /* ParseException.m */,
+			);
+			name = Bridge;
+			sourceTree = "<group>";
+		};
+		099DAEA3178FC1CF00CBF872 /* FaceBook */ = {
+			isa = PBXGroup;
+			children = (
+				099DAEA4178FC1E400CBF872 /* FacebookSDK.framework */,
+			);
+			name = FaceBook;
+			sourceTree = "<group>";
+		};
+		099DAEA6178FC20100CBF872 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				099DAEA7178FC20A00CBF872 /* Parse.framework */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		7A3FC5ED17533CA900EF7EE1 = {
+			isa = PBXGroup;
+			children = (
+				7A3FC60217533CA900EF7EE1 /* HelloJava */,
+				7A3FC5FB17533CA900EF7EE1 /* Frameworks */,
+				7A3FC5F917533CA900EF7EE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A3FC5F917533CA900EF7EE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A3FC5F817533CA900EF7EE1 /* HelloJava.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A3FC5FB17533CA900EF7EE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */,
+				099DAEB7178FC83E00CBF872 /* StoreKit.framework */,
+				099DAEB5178FC83800CBF872 /* Security.framework */,
+				099DAEB3178FC83100CBF872 /* QuartzCore.framework */,
+				099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */,
+				099DAEB1178FC82800CBF872 /* MobileCoreServices.framework */,
+				099DAEAD178FC81200CBF872 /* CoreLocation.framework */,
+				099DAEAB178FC80400CBF872 /* CFNetwork.framework */,
+				099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */,
+				7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */,
+				7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */,
+				7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A3FC60217533CA900EF7EE1 /* HelloJava */ = {
+			isa = PBXGroup;
+			children = (
+				099CA3AD179B9E8A000F39DD /* Bridge */,
+				099DAEA6178FC20100CBF872 /* Parse */,
+				099DAEA3178FC1CF00CBF872 /* FaceBook */,
+				7A3FC60B17533CA900EF7EE1 /* HelloJavaAppDelegate.h */,
+				7A3FC60C17533CA900EF7EE1 /* HelloJavaAppDelegate.m */,
+				7A3FC60317533CA900EF7EE1 /* Supporting Files */,
+			);
+			path = HelloJava;
+			sourceTree = "<group>";
+		};
+		7A3FC60317533CA900EF7EE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A3FC60417533CA900EF7EE1 /* HelloJava-Info.plist */,
+				7A3FC60517533CA900EF7EE1 /* InfoPlist.strings */,
+				7A3FC60817533CA900EF7EE1 /* main.m */,
+				7A3FC60A17533CA900EF7EE1 /* HelloJava-Prefix.pch */,
+				7A3FC60E17533CA900EF7EE1 /* Default.png */,
+				7A3FC61017533CA900EF7EE1 /* Default@2x.png */,
+				7A3FC61217533CA900EF7EE1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A3FC5F717533CA900EF7EE1 /* HelloJava */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A3FC61617533CA900EF7EE1 /* Build configuration list for PBXNativeTarget "HelloJava" */;
+			buildPhases = (
+				7A3FC5F417533CA900EF7EE1 /* Sources */,
+				7A3FC5F517533CA900EF7EE1 /* Frameworks */,
+				7A3FC5F617533CA900EF7EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloJava;
+			productName = HelloJava;
+			productReference = 7A3FC5F817533CA900EF7EE1 /* HelloJava.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A3FC5EF17533CA900EF7EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HelloJava;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Apportable;
+			};
+			buildConfigurationList = 7A3FC5F217533CA900EF7EE1 /* Build configuration list for PBXProject "HelloJava" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A3FC5ED17533CA900EF7EE1;
+			productRefGroup = 7A3FC5F917533CA900EF7EE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A3FC5F717533CA900EF7EE1 /* HelloJava */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A3FC5F617533CA900EF7EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3FC60717533CA900EF7EE1 /* InfoPlist.strings in Resources */,
+				7A3FC60F17533CA900EF7EE1 /* Default.png in Resources */,
+				7A3FC61117533CA900EF7EE1 /* Default@2x.png in Resources */,
+				7A3FC61317533CA900EF7EE1 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A3FC5F417533CA900EF7EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3FC60917533CA900EF7EE1 /* main.m in Sources */,
+				7A3FC60D17533CA900EF7EE1 /* HelloJavaAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A3FC60517533CA900EF7EE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A3FC60617533CA900EF7EE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A3FC61417533CA900EF7EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A3FC61517533CA900EF7EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A3FC61717533CA900EF7EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HelloJava\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloJava/HelloJava-Prefix.pch";
+				INFOPLIST_FILE = "HelloJava/HelloJava-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7A3FC61817533CA900EF7EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HelloJava\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloJava/HelloJava-Prefix.pch";
+				INFOPLIST_FILE = "HelloJava/HelloJava-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A3FC5F217533CA900EF7EE1 /* Build configuration list for PBXProject "HelloJava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3FC61417533CA900EF7EE1 /* Debug */,
+				7A3FC61517533CA900EF7EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A3FC61617533CA900EF7EE1 /* Build configuration list for PBXNativeTarget "HelloJava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3FC61717533CA900EF7EE1 /* Debug */,
+				7A3FC61817533CA900EF7EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A3FC5EF17533CA900EF7EE1 /* Project object */;
+}
