@@ -49,7 +49,7 @@
 
 + (NSString *)className
 {
-    return @"com.apportable.demo.ParseManager";
+    return @"com.parsebridge.parsebridge.ParseManager";
 }
 
 -(void)callBack:(int)i{
