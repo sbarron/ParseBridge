@@ -1,3 +1,6 @@
 #ParseBridge Test Project
 
-This is a test project for bridging objective C to Java using Apportable and BridgeKit.
+This is a test project for bridging an iOS app to Android using Apportable. This application demonstrates how to use BridgeKit to bridge an iOS implementation of Parse to the Android version of the Parse library (parse.jar).
+
+For more information about Apportable visit http://www.apportable.com
+For more information about Parse visit http://www.parse.com
