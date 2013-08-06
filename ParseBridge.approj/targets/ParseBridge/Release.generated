@@ -23,30 +23,13 @@
         "z.1.1.3"
     ], 
     "defines": {
-        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60000, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60100, 
         "NS_BLOCK_ASSERTIONS": 1
     }, 
     "pchs": [
         "./ParseBridge/ParseBridge-Prefix.pch"
     ], 
-    "assets": [
-        {
-            "asset": "ParseBridge/Default@2x.png", 
-            "target": "Default@2x.png"
-        }, 
-        {
-            "asset": "ParseBridge/Default.png", 
-            "target": "Default.png"
-        }, 
-        {
-            "asset": "ParseBridge/Default-568h@2x.png", 
-            "target": "Default-568h@2x.png"
-        }, 
-        {
-            "asset": "ParseBridge/en.lproj/InfoPlist.strings", 
-            "target": "en.lproj/InfoPlist.strings"
-        }
-    ], 
+    "assets": [], 
     "type": "app", 
     "header_paths": [
         {
@@ -69,27 +52,27 @@
             "header_path": "ParseBridge-project-headers.hmap", 
             "hmap": {
                 "ParseTwitterUtils.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseTwitterUtils.h", 
                     "key": "ParseTwitterUtils.h"
                 }, 
                 "ParseAnalytics.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseAnalytics.h", 
                     "key": "ParseAnalytics.h"
                 }, 
                 "ParseFacebookUtils.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseFacebookUtils.h", 
                     "key": "ParseFacebookUtils.h"
                 }, 
                 "ParseObject.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseObject.h", 
                     "key": "ParseObject.h"
                 }, 
                 "ParseQuery.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseQuery.h", 
                     "key": "ParseQuery.h"
                 }, 
@@ -99,27 +82,27 @@
                     "key": "ParseBridge-Prefix.pch"
                 }, 
                 "Parse.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "Parse.h", 
                     "key": "Parse.h"
                 }, 
                 "ParseException.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseException.h", 
                     "key": "ParseException.h"
                 }, 
                 "LogInCallBack.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "LogInCallBack.h", 
                     "key": "LogInCallBack.h"
                 }, 
                 "ParseUser.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseUser.h", 
                     "key": "ParseUser.h"
                 }, 
                 "ParseGeoPoint.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseGeoPoint.h", 
                     "key": "ParseGeoPoint.h"
                 }, 
@@ -129,7 +112,7 @@
                     "key": "ParseBridgeAppDelegate.h"
                 }, 
                 "ParseFile.h": {
-                    "prefix": "ParseBridge/", 
+                    "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseFile.h", 
                     "key": "ParseFile.h"
                 }
@@ -141,6 +124,7 @@
     "flags": [
         "-DNS_BLOCK_ASSERTIONS=1", 
         "-fwritable-strings", 
+        "-fno-objc-arc", 
         "-fasm-blocks", 
         {
             "flag": "-std=gnu99", 
@@ -172,22 +156,22 @@
     ], 
     "deps": [
         "UIKit", 
-        "SystemConfiguration", 
-        "StoreKit", 
-        "Security", 
-        "QuartzCore", 
-        "MobileCoreServices", 
-        "CoreLocation", 
-        "CoreGraphics", 
-        "CFNetwork", 
-        "AudioToolbox", 
-        "UIKit", 
-        "Foundation", 
         "FacebookSDK", 
-        "Parse"
+        "Parse", 
+        "AudioToolbox", 
+        "CFNetwork", 
+        "CoreGraphics", 
+        "CoreLocation", 
+        "MobileCoreServices", 
+        "QuartzCore", 
+        "Security", 
+        "StoreKit", 
+        "SystemConfiguration", 
+        "UIKit", 
+        "Foundation"
     ], 
     "config": {
-        "APPLICATION_IDENTIFIER": "com.apportable.ParseBridge", 
+        "APPLICATION_IDENTIFIER": "SpencerBarron.ParseBridge", 
         "TEMPLATE_VALUES": {
             "PRODUCT_NAME": "ParseBridge", 
             "EXECUTABLE_NAME": "ParseBridge"
