@@ -2,8 +2,8 @@
 //  ParseBridgeAppDelegate.h
 //  ParseBridge
 //
-//  Created by Collin Jackson on 5/27/13.
-//  Copyright (c) 2013 Apportable. All rights reserved.
+//  Created by Spencer Barron on 8/6/13.
+//  Copyright (c) 2013 Spencer Barron. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
