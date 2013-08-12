@@ -19,10 +19,10 @@
 		098A2D8417B0CF8100B99928 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAB178FC80400CBF872 /* CFNetwork.framework */; };
 		098A2D8517B0CF8700B99928 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */; };
 		098A2D8617B0CFB000B99928 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E65A31017AEA12000924194 /* Parse.framework */; };
-		098A2D8817B0CFDD00B99928 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098A2D8717B0CFDD00B99928 /* FacebookSDK.framework */; };
 		098A2D8917B0D00600B99928 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */; };
 		098A2D8C17B0DA0000B99928 /* ParseBridgeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */; };
 		098A2D8E17B0DE4400B99928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8D17B0DE4400B99928 /* main.m */; };
+		09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +49,9 @@
 		098A2D5F17B0C79200B99928 /* LogInCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogInCallBack.h; path = Bridge/LogInCallBack.h; sourceTree = "<group>"; };
 		098A2D6017B0C79200B99928 /* ParseAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseAnalytics.h; path = Bridge/ParseAnalytics.h; sourceTree = "<group>"; };
 		098A2D6517B0CEDA00B99928 /* ParseBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		098A2D8717B0CFDD00B99928 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		098A2D8A17B0DA0000B99928 /* ParseBridgeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeAppDelegate.h; sourceTree = "<group>"; };
 		098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeAppDelegate.m; sourceTree = "<group>"; };
 		098A2D8D17B0DE4400B99928 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		099DAEA4178FC1E400CBF872 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		099DAEAB178FC80400CBF872 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		099DAEAD178FC81200CBF872 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -63,6 +61,7 @@
 		099DAEB5178FC83800CBF872 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		099DAEB7178FC83E00CBF872 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,7 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				098A2D8917B0D00600B99928 /* libz.1.1.3.dylib in Frameworks */,
-				098A2D8817B0CFDD00B99928 /* FacebookSDK.framework in Frameworks */,
 				098A2D8617B0CFB000B99928 /* Parse.framework in Frameworks */,
 				098A2D8517B0CF8700B99928 /* AudioToolbox.framework in Frameworks */,
 				098A2D8417B0CF8100B99928 /* CFNetwork.framework in Frameworks */,
@@ -94,6 +92,7 @@
 				098A2D7E17B0CF4600B99928 /* SystemConfiguration.framework in Frameworks */,
 				098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */,
 				098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */,
+				09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +131,7 @@
 		099DAEA3178FC1CF00CBF872 /* FaceBook */ = {
 			isa = PBXGroup;
 			children = (
-				099DAEA4178FC1E400CBF872 /* FacebookSDK.framework */,
+				09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */,
 			);
 			name = FaceBook;
 			sourceTree = "<group>";
@@ -148,7 +147,6 @@
 		7A3FC5ED17533CA900EF7EE1 = {
 			isa = PBXGroup;
 			children = (
-				098A2D8717B0CFDD00B99928 /* FacebookSDK.framework */,
 				7A3FC60217533CA900EF7EE1 /* ParseBridge */,
 				7A3FC5FB17533CA900EF7EE1 /* Frameworks */,
 				7A3FC5F917533CA900EF7EE1 /* Products */,
@@ -394,6 +392,7 @@
 				098A2D7D17B0CEDB00B99928 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A3FC5F217533CA900EF7EE1 /* Build configuration list for PBXProject "ParseBridge" */ = {
 			isa = XCConfigurationList;
