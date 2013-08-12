@@ -22,6 +22,13 @@
 					   selector:@selector(init:applicationId:clientKey:)
 					returnValue:nil
 					  arguments:[AndroidContext className],[NSString className],[NSString className], nil];
+				
+				
+	//*- Java: public static void setLogLevel(int logLevel)
+	//*- Objective-C:
+	
+	//*- Java: public static int getLogLevel()
+	//*- Objective-C:
 					  				   
 	NSLog(@"Parse.h associated with %@", [[Parse javaClass] className]);
 }
