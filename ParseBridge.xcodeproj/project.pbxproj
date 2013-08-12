@@ -62,6 +62,9 @@
 		099DAEB7178FC83E00CBF872 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		09A9B9AA17B8B33100ACA1BD /* ParseACL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseACL.h; sourceTree = "<group>"; };
+		09A9B9AB17B8B33100ACA1BD /* ParseACL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseACL.m; sourceTree = "<group>"; };
+		09A9B9AC17B8B33100ACA1BD /* ParseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseHeaders.h; sourceTree = "<group>"; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,10 +105,10 @@
 		099CA3AD179B9E8A000F39DD /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				098A2D4E17B0C79200B99928 /* Parse.h */,
 				098A2D4B17B0C79200B99928 /* Parse.m */,
 				098A2D4C17B0C79200B99928 /* ParseQuery.m */,
 				098A2D4D17B0C79200B99928 /* ParseUser.m */,
-				098A2D4E17B0C79200B99928 /* Parse.h */,
 				098A2D4F17B0C79200B99928 /* ParseFacebookUtils.m */,
 				098A2D5017B0C79200B99928 /* ParseObject.m */,
 				098A2D5117B0C79200B99928 /* ParseFacebookUtils.h */,
@@ -124,6 +127,9 @@
 				098A2D5E17B0C79200B99928 /* ParseException.m */,
 				098A2D5F17B0C79200B99928 /* LogInCallBack.h */,
 				098A2D6017B0C79200B99928 /* ParseAnalytics.h */,
+				09A9B9AA17B8B33100ACA1BD /* ParseACL.h */,
+				09A9B9AB17B8B33100ACA1BD /* ParseACL.m */,
+				09A9B9AC17B8B33100ACA1BD /* ParseHeaders.h */,
 			);
 			name = Bridge;
 			sourceTree = "<group>";
