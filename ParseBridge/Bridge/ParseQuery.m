@@ -243,7 +243,7 @@
 //*- Java: public String getClassName()
 //Accessor for the class name.
 
-	NSLog(@"ParseQuery bridge init");
+	
 }
 
 + (NSString *)className

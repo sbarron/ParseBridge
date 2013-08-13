@@ -282,7 +282,7 @@
  
 
 //*- Java: public boolean hasSameId(ParseObject other)
- 
+}
 
 + (NSString *)className
 {

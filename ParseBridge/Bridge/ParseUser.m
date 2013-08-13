@@ -115,6 +115,8 @@
 //*- Java: public static ParseQuery<ParseUser> getQuery()
 //Constructs a query for ParseUsers.
   
+}
+
 
 
 + (NSString *)className

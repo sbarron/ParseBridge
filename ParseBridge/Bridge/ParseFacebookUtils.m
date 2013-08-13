@@ -113,6 +113,7 @@
 
 //*- Java:  public static void saveLatestSessionData(ParseUser user)
 
+}
 
 + (NSString *)className
 {
