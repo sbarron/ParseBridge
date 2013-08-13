@@ -65,6 +65,8 @@
 		09A9B9AD17B8DA1A00ACA1BD /* ParseACL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseACL.h; path = Bridge/ParseACL.h; sourceTree = "<group>"; };
 		09A9B9AE17B8DA1B00ACA1BD /* ParseACL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseACL.m; path = Bridge/ParseACL.m; sourceTree = "<group>"; };
 		09A9B9AF17B8DA1C00ACA1BD /* ParseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseHeaders.h; path = Bridge/ParseHeaders.h; sourceTree = "<group>"; };
+		09A9B9B317BA1D9200ACA1BD /* ParsePush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParsePush.h; path = Bridge/ParsePush.h; sourceTree = "<group>"; };
+		09A9B9B417BA1D9300ACA1BD /* ParsePush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParsePush.m; path = Bridge/ParsePush.m; sourceTree = "<group>"; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +109,8 @@
 			children = (
 				098A2D4E17B0C79200B99928 /* Parse.h */,
 				098A2D4B17B0C79200B99928 /* Parse.m */,
+				09A9B9B317BA1D9200ACA1BD /* ParsePush.h */,
+				09A9B9B417BA1D9300ACA1BD /* ParsePush.m */,
 				098A2D5217B0C79200B99928 /* ParseQuery.h */,
 				098A2D4C17B0C79200B99928 /* ParseQuery.m */,
 				098A2D5317B0C79200B99928 /* ParseUser.h */,

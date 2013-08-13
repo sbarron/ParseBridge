@@ -176,6 +176,9 @@
     // {"source": "./PngImageLoader.m", "flags": ["-fstack-protector"], "defines": {"PNG": 1}, "env": {"TARGET_TEXTURE_FMT": "png"}}
     "sources": [
     	"ParseBridge/Bridge/Parse.m",
+    	"ParseBridge/Bridge/ParsePush.m",
+    	"ParseBridge/Bridge/ParseACL.m",
+    	"ParseBridge/Bridge/ParseQuery.m",
     	"ParseBridge/Bridge/ParseObject.m",
     	"ParseBridge/Bridge/ParseUser.m",
     	"ParseBridge/Bridge/ParseAnalytics.m",

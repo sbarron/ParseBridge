@@ -96,10 +96,15 @@
                     "suffix": "LogInCallBack.h", 
                     "key": "LogInCallBack.h"
                 }, 
-                "ParseUser.h": {
+                "ParseACL.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseUser.h", 
-                    "key": "ParseUser.h"
+                    "suffix": "ParseACL.h", 
+                    "key": "ParseACL.h"
+                }, 
+                "ParseHeaders.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseHeaders.h", 
+                    "key": "ParseHeaders.h"
                 }, 
                 "ParseGeoPoint.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -115,6 +120,11 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseFile.h", 
                     "key": "ParseFile.h"
+                }, 
+                "ParseUser.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseUser.h", 
+                    "key": "ParseUser.h"
                 }
             }
         }
@@ -156,7 +166,6 @@
     ], 
     "deps": [
         "UIKit", 
-        "FacebookSDK", 
         "Parse", 
         "AudioToolbox", 
         "CFNetwork", 
@@ -168,7 +177,8 @@
         "StoreKit", 
         "SystemConfiguration", 
         "UIKit", 
-        "Foundation"
+        "Foundation", 
+        "FacebookSDK"
     ], 
     "config": {
         "APPLICATION_IDENTIFIER": "SpencerBarron.ParseBridge", 

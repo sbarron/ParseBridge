@@ -93,10 +93,15 @@
                     "suffix": "ParseGeoPoint.h", 
                     "key": "ParseGeoPoint.h"
                 }, 
-                "ParseUser.h": {
+                "ParseACL.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseUser.h", 
-                    "key": "ParseUser.h"
+                    "suffix": "ParseACL.h", 
+                    "key": "ParseACL.h"
+                }, 
+                "ParseHeaders.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseHeaders.h", 
+                    "key": "ParseHeaders.h"
                 }, 
                 "LogInCallBack.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -112,6 +117,11 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseFile.h", 
                     "key": "ParseFile.h"
+                }, 
+                "ParseUser.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseUser.h", 
+                    "key": "ParseUser.h"
                 }
             }
         }
@@ -119,11 +129,7 @@
     "modules": [], 
     "sources": [
         {
-            "source": "ParseBridge/Bridge/LogInCallBack.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseFacebookUtils.m", 
+            "source": "ParseBridge/Bridge/ParseTwitterUtils.m", 
             "language": "objc"
         }, 
         {
@@ -134,23 +140,23 @@
             "defines": {}
         }, 
         {
-            "source": "ParseBridge/Bridge/ParseUser.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseGeoPoint.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/Parse.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseTwitterUtils.m", 
+            "source": "ParseBridge/Bridge/ParseException.m", 
             "language": "objc"
         }, 
         {
             "source": "ParseBridge/Bridge/ParseFile.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseAnalytics.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseUser.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseFacebookUtils.m", 
             "language": "objc"
         }, 
         {
@@ -161,15 +167,19 @@
             "defines": {}
         }, 
         {
+            "source": "ParseBridge/Bridge/ParseGeoPoint.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/LogInCallBack.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/Parse.m", 
+            "language": "objc"
+        }, 
+        {
             "source": "ParseBridge/Bridge/ParseObject.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseException.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseAnalytics.m", 
             "language": "objc"
         }
     ], 
@@ -212,7 +222,6 @@
     ], 
     "deps": [
         "UIKit", 
-        "FacebookSDK", 
         "Parse", 
         "AudioToolbox", 
         "CFNetwork", 
@@ -224,7 +233,8 @@
         "StoreKit", 
         "SystemConfiguration", 
         "UIKit", 
-        "Foundation"
+        "Foundation", 
+        "FacebookSDK"
     ], 
     "libs": [
         "z.1.1.3"
