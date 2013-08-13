@@ -9,7 +9,7 @@
 
 @class ParseUser;
 
-@interface ParseUser: JavaObject
+@interface ParseUser : JavaObject
 
 + (ParseUser*) currentUser; 
 + (void)logOut;

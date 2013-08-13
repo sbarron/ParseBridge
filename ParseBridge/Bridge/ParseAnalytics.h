@@ -7,5 +7,7 @@
 #import <BridgeKit/AndroidIntent.h>
 
 @interface ParseAnalytics : JavaObject
-   +(void)trackAppOpened:(AndroidIntent*)intent;
+
++(void)trackAppOpened:(AndroidIntent*)intent;
+
 @end

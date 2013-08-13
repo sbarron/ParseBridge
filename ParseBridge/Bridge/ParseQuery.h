@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Spencer Barron. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <BridgeKit/JavaObject.h>
 
 @interface ParseQuery : JavaObject
 

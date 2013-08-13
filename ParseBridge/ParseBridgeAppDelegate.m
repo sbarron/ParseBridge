@@ -90,6 +90,7 @@
     NSLog(@"Parse Android - Finished Android Init");
 	
     [self runParseTest];
+	
 #else
 	
     [Parse setApplicationId:PARSE_APPLICATION_ID
@@ -97,7 +98,20 @@
     
     [self runParseTest];
 #endif
+
+	[self startAnalytics:launchOptions];
+}
+
+-(void)startAnalytics:(NSDictionary*)launchOptions{
+#ifdef ANDROID
+    NSLog(@"ParseAnalytics");
+	//AndroidIntent *intent = [AndroidIntent intentWithClassName:@"SpencerBarron.ParseBridge"];
 	
+	[ParseAnalytics trackAppOpened:nil]; //NOT WORKING
+  
+#else
+	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+#endif
 }
 
 #ifdef ANDROID
