@@ -16,17 +16,22 @@
             "opengles2", 
             "portrait", 
             "access_network_state", 
-            "internet"
+            "internet", 
+            "receive_boot_completed", 
+            "vibrate"
         ], 
         "SHORT_VERSION": "1.0", 
         "APPLICATION_NAME": "ParseBridge", 
         "LONG_VERSION": "1.0", 
-        "APPLICATION_IDENTIFIER": "SpencerBarron.ParseBridge", 
+        "APPLICATION_IDENTIFIER": "com.SpencerBarron.ParseBridge", 
         "TEMPLATE_VALUES": {
             "PRODUCT_NAME": "ParseBridge", 
             "EXECUTABLE_NAME": "ParseBridge"
         }, 
-        "APPLICATION_FULL_NAME": "ParseBridge"
+        "APPLICATION_FULL_NAME": "ParseBridge", 
+        "APPLICATION_MANIFEST_EXTRAS": [
+            "java/manifest_extras.xml"
+        ]
     }, 
     "header_paths": [
         {
@@ -93,6 +98,21 @@
                     "suffix": "ParseGeoPoint.h", 
                     "key": "ParseGeoPoint.h"
                 }, 
+                "ParsePush.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParsePush.h", 
+                    "key": "ParsePush.h"
+                }, 
+                "PushService.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "PushService.h", 
+                    "key": "PushService.h"
+                }, 
+                "ParseInstallation.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseInstallation.h", 
+                    "key": "ParseInstallation.h"
+                }, 
                 "ParseACL.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseACL.h", 
@@ -102,6 +122,11 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseHeaders.h", 
                     "key": "ParseHeaders.h"
+                }, 
+                "SaveCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "SaveCallback.h", 
+                    "key": "SaveCallback.h"
                 }, 
                 "LogInCallBack.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -129,7 +154,11 @@
     "modules": [], 
     "sources": [
         {
-            "source": "ParseBridge/Bridge/ParseTwitterUtils.m", 
+            "source": "ParseBridge/Bridge/PushService.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/SaveCallback.m", 
             "language": "objc"
         }, 
         {
@@ -144,22 +173,6 @@
             "language": "objc"
         }, 
         {
-            "source": "ParseBridge/Bridge/ParseFile.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseAnalytics.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseUser.m", 
-            "language": "objc"
-        }, 
-        {
-            "source": "ParseBridge/Bridge/ParseFacebookUtils.m", 
-            "language": "objc"
-        }, 
-        {
             "source": "ParseBridge/main.m", 
             "header_paths": [], 
             "flags": [], 
@@ -167,7 +180,43 @@
             "defines": {}
         }, 
         {
-            "source": "ParseBridge/Bridge/ParseGeoPoint.m", 
+            "source": "ParseBridge/Bridge/ParseQuery.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseFile.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseTwitterUtils.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseAnalytics.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseACL.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseFacebookUtils.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseObject.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseInstallation.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParseUser.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "ParseBridge/Bridge/ParsePush.m", 
             "language": "objc"
         }, 
         {
@@ -179,7 +228,7 @@
             "language": "objc"
         }, 
         {
-            "source": "ParseBridge/Bridge/ParseObject.m", 
+            "source": "ParseBridge/Bridge/ParseGeoPoint.m", 
             "language": "objc"
         }
     ], 

@@ -96,6 +96,21 @@
                     "suffix": "LogInCallBack.h", 
                     "key": "LogInCallBack.h"
                 }, 
+                "ParsePush.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParsePush.h", 
+                    "key": "ParsePush.h"
+                }, 
+                "PushService.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "PushService.h", 
+                    "key": "PushService.h"
+                }, 
+                "ParseInstallation.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseInstallation.h", 
+                    "key": "ParseInstallation.h"
+                }, 
                 "ParseACL.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseACL.h", 
@@ -105,6 +120,11 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseHeaders.h", 
                     "key": "ParseHeaders.h"
+                }, 
+                "SaveCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "SaveCallback.h", 
+                    "key": "SaveCallback.h"
                 }, 
                 "ParseGeoPoint.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -181,7 +201,7 @@
         "FacebookSDK"
     ], 
     "config": {
-        "APPLICATION_IDENTIFIER": "SpencerBarron.ParseBridge", 
+        "APPLICATION_IDENTIFIER": "com.SpencerBarron.ParseBridge", 
         "TEMPLATE_VALUES": {
             "PRODUCT_NAME": "ParseBridge", 
             "EXECUTABLE_NAME": "ParseBridge"

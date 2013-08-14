@@ -61,6 +61,12 @@
 		099DAEB5178FC83800CBF872 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		099DAEB7178FC83E00CBF872 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		09A5883A17BB4116004F48C1 /* ParseInstallation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseInstallation.h; path = Bridge/ParseInstallation.h; sourceTree = "<group>"; };
+		09A5883B17BB4116004F48C1 /* ParseInstallation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseInstallation.m; path = Bridge/ParseInstallation.m; sourceTree = "<group>"; };
+		09A5883C17BB517B004F48C1 /* PushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PushService.h; path = Bridge/PushService.h; sourceTree = "<group>"; };
+		09A5883D17BB517B004F48C1 /* PushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PushService.m; path = Bridge/PushService.m; sourceTree = "<group>"; };
+		09A5884417BB6EC1004F48C1 /* SaveCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaveCallback.h; path = Bridge/SaveCallback.h; sourceTree = "<group>"; };
+		09A5884517BB6EC2004F48C1 /* SaveCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SaveCallback.m; path = Bridge/SaveCallback.m; sourceTree = "<group>"; };
 		09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		09A9B9AD17B8DA1A00ACA1BD /* ParseACL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseACL.h; path = Bridge/ParseACL.h; sourceTree = "<group>"; };
 		09A9B9AE17B8DA1B00ACA1BD /* ParseACL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseACL.m; path = Bridge/ParseACL.m; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 				098A2D4B17B0C79200B99928 /* Parse.m */,
 				09A9B9B317BA1D9200ACA1BD /* ParsePush.h */,
 				09A9B9B417BA1D9300ACA1BD /* ParsePush.m */,
+				09A5883C17BB517B004F48C1 /* PushService.h */,
+				09A5883D17BB517B004F48C1 /* PushService.m */,
 				098A2D5217B0C79200B99928 /* ParseQuery.h */,
 				098A2D4C17B0C79200B99928 /* ParseQuery.m */,
 				098A2D5317B0C79200B99928 /* ParseUser.h */,
@@ -119,6 +127,8 @@
 				098A2D4F17B0C79200B99928 /* ParseFacebookUtils.m */,
 				098A2D5817B0C79200B99928 /* ParseObject.h */,
 				098A2D5017B0C79200B99928 /* ParseObject.m */,
+				09A5883A17BB4116004F48C1 /* ParseInstallation.h */,
+				09A5883B17BB4116004F48C1 /* ParseInstallation.m */,
 				098A2D5417B0C79200B99928 /* ParseFile.h */,
 				098A2D5517B0C79200B99928 /* ParseFile.m */,
 				098A2D5617B0C79200B99928 /* ParseGeoPoint.h */,
@@ -129,6 +139,8 @@
 				098A2D5C17B0C79200B99928 /* ParseAnalytics.m */,
 				098A2D5D17B0C79200B99928 /* ParseException.h */,
 				098A2D5E17B0C79200B99928 /* ParseException.m */,
+				09A5884417BB6EC1004F48C1 /* SaveCallback.h */,
+				09A5884517BB6EC2004F48C1 /* SaveCallback.m */,
 				098A2D5F17B0C79200B99928 /* LogInCallBack.h */,
 				098A2D5B17B0C79200B99928 /* LogInCallBack.m */,
 				09A9B9AD17B8DA1A00ACA1BD /* ParseACL.h */,

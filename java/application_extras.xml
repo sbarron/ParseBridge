@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:android="http://schemas.android.com/apk/res/android">
+    <activity
+        android:name="com.apportable.demo.DemoActivity"
+        android:label="@string/title_activity_second"
+        android:screenOrientation="reverseLandscape"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize">
+    </activity>
+</application>

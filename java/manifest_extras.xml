@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:android="http://schemas.android.com/apk/res/android">
+	<service android:name="com.parse.PushService" />
+	<receiver android:name="com.parse.ParseBroadcastReceiver">
+ 	 	<intent-filter>
+   	 		<action android:name="android.intent.action.BOOT_COMPLETED" />
+   	 		<action android:name="android.intent.action.USER_PRESENT" />
+  		</intent-filter>
+	</receiver>
+</application>

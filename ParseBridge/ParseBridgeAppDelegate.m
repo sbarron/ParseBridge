@@ -11,11 +11,14 @@
 #import "Parse.h"
 #import "ParseUser.h"
 #import "ParseAnalytics.h"
+#import "ParseInstallation.h"
+#import "PushService.h"
 #import "ParseFacebookUtils.h"
 #import "ParseObject.h"
 #import "ParseManager.h"
 #import <BridgeKit/AndroidActivity.h>
 #import <BridgeKit/AndroidIntent.h>
+//#import <BridgeKit/AndroidContext.h>
 #else
 #import <Parse/Parse.h>
 #endif
@@ -59,6 +62,32 @@
     return YES;
 }
 
+-(void)initializeParse:(NSDictionary *)launchOptions{
+#ifdef ANDROID
+    NSLog(@"Parse Android - Starting Parse init from ParseBridgeAppDelegate");
+    AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
+    
+    [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
+	
+    NSLog(@"Parse Android - Finished Android Init");
+	
+	[self runParseTest];
+	[self startPushNotifications];
+	[self startAnalytics:launchOptions];
+	
+#else
+	
+    [Parse setApplicationId:PARSE_APPLICATION_ID
+                  clientKey:PARSE_CLIENT_KEY];
+				
+	[self runParseTest];
+	[self startPushNotifications];
+	[self startAnalytics:launchOptions];
+    
+#endif
+ 
+}
+
 -(void)runParseTest{
 #ifdef ANDROID
     NSLog(@"Parse Android - Create Test Object");
@@ -80,37 +109,31 @@
 #endif
 }
 
--(void)initializeParse:(NSDictionary *)launchOptions{
-#ifdef ANDROID
-    NSLog(@"Parse Android - Starting Parse init from ParseBridgeAppDelegate");
-    AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
-    
-    [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
-	
-    NSLog(@"Parse Android - Finished Android Init");
-	
-    [self runParseTest];
-	
-#else
-	
-    [Parse setApplicationId:PARSE_APPLICATION_ID
-                  clientKey:PARSE_CLIENT_KEY];
-    
-    [self runParseTest];
-#endif
 
-	[self startAnalytics:launchOptions];
-}
 
 -(void)startAnalytics:(NSDictionary*)launchOptions{
 #ifdef ANDROID
     NSLog(@"ParseAnalytics");
-	//AndroidIntent *intent = [AndroidIntent intentWithClassName:@"SpencerBarron.ParseBridge"];
-	
+
 	[ParseAnalytics trackAppOpened:nil]; //NOT WORKING
   
 #else
 	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+#endif
+}
+
+-(void)startPushNotifications{
+#ifdef ANDROID
+    NSLog(@"ParsePush Notifications");
+	
+	//PushService.setDefaultPushCallback(this, YourDefaultActivity.class);
+	[PushService setDefaultPushCallback:[AndroidActivity currentActivity] activitySubClass:[AndroidActivity currentActivity]];
+	
+	//ParseInstallation.getCurrentInstallation().saveInBackground();
+	[[ParseInstallation getCurrentInstallation] saveInBackground];
+	
+#else
+	 
 #endif
 }
 

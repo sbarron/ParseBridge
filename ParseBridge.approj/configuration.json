@@ -57,7 +57,7 @@
     //   "write_external_storage"
     //   "write_settings"
     //   "xperia"
-    "FEATURES": ["opengles2","portrait", "access_network_state", "internet"],
+    "FEATURES": ["opengles2","portrait", "access_network_state", "internet", "receive_boot_completed", "vibrate"],
 
     // Preferred way of handling URLs in the code.
     // Leave it null for most cases.
@@ -112,7 +112,10 @@
     //"NOTIFICATION_ICON":"",
     //"MANIFEST_EXTRAS":"",
     //"ACTIVITY_MANIFEST_EXTRAS":"",
-    //"APPLICATION_MANIFEST_EXTRAS":"",
+    "APPLICATION_MANIFEST_EXTRAS":[
+    	"java/manifest_extras.xml"
+    ],
+    
     //"TEMPLATE_VALUES":{},
     //"OGGENC_OPTIONS":"",
     //"AFCONVERT_OPTIONS":"",
@@ -176,7 +179,6 @@
     // {"source": "./PngImageLoader.m", "flags": ["-fstack-protector"], "defines": {"PNG": 1}, "env": {"TARGET_TEXTURE_FMT": "png"}}
     "sources": [
     	"ParseBridge/Bridge/Parse.m",
-    	"ParseBridge/Bridge/ParsePush.m",
     	"ParseBridge/Bridge/ParseACL.m",
     	"ParseBridge/Bridge/ParseQuery.m",
     	"ParseBridge/Bridge/ParseObject.m",
@@ -185,9 +187,13 @@
     	"ParseBridge/Bridge/ParseFacebookUtils.m",
     	"ParseBridge/Bridge/LogInCallBack.m",
     	"ParseBridge/Bridge/ParseException.m",
+    	"ParseBridge/Bridge/SaveCallback.m",
     	"ParseBridge/Bridge/ParseGeoPoint.m",
     	"ParseBridge/Bridge/ParseTwitterUtils.m",
     	"ParseBridge/Bridge/ParseFile.m",
+    	"ParseBridge/Bridge/ParseInstallation.m",
+    	"ParseBridge/Bridge/ParsePush.m",
+    	"ParseBridge/Bridge/PushService.m",
     ],
     
     // A list of glob inclusion filters for additional files.

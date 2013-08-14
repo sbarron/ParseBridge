@@ -7,6 +7,7 @@
 //
 
 #import "ParseQuery.h"
+#import "ParseObject.h"
 
 @implementation ParseQuery
 
@@ -15,21 +16,34 @@
     [super initializeJava];
 
 
-	//*- Java: public ParseQuery(Class<T> subclass)
-	//*- ObjC:
 	
-	//*- Java: public ParseQuery(String theClassName)
-	//*- ObjC:
-    [ParseQuery registerConstructorWithSelector:@selector(initQuery)
-                                      arguments:[NSString className]];
+
 	
 	
-    //*- Java: public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
-    //*- ObjC: + queryWithClassName:(NSString*)
+	//*- Java:  public ParseQuery(Class<T> subclass)
+	//*- iOS Bridge Method:  -(ParseQuery*)initWithParseObject:(ParseObject*)object;
+	[ParseQuery registerConstructorWithSelector:@selector(initWithParseObject:)
+                                      arguments:[ParseObject className], nil];
+				
+	//*- Java:  public ParseQuery(String theClassName)
+	//*- iOS Bridge Method:  -(ParseQuery*)initWithClassName:(NSString*)theClassName;
+    [ParseQuery registerConstructorWithSelector:@selector(initWithClassName)
+                                      arguments:[NSString className], nil];
+	
+	
+	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(String className)
+	//*- iOS Bridge Method: -(ParseQuery*)queryWithClassName:(NSString*)theClassName;
     [ParseQuery registerStaticMethod:@"getQuery"
                             selector:@selector(queryWithClassName:)
-                         returnValue:[ParseObject className]
+                         returnValue:[ParseQuery className]
                            arguments:[NSString className], nil];
+				
+	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
+	//*- iOS Bridge Method: -(ParseQuery*)queryWithObject:(ParseObject*)object;
+    [ParseQuery registerStaticMethod:@"getQuery"
+                            selector:@selector(queryWithClassName:)
+                         returnValue:[ParseQuery className]
+                           arguments:[ParseObject className], nil];
 	
 	
     //*- Java: public T get(String theObjectId) throws ParseException
@@ -39,6 +53,7 @@
                          returnValue:[JavaObject className]
                            arguments:[NSString className], [NSString className], nil];
 	
+
 
 //*- Java:  public static <T extends ParseObject> ParseQuery<T> or(List<ParseQuery<T>> queries)
 //*- ObjC
