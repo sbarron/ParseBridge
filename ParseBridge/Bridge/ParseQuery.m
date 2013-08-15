@@ -8,6 +8,9 @@
 
 #import "ParseQuery.h"
 #import "ParseObject.h"
+#import <BridgeKit/JavaClass.h>
+
+
 
 @implementation ParseQuery
 
@@ -19,44 +22,55 @@
 	
 
 	
-	
+	BOOL results = FALSE;
 	//*- Java:  public ParseQuery(Class<T> subclass)
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithParseObject:(ParseObject*)object;
-	[ParseQuery registerConstructorWithSelector:@selector(initWithParseObject:)
-                                      arguments:[ParseObject className], nil];
+	results = [ParseQuery registerConstructorWithSelector:@selector(initWithParseObject:)
+                                      arguments:[JavaClass className], nil];
+	NSLog(@"ParseQuery Registered initWithParseObject =  %@", (results ? @"YES" : @"NO"));
 				
 	//*- Java:  public ParseQuery(String theClassName)
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithClassName:(NSString*)theClassName;
-    [ParseQuery registerConstructorWithSelector:@selector(initWithClassName)
+    results = [ParseQuery registerConstructorWithSelector:@selector(initWithClassName)
                                       arguments:[NSString className], nil];
+	NSLog(@"ParseQuery Registered initWithClassName =  %@", (results ? @"YES" : @"NO"));
 	
 	
 	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(String className)
 	//*- iOS Bridge Method: -(ParseQuery*)queryWithClassName:(NSString*)theClassName;
-    [ParseQuery registerStaticMethod:@"getQuery"
+     results = [ParseQuery registerStaticMethod:@"getQuery"
                             selector:@selector(queryWithClassName:)
                          returnValue:[ParseQuery className]
                            arguments:[NSString className], nil];
+	NSLog(@"ParseQuery Registered getQuery ->queryWithClassName =  %@", (results ? @"YES" : @"NO"));
 				
 	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
 	//*- iOS Bridge Method: -(ParseQuery*)queryWithObject:(ParseObject*)object;
-    [ParseQuery registerStaticMethod:@"getQuery"
-                            selector:@selector(queryWithClassName:)
+     results = [ParseQuery registerStaticMethod:@"getQuery"
+                            selector:@selector(queryWithObject:)
                          returnValue:[ParseQuery className]
-                           arguments:[ParseObject className], nil];
-	
-	
-    //*- Java: public T get(String theObjectId) throws ParseException
-    //*- ObjC: + getObjectOfClass:(NSString*) objectId:(NSString*)
-	[ParseQuery registerStaticMethod:@"get"
-                            selector:@selector(getObjectOfClass:objectId:)
-                         returnValue:[JavaObject className]
-                           arguments:[NSString className], [NSString className], nil];
+                           arguments:[JavaClass className], nil];
+	NSLog(@"ParseQuery Registered getQuery ->queryWithObject =  %@", (results ? @"YES" : @"NO"));
 	
 
+	results = [ParseQuery registerInstanceMethod:@"get"
+							selector:@selector(_get:)
+						 returnValue:[JavaClass className]
+						   arguments:[NSString className], nil];
+	NSLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
+	
+	//Constructs a ParseObject whose id is already known by fetching data from the server. This mutates the ParseQuery.
+	
+	//*- Java: public void getInBackground(String objectId,GetCallback<T> callback)
+	//*- iOS Bridge Method: -(void)getInBackground:(NSString*)objectID callback:(GetCallback*)callback;
+	//results = [ParseQuery registerInstanceMethod:@"getInBackground" selector:@selector(_get:) returnValue:[JavaObject className] arguments:[NSString className], nil];
+	//NSLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
+  
 
 //*- Java:  public static <T extends ParseObject> ParseQuery<T> or(List<ParseQuery<T>> queries)
 //*- ObjC
+	//results = [ParseQuery registerInstanceMethod:@"or" selector:@selector(_or:) returnValue:[JavaObject className] arguments:[NSString className], nil];
+	//NSLog(@"ParseQuery Registered or  =  %@", (success ? @"YES" : @"NO"));
 	
 //*- Java: public void cancel()
 //Cancels the current network request (if one is running).
@@ -102,8 +116,6 @@
 //Counts the number of objects that match this query in a background thread. This does not use caching.
 
 
-//*- Java: public T get(String theObjectId)throws ParseException
-//Constructs a ParseObject whose id is already known by fetching data from the server. This mutates the ParseQuery.
 
 
 //*- Java: public boolean hasCachedResult()
@@ -116,10 +128,6 @@
 
 //*- Java: public static void clearAllCachedResults()
 //Clears the cached result for all queries.
-
-
-//*- Java: public void getInBackground(String objectId,GetCallback<T> callback)
-//Constructs a ParseObject whose id is already known by fetching data from the server in a background thread. This does not use caching. This is preferable to using the ParseObject(className, objectId) constructor, unless your code is already running in a background thread.
 
 
 //*- Java: public ParseQuery<T> whereEqualTo(String key,Object value)
@@ -259,6 +267,11 @@
 //Accessor for the class name.
 
 	
+}
+
+- (ParseObject *)get:(NSString *)objectID
+{
+	return [ParseObject typecast:[self _get:objectID]];
 }
 
 + (NSString *)className

@@ -8,6 +8,7 @@
 
 #import "ParseException.h"
 #import <BridgeKit/JavaNumbers.h>
+#import <BridgeKit/JavaClass.h>
 
 @implementation ParseException
 

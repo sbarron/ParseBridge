@@ -7,6 +7,7 @@
 
 
 #import "ParseUser.h"
+#import <BridgeKit/JavaClass.h>
 
 @implementation ParseUser
 

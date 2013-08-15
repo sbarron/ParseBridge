@@ -9,6 +9,7 @@
 #import "ParseFacebookUtils.h"
 #import <BridgeKit/AndroidActivity.h>
 #import <BridgeKit/JavaList.h>
+#import <BridgeKit/JavaClass.h>
 #import "LogInCallBack.h"
 
 @implementation ParseFacebookUtils
