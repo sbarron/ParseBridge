@@ -5,6 +5,7 @@
 
 #import "ParseObject.h"
 #import <BridgeKit/JavaList.h>
+#import <BridgeKit/JavaClass.h>
 
 @implementation ParseObject
 
@@ -14,6 +15,9 @@
 	
     //*- Java: ParseObject(String theClassName) - Constructor
     //*- ObjC: -(id)initParseObject:(NSString*)name;
+	BOOL results = NO;
+	results = [ParseObject registerConstructor];
+	
 	BOOL method1 = [ParseObject registerConstructorWithSelector:@selector(initParseObject:)
                                        arguments:[NSString className], nil];
     //*- Java: public final void saveEventually()
@@ -57,8 +61,17 @@
 					   selector:@selector(objectWithoutDataWithClassName:objectId:)
 					returnValue:[ParseObject className]
 					  arguments:[NSString className], [NSString className], nil];
+				
+	//*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
+	//*- ObjC: + (ParseObject*)create:(JavaClass*)class;
+	BOOL method8 = [ParseObject registerStaticMethod:@"create"
+											selector:@selector(create:)
+										 returnValue:[ParseObject className]
+										   arguments:[JavaClass className], nil];
+	
 
-	NSLog(@"ParseObject method registration - %i,%i,%i,%i,%i,%i,%i", method1, method2, method3, method4,method5,method6,method7);
+	NSLog(@"ParseObject method registration -> %i,%i,%i,%i,%i,%i,%i,%i,%i", results, method1, method2, method3, method4,method5,method6,method7,method8);
+	
 //*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
 //Creates a new ParseObject based upon a subclass type. Note that the object will be created based upon the ParseClassName of the given subclass type. For example, calling create(ParseUser.class) may create an instance of a custom subclass of ParseUser.
 
@@ -105,8 +118,14 @@
 //*- Java: public final void saveInBackground(SaveCallback callback)
 //Saves this object to the server in a background thread. This is preferable to using save(), unless your code is already running from a background thread.
  
-//*- Java: public final void saveInBackground()
-//Saves this object to the server in a background thread. Use this when you do not have code to run on completion of the push.
+	//*- Java: public final void saveInBackground()
+	//*- ObjC: -(void)saveInBackground;
+	//Saves this object to the server in a background thread. Use this when you do not have code to run on completion of the push.
+	BOOL result = [ParseObject registerInstanceMethod:@"saveInBackground"
+											  selector:@selector(saveInBackground)
+										   returnValue:nil
+											 arguments:nil];
+	NSLog(@"ParseObject Registered saveInBackground  =  %@", (results ? @"YES" : @"NO"));
  
 
 //*- Java: public final void saveEventually()

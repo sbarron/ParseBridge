@@ -34,11 +34,11 @@
 	
  
 	//*- Java:   public String getInstallationId()
-	//*- iOS Bridge Method:  -(NSString*)getInstallationId;getInstallationId
-	BOOL method3 = [ParseInstallation registerStaticMethod:@"getInstallationId"
-								   selector:@selector(getInstallationId)
-								returnValue:[NSString className]
-								  arguments:nil];
+	//*- iOS Bridge Method:  -(NSString*)getInstallationId;
+	BOOL method3 = [ParseInstallation registerInstanceMethod:@"getInstallationId"
+													selector:@selector(getInstallationId)
+												 returnValue:[NSString className]
+												   arguments:nil];
 	
 
 	//*- Java: public void put(String key, Object value)   throws IllegalArgumentException
@@ -58,16 +58,23 @@
 
 	//*- Java:  public void saveEventually(SaveCallback callback)
 	//*- iOS Bridge Method:  -(void)saveEventually:(SaveCallback*)callback;
-	BOOL method6 = [ParseInstallation registerInstanceMethod:@"saveEventually"
-                               selector:@selector(saveEventually:)
-                            returnValue:nil
-							  arguments:[SaveCallback className], nil];
+	//BOOL method6 = [ParseInstallation registerInstanceMethod:@"saveEventually"
+    //                           selector:@selector(saveEventually:)
+      //                      returnValue:nil
+	//						  arguments:[SaveCallback className], nil];
 	
-	NSLog(@"ParseInstallation Method Registration %i, %i, %i, %i, %i, %i", method1, method2, method3, method4, method5, method6);
+	NSLog(@"ParseInstallation Method Registration %i, %i, %i, %i, %i", method1, method2, method3, method4, method5);
 	
 
 
 }
+
+/*
+-(NSString*)getInstallationId{
+	NSString* installationID = [self _getInstallationId];
+	NSLog(@"InstallationID = %@",installationID);
+	return  installationID; //[NSString stringWithJavaString:(jstring)[self _getInstallationId];
+}*/
 
 + (NSString *)className
 {

@@ -4,7 +4,10 @@
 
 #import <BridgeKit/JavaObject.h>
 
+@class JavaClass;
+
 @interface ParseObject : JavaObject
+
 
 /*
  PFObject
@@ -34,4 +37,6 @@
 //*- public static ParseObject createWithoutData(String className, String objectId)
 + (ParseObject*)objectWithoutDataWithClassName:(NSString*)className objectId:(NSString*)objectId;
 
+//*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
++ (ParseObject*)create:(JavaClass*)object;
 @end

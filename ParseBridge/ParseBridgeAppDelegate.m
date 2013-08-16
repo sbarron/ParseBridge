@@ -126,11 +126,11 @@
 #ifdef ANDROID
     NSLog(@"ParsePush Notifications");
 	
-	//PushService.setDefaultPushCallback(this, YourDefaultActivity.class);
 	[PushService setDefaultPushCallback:[AndroidActivity currentActivity] activitySubClass:[AndroidActivity currentActivity]];
 	
 	//ParseInstallation.getCurrentInstallation().saveInBackground();
-	[[ParseInstallation getCurrentInstallation] saveInBackground];
+	ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
+	[myInstallation saveInBackground];
 	
 #else
 	 

@@ -19,10 +19,10 @@
 @interface ParseQuery : JavaObject
 
 //*- Java:  public ParseQuery(Class<T> subclass)
--(ParseQuery*)initWithParseObject:(JavaClass*)object;
+-(id)initWithParseObject:(ParseObject*)object;
 
 //*- Java:  public ParseQuery(String theClassName)
--(ParseQuery*)initWithClassName:(NSString*)theClassName;
+-(id)initWithClassName:(NSString*)theClassName;
 
 //*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(String className)
 -(ParseQuery*)queryWithClassName:(NSString*)theClassName;
@@ -35,7 +35,7 @@
 //Constructs a ParseObject whose id is already known by fetching data from the server. This mutates the ParseQuery.
 
 //*- Java: public void getInBackground(String objectId,GetCallback<T> callback)
--(ParseObject*)getInBackground:(NSString*)objectID callback:(GetCallback*)callback;
+-(void)getInBackground:(NSString*)objectID callback:(GetCallback*)callback;
 
 
 //*- Java:  public static <T extends ParseObject> ParseQuery<T> or(List<ParseQuery<T>> queries)

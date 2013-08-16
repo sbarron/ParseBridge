@@ -93,9 +93,9 @@
 
 
 	//*- Java:   public static Set<String> getSubscriptions(Context context)
-	//*- iOS Bridge Method: +(JavaSet*)getSubscriptions:(AndroidContext*)context;
+	//*- iOS Bridge Method: +(NSArray*)getSubscriptions:(AndroidContext*)context;
 	BOOL getSubscriptions = [PushService registerStaticMethod:@"getSubscriptions"
-							 selector:@selector(getSubscriptions:)
+							 selector:@selector(_getSubscriptions:)
 						  returnValue:[JavaSet className]
 							arguments:[AndroidContext className], nil];
 	//Accesses the current set of channels for which the current installation is subscribed. It is important to remember that the device may receive pushes by means other than channels. This method returns the local cache, so it returns without blocking on network IO. In rare circumstances this may be stale, but only after the installation was edited via the REST API using the master key.
@@ -112,8 +112,10 @@
 	NSLog(@"Push Service Method Registration %i, %i, %i, %i, %i, %i, %i, %i", pushServiceConstructor, startServiceIfRequired, subscribeChannel, subscribeChannelIcon, unsubscribe, setDefaultPushCallback, setDefaultPushCallbackIcon, getSubscriptions);
 	
 
+}
 
-
++(NSArray*)getSubscriptions:(AndroidContext*)context{
+	return [[self _getSubscriptions:context] toArray];
 }
 
 + (NSString *)className

@@ -8,9 +8,15 @@
 
 #import <BridgeKit/JavaObject.h>
 
+@class JavaThrowable;
+
 @interface ParseException : JavaObject{
 }
 
--(void)initParseException :(int)errorcode :(NSString*)message;
+-(id)initParseExceptionWithCode:(int)errorcode message:(NSString*)message;
+-(id)initParseExceptionWithMessageandCause:(NSString*)message throwable:(JavaThrowable*)throwable;
+-(id)initParseExceptionWithCause:(JavaThrowable*)throwable;
+
+-(int)getCode;
 
 @end

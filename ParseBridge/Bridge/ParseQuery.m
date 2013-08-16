@@ -18,20 +18,17 @@
 {
     [super initializeJava];
 
-
-	
-
-	
 	BOOL results = FALSE;
+	
 	//*- Java:  public ParseQuery(Class<T> subclass)
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithParseObject:(ParseObject*)object;
-	results = [ParseQuery registerConstructorWithSelector:@selector(initWithParseObject:)
+	results = [ParseQuery registerConstructorWithSelector:@selector(_initWithParseObject:)
                                       arguments:[JavaClass className], nil];
 	NSLog(@"ParseQuery Registered initWithParseObject =  %@", (results ? @"YES" : @"NO"));
 				
 	//*- Java:  public ParseQuery(String theClassName)
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithClassName:(NSString*)theClassName;
-    results = [ParseQuery registerConstructorWithSelector:@selector(initWithClassName)
+    results = [ParseQuery registerConstructorWithSelector:@selector(_initWithClassName)
                                       arguments:[NSString className], nil];
 	NSLog(@"ParseQuery Registered initWithClassName =  %@", (results ? @"YES" : @"NO"));
 	
@@ -52,10 +49,12 @@
                            arguments:[JavaClass className], nil];
 	NSLog(@"ParseQuery Registered getQuery ->queryWithObject =  %@", (results ? @"YES" : @"NO"));
 	
-
+	//*- Java:  public T get(String theObjectId)
+	//*- iOS Bridge Method: -(ParseObject*)get:(NSString*)objectID;
+	//Constructs a ParseObject whose id is already known by fetching data from the server.
 	results = [ParseQuery registerInstanceMethod:@"get"
 							selector:@selector(_get:)
-						 returnValue:[JavaClass className]
+						 returnValue:[ParseObject className]
 						   arguments:[NSString className], nil];
 	NSLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
 	
@@ -267,6 +266,14 @@
 //Accessor for the class name.
 
 	
+}
+
+-(id)initWithParseObject:(ParseObject*)object{
+	return [ParseQuery typecast:[self _initWithParseObject:object]];
+}
+
+-(id)initWithClassName:(NSString*)theClassName{
+	return [ParseQuery typecast:[self _initWithClassName:theClassName]];
 }
 
 - (ParseObject *)get:(NSString *)objectID
