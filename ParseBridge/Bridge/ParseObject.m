@@ -1,7 +1,28 @@
-//
-//  ParseObject.m
-//  ParseBridge
-//
+/*
+ * ParseBridge: https://github.com/sbarron/ParseBridge
+ *
+ * Copyright (c) 2013 Spencer Barron
+ *
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 #import "ParseObject.h"
 #import <BridgeKit/JavaList.h>
@@ -28,9 +49,20 @@
                             
     //*- Java: public final void saveInBackground()
     //*- ObjC: -(void)saveInBackground;
-    BOOL method3 = [ParseObject registerInstanceMethod:@"saveInBackground"
+    BOOL result = [ParseObject registerInstanceMethod:@"saveInBackground"
                                selector:@selector(saveInBackground)
-                            returnValue:nil];
+							   returnValue:nil];
+	DLog(@"ParseObject Registered saveInBackground  =  %@", (result ? @"YES" : @"NO"));
+	
+	
+	//*- Java: public final void save()
+	//*- ObjC: -(void)save;
+	result = [ParseObject registerInstanceMethod:@"save"
+											  selector:@selector(save)
+										   returnValue:nil];
+	DLog(@"ParseObject Registered save  =  %@", (result ? @"YES" : @"NO"));
+	//Saves this object to the server. Typically, you should use ParseObject.saveInBackground(com.parse.SaveCallback) instead of this, unless you are managing your own threading.
+
     
     //*- Java: public void put(String key, Object value)
     //*- ObjC: -(void)forKey:(NSString *)key setObject:(id)value;
@@ -57,20 +89,20 @@
 
     //*- Java: public static ParseObject createWithoutData(String className, String objectId)
     //*- ObjC: + (PFObject*)objectWithoutDataWithClassName:(NSString*)className objectId:(NSString*)objectId;
-    BOOL method7 = [ParseObject registerStaticMethod:@"createWithoutData"
-					   selector:@selector(objectWithoutDataWithClassName:objectId:)
-					returnValue:[ParseObject className]
-					  arguments:[NSString className], [NSString className], nil];
+    //BOOL method7 = [ParseObject registerStaticMethod:@"createWithoutData"
+	//				   selector:@selector(objectWithoutDataWithClassName:objectId:)
+	//				returnValue:[ParseObject className]
+	//				  arguments:[NSString className], [NSString className], nil];
 				
 	//*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
 	//*- ObjC: + (ParseObject*)create:(JavaClass*)class;
-	BOOL method8 = [ParseObject registerStaticMethod:@"create"
-											selector:@selector(create:)
-										 returnValue:[ParseObject className]
-										   arguments:[JavaClass className], nil];
+	//BOOL method8 = [ParseObject registerStaticMethod:@"create"
+	//										selector:@selector(create:)
+	//									 returnValue:[ParseObject className]
+	//									   arguments:[JavaClass className], nil];
 	
 
-	NSLog(@"ParseObject method registration -> %i,%i,%i,%i,%i,%i,%i,%i,%i", results, method1, method2, method3, method4,method5,method6,method7,method8);
+	DLog(@"ParseObject method registration -> %i,%i,%i,%i,%i,%i,%i", results, method1, method2, result, method4,method5,method6);
 	
 //*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
 //Creates a new ParseObject based upon a subclass type. Note that the object will be created based upon the ParseClassName of the given subclass type. For example, calling create(ParseUser.class) may create an instance of a custom subclass of ParseUser.
@@ -110,10 +142,7 @@
 
 //*- Java: public void setObjectId(String newObjectId)
 //Setter for the object id. In general you do not need to use this. However, in some cases this can be convenient. For example, if you are serializing a ParseObject yourself and wish to recreate it, you can use this to recreate the ParseObject exactly.
- 
 
-//*- Java: public final void save()
-//Saves this object to the server. Typically, you should use ParseObject.saveInBackground(com.parse.SaveCallback) instead of this, unless you are managing your own threading.
 
 //*- Java: public final void saveInBackground(SaveCallback callback)
 //Saves this object to the server in a background thread. This is preferable to using save(), unless your code is already running from a background thread.
@@ -121,11 +150,7 @@
 	//*- Java: public final void saveInBackground()
 	//*- ObjC: -(void)saveInBackground;
 	//Saves this object to the server in a background thread. Use this when you do not have code to run on completion of the push.
-	BOOL result = [ParseObject registerInstanceMethod:@"saveInBackground"
-											  selector:@selector(saveInBackground)
-										   returnValue:nil
-											 arguments:nil];
-	NSLog(@"ParseObject Registered saveInBackground  =  %@", (results ? @"YES" : @"NO"));
+
  
 
 //*- Java: public final void saveEventually()

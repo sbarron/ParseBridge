@@ -1,10 +1,28 @@
-//
-//  ParseInstallation.m
-//  ParseBridge
-//
-//  Created by Spencer Barron on 8/13/13.
-//  Copyright (c) 2013 Apportable. All rights reserved.
-//
+/*
+ * ParseBridge: https://github.com/sbarron/ParseBridge
+ *
+ * Copyright (c) 2013 Spencer Barron
+ *
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 #import "ParseInstallation.h"
 #import "ParseException.h"
@@ -44,7 +62,7 @@
 	//*- Java: public void put(String key, Object value)   throws IllegalArgumentException
 	//*- iOS Bridge Method:  -(void)forKey:(NSString*)key setObject:(id)value;
     BOOL method4 = [ParseInstallation registerInstanceMethod:@"put"
-							   selector:@selector(forKey:setObject:)
+							   selector:@selector(_forKey:setObject:)
 							returnValue:nil
 							  arguments:[NSString className],[JavaObject className],nil];
 
@@ -58,23 +76,31 @@
 
 	//*- Java:  public void saveEventually(SaveCallback callback)
 	//*- iOS Bridge Method:  -(void)saveEventually:(SaveCallback*)callback;
-	//BOOL method6 = [ParseInstallation registerInstanceMethod:@"saveEventually"
-    //                           selector:@selector(saveEventually:)
-      //                      returnValue:nil
-	//						  arguments:[SaveCallback className], nil];
+	BOOL method6 = [ParseInstallation registerInstanceMethod:@"saveEventually"
+                               selector:@selector(saveEventually:)
+                            returnValue:nil
+							  arguments:[SaveCallback className], nil];
 	
-	NSLog(@"ParseInstallation Method Registration %i, %i, %i, %i, %i", method1, method2, method3, method4, method5);
+	DLog(@"ParseInstallation Method Registration %i, %i, %i, %i, %i, %i", method1, method2, method3, method4, method5, method6);
 	
 
 
 }
 
 /*
+-(void)forKey:(NSString*)key setObject:(id)value{
+	DLog(@"ParseInstallation Value = %@");
+	[self _forKey:key setObject:value];
+}*/
+
+
+/*
 -(NSString*)getInstallationId{
 	NSString* installationID = [self _getInstallationId];
-	NSLog(@"InstallationID = %@",installationID);
+	DLog(@"InstallationID is = %@",installationID);
 	return  installationID; //[NSString stringWithJavaString:(jstring)[self _getInstallationId];
 }*/
+
 
 + (NSString *)className
 {

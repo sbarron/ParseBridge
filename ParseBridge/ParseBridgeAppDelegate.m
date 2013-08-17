@@ -64,12 +64,12 @@
 
 -(void)initializeParse:(NSDictionary *)launchOptions{
 #ifdef ANDROID
-    NSLog(@"Parse Android - Starting Parse init from ParseBridgeAppDelegate");
+    DLog(@"Parse Android - Starting Parse init from ParseBridgeAppDelegate");
     AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
     
     [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
 	
-    NSLog(@"Parse Android - Finished Android Init");
+    DLog(@"Parse Android - Finished Android Init");
 	
 	[self runParseTest];
 	[self startPushNotifications];
@@ -90,18 +90,18 @@
 
 -(void)runParseTest{
 #ifdef ANDROID
-    NSLog(@"Parse Android - Create Test Object");
+    DLog(@"Parse Android - Create Test Object");
 	
     ParseObject *testObject = [[ParseObject alloc] initParseObject:@"TestObject"];
 	
-    NSLog(@"Test Object: %@", testObject);
+    DLog(@"Test Object: %@", testObject);
     
     [testObject forKey:@"foo" setObject:@"Androidbar"];
     [testObject saveInBackground];
 	
-    NSLog(@"Parse Android - TestObject Saved %@", testObject);
+    DLog(@"Parse Android - TestObject Saved %@", testObject);
 #else
-    NSLog(@"Parse Android - Running Parse Object Test iOS");
+    DLog(@"Parse Android - Running Parse Object Test iOS");
     
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     [testObject setObject:@"foo" forKey:@"iOSbar"];
@@ -113,7 +113,7 @@
 
 -(void)startAnalytics:(NSDictionary*)launchOptions{
 #ifdef ANDROID
-    NSLog(@"ParseAnalytics");
+    DLog(@"ParseAnalytics");
 
 	[ParseAnalytics trackAppOpened:nil]; //NOT WORKING
   
@@ -124,16 +124,19 @@
 
 -(void)startPushNotifications{
 #ifdef ANDROID
-    NSLog(@"ParsePush Notifications");
+    DLog(@"ParsePush Notifications");
 	
 	[PushService setDefaultPushCallback:[AndroidActivity currentActivity] activitySubClass:[AndroidActivity currentActivity]];
 	
 	//ParseInstallation.getCurrentInstallation().saveInBackground();
+
 	ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
-	[myInstallation saveInBackground];
+	DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
+
+	[[myInstallation getCurrentInstallation] saveInBackground];
 	
 #else
-	 
+	 //Requires setup in iTunesConnect
 #endif
 }
 
