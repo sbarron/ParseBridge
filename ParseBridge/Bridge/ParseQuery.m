@@ -1,10 +1,28 @@
-//
-//  ParseQuery.m
-//  ParseBridge
-//
-//  Created by Spencer Barron on 7/21/13.
-//  Copyright (c) 2013 Spencer Barron. All rights reserved.
-//
+/*
+ * ParseBridge: https://github.com/sbarron/ParseBridge
+ *
+ * Copyright (c) 2013 Spencer Barron
+ *
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
 
 #import "ParseQuery.h"
 #import "ParseObject.h"
@@ -24,13 +42,13 @@
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithParseObject:(ParseObject*)object;
 	results = [ParseQuery registerConstructorWithSelector:@selector(_initWithParseObject:)
                                       arguments:[JavaClass className], nil];
-	NSLog(@"ParseQuery Registered initWithParseObject =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"ParseQuery Registered initWithParseObject =  %@", (results ? @"YES" : @"NO"));
 				
 	//*- Java:  public ParseQuery(String theClassName)
 	//*- iOS Bridge Method:  -(ParseQuery*)initWithClassName:(NSString*)theClassName;
     results = [ParseQuery registerConstructorWithSelector:@selector(_initWithClassName)
                                       arguments:[NSString className], nil];
-	NSLog(@"ParseQuery Registered initWithClassName =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"ParseQuery Registered initWithClassName =  %@", (results ? @"YES" : @"NO"));
 	
 	
 	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(String className)
@@ -39,7 +57,7 @@
                             selector:@selector(queryWithClassName:)
                          returnValue:[ParseQuery className]
                            arguments:[NSString className], nil];
-	NSLog(@"ParseQuery Registered getQuery ->queryWithClassName =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"ParseQuery Registered getQuery ->queryWithClassName =  %@", (results ? @"YES" : @"NO"));
 				
 	//*- Java:  public static <T extends ParseObject> ParseQuery<T> getQuery(Class<T> subclass)
 	//*- iOS Bridge Method: -(ParseQuery*)queryWithObject:(ParseObject*)object;
@@ -47,7 +65,7 @@
                             selector:@selector(queryWithObject:)
                          returnValue:[ParseQuery className]
                            arguments:[JavaClass className], nil];
-	NSLog(@"ParseQuery Registered getQuery ->queryWithObject =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"ParseQuery Registered getQuery ->queryWithObject =  %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public T get(String theObjectId)
 	//*- iOS Bridge Method: -(ParseObject*)get:(NSString*)objectID;
@@ -56,20 +74,20 @@
 							selector:@selector(_get:)
 						 returnValue:[ParseObject className]
 						   arguments:[NSString className], nil];
-	NSLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
 	
 	//Constructs a ParseObject whose id is already known by fetching data from the server. This mutates the ParseQuery.
 	
 	//*- Java: public void getInBackground(String objectId,GetCallback<T> callback)
 	//*- iOS Bridge Method: -(void)getInBackground:(NSString*)objectID callback:(GetCallback*)callback;
 	//results = [ParseQuery registerInstanceMethod:@"getInBackground" selector:@selector(_get:) returnValue:[JavaObject className] arguments:[NSString className], nil];
-	//NSLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
+	//DLog(@"ParseQuery Registered get  =  %@", (results ? @"YES" : @"NO"));
   
 
 //*- Java:  public static <T extends ParseObject> ParseQuery<T> or(List<ParseQuery<T>> queries)
 //*- ObjC
 	//results = [ParseQuery registerInstanceMethod:@"or" selector:@selector(_or:) returnValue:[JavaObject className] arguments:[NSString className], nil];
-	//NSLog(@"ParseQuery Registered or  =  %@", (success ? @"YES" : @"NO"));
+	//DLog(@"ParseQuery Registered or  =  %@", (success ? @"YES" : @"NO"));
 	
 //*- Java: public void cancel()
 //Cancels the current network request (if one is running).

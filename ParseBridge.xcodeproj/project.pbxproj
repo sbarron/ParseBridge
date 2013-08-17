@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; };
+		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D4C17B0C79200B99928 /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseQuery.m; path = Bridge/ParseQuery.m; sourceTree = "<group>"; };
 		098A2D4D17B0C79200B99928 /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseUser.m; path = Bridge/ParseUser.m; sourceTree = "<group>"; };
 		098A2D4E17B0C79200B99928 /* Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Bridge/Parse.h; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		098A2D5917B0C79200B99928 /* ParseTwitterUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseTwitterUtils.h; path = Bridge/ParseTwitterUtils.h; sourceTree = "<group>"; };
 		098A2D5A17B0C79200B99928 /* ParseTwitterUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseTwitterUtils.m; path = Bridge/ParseTwitterUtils.m; sourceTree = "<group>"; };
 		098A2D5B17B0C79200B99928 /* LogInCallBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LogInCallBack.m; path = Bridge/LogInCallBack.m; sourceTree = "<group>"; };
-		098A2D5C17B0C79200B99928 /* ParseAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseAnalytics.m; path = Bridge/ParseAnalytics.m; sourceTree = "<group>"; };
+		098A2D5C17B0C79200B99928 /* ParseAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ParseAnalytics.m; path = Bridge/ParseAnalytics.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D5D17B0C79200B99928 /* ParseException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseException.h; path = Bridge/ParseException.h; sourceTree = "<group>"; };
 		098A2D5E17B0C79200B99928 /* ParseException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseException.m; path = Bridge/ParseException.m; sourceTree = "<group>"; };
 		098A2D5F17B0C79200B99928 /* LogInCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogInCallBack.h; path = Bridge/LogInCallBack.h; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7A3FC60417533CA900EF7EE1 /* ParseBridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParseBridge-Info.plist"; sourceTree = "<group>"; };
 		7A3FC60617533CA900EF7EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7A3FC60A17533CA900EF7EE1 /* ParseBridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBridge-Prefix.pch"; sourceTree = "<group>"; };
+		7A3FC60A17533CA900EF7EE1 /* ParseBridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "ParseBridge-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7A3FC60E17533CA900EF7EE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7A3FC61017533CA900EF7EE1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7A3FC61217533CA900EF7EE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -328,6 +328,7 @@
 				INFOPLIST_FILE = "ParseBridge/ParseBridge-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -377,6 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
