@@ -24,46 +24,47 @@
  *
  */
 
-#import "SaveCallback.h"
+#import "FindCallback.h"
+#import <BridgeKit/JavaList.h>
 #import "ParseException.h"
 
-@implementation SaveCallback
+@implementation FindCallback
+
 
 + (void)initializeJava
 {
     [super initializeJava];
 	
 	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
+	[FindCallback registerConstructor];
 	
 	//*- Java:  public abstract void done(ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
-						   selector:@selector(done:)
-						returnValue:nil
-						  arguments:[ParseException className], nil];
+	[FindCallback registerCallback:@"done"
+						  selector:@selector(done:error:)
+					   returnValue:nil
+						 arguments:[JavaList className],[ParseException className], nil];
 	
 }
 
 
 
--(void)done:(ParseException*)error{
-//[self _done:error];
-	if(!error){
+-(void)done:(JavaList*)list error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && list != nil){
 		//No error
-		ALog(@"Save Successful");
+		ALog(@"Find Successful");
 	}
 	else{
-		ALog(@"Save failed", [error getCode]);
+		ALog(@"Find failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.SaveCallback";
+    return @"com.parse.FindCallback";
 }
-
 
 @end

@@ -23,46 +23,43 @@
  * THE SOFTWARE.
  *
  */
-
-#import "SaveCallback.h"
+#import "ProgressCallback.h"
 #import "ParseException.h"
 
-@implementation SaveCallback
+@implementation ProgressCallback
 
 + (void)initializeJava
 {
     [super initializeJava];
 	
 	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
+	[ProgressCallback registerConstructor];
 	
-	//*- Java:  public abstract void done(ParseException e)
+	//*- Java:  done(Integer percentDone) 
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
+	[ProgressCallback registerCallback:@"done"
 						   selector:@selector(done:)
 						returnValue:nil
-						  arguments:[ParseException className], nil];
+						  arguments:[ParseUser className],[ParseException className], nil];
 	
 }
 
-
-
--(void)done:(ParseException*)error{
-//[self _done:error];
-	if(!error){
+-(void)done:(ParseUser*)user{
+	//[self _done:error];
+	if(!error && user != nil){
 		//No error
-		ALog(@"Save Successful");
+		ALog(@"User Retrieved Successfully");
 	}
 	else{
-		ALog(@"Save failed", [error getCode]);
+		ALog(@"Object retrieval failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.SaveCallback";
+    return @"com.parse.ProgressCallback";
 }
 
 

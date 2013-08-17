@@ -44,7 +44,7 @@
 					   selector:@selector(init:applicationId:clientKey:)
 					returnValue:nil
 					  arguments:[AndroidContext className],[NSString className],[NSString className], nil];
-	DLog(@"Parse Registered initialize  =  %@", (result ? @"YES" : @"NO"));
+	DLog(@"Registered initialize = %@", (result ? @"YES" : @"NO"));
  
 	//*- Java: public static void setLogLevel(int logLevel)
 	//*- Objective-C:+(void)setLogLevel:(int)logLevel;
@@ -52,7 +52,7 @@
 					   selector:@selector(setLogLevel:)
 					returnValue:nil
 					  arguments:[JavaClass intPrimitive], nil];
-	DLog(@"Parse Registered setLogLevel  =  %@", (result ? @"YES" : @"NO"));
+	DLog(@"Registered setLogLevel = %@", (result ? @"YES" : @"NO"));
 	
 	//*- Java: public static int getLogLevel()
 	//*- Objective-C:+(int)getLogLevel;
@@ -60,7 +60,7 @@
 					   selector:@selector(getLogLevel)
 					returnValue:[JavaClass intPrimitive]
 					  arguments:nil];
-	DLog(@"Parse Registered getLogLevel  =  %@", (result ? @"YES" : @"NO"));
+	DLog(@"Registered getLogLevel = %@", (result ? @"YES" : @"NO"));
 
 					  				   
 	

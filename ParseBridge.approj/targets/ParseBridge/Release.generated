@@ -23,6 +23,7 @@
         "z.1.1.3"
     ], 
     "defines": {
+        "DEBUG": 1, 
         "__IPHONE_OS_VERSION_MIN_REQUIRED": 60100, 
         "NS_BLOCK_ASSERTIONS": 1
     }, 
@@ -51,85 +52,110 @@
             "type": "iquote", 
             "header_path": "ParseBridge-project-headers.hmap", 
             "hmap": {
-                "ParseTwitterUtils.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseTwitterUtils.h", 
-                    "key": "ParseTwitterUtils.h"
-                }, 
                 "ParseAnalytics.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseAnalytics.h", 
                     "key": "ParseAnalytics.h"
-                }, 
-                "ParseFacebookUtils.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseFacebookUtils.h", 
-                    "key": "ParseFacebookUtils.h"
-                }, 
-                "ParseObject.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseObject.h", 
-                    "key": "ParseObject.h"
-                }, 
-                "ParseQuery.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseQuery.h", 
-                    "key": "ParseQuery.h"
-                }, 
-                "ParseBridge-Prefix.pch": {
-                    "prefix": "ParseBridge/", 
-                    "suffix": "ParseBridge-Prefix.pch", 
-                    "key": "ParseBridge-Prefix.pch"
-                }, 
-                "Parse.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "Parse.h", 
-                    "key": "Parse.h"
                 }, 
                 "ParseException.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseException.h", 
                     "key": "ParseException.h"
                 }, 
-                "LogInCallBack.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "LogInCallBack.h", 
-                    "key": "LogInCallBack.h"
-                }, 
                 "ParsePush.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParsePush.h", 
                     "key": "ParsePush.h"
+                }, 
+                "FunctionCallback.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "FunctionCallback.h", 
+                    "key": "FunctionCallback.h"
                 }, 
                 "PushService.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "PushService.h", 
                     "key": "PushService.h"
                 }, 
-                "ParseInstallation.h": {
+                "SaveCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseInstallation.h", 
-                    "key": "ParseInstallation.h"
+                    "suffix": "SaveCallback.h", 
+                    "key": "SaveCallback.h"
                 }, 
-                "ParseACL.h": {
+                "ParseObject.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseACL.h", 
-                    "key": "ParseACL.h"
+                    "suffix": "ParseObject.h", 
+                    "key": "ParseObject.h"
+                }, 
+                "ParseBridge-Prefix.pch": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridge-Prefix.pch", 
+                    "key": "ParseBridge-Prefix.pch"
                 }, 
                 "ParseHeaders.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseHeaders.h", 
                     "key": "ParseHeaders.h"
                 }, 
-                "SaveCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "SaveCallback.h", 
-                    "key": "SaveCallback.h"
-                }, 
                 "ParseGeoPoint.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseGeoPoint.h", 
                     "key": "ParseGeoPoint.h"
+                }, 
+                "Parse.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "Parse.h", 
+                    "key": "Parse.h"
+                }, 
+                "ParseTwitterUtils.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseTwitterUtils.h", 
+                    "key": "ParseTwitterUtils.h"
+                }, 
+                "ParseFacebookUtils.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseFacebookUtils.h", 
+                    "key": "ParseFacebookUtils.h"
+                }, 
+                "ParseQuery.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseQuery.h", 
+                    "key": "ParseQuery.h"
+                }, 
+                "GetCallback.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "GetCallback.h", 
+                    "key": "GetCallback.h"
+                }, 
+                "ParseACL.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseACL.h", 
+                    "key": "ParseACL.h"
+                }, 
+                "ParseUser.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseUser.h", 
+                    "key": "ParseUser.h"
+                }, 
+                "FindCallback.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "FindCallback.h", 
+                    "key": "FindCallback.h"
+                }, 
+                "DeleteCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "DeleteCallback.h", 
+                    "key": "DeleteCallback.h"
+                }, 
+                "ParseInstallation.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseInstallation.h", 
+                    "key": "ParseInstallation.h"
+                }, 
+                "LogInCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "LogInCallback.h", 
+                    "key": "LogInCallback.h"
                 }, 
                 "ParseBridgeAppDelegate.h": {
                     "prefix": "ParseBridge/", 
@@ -140,11 +166,6 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseFile.h", 
                     "key": "ParseFile.h"
-                }, 
-                "ParseUser.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseUser.h", 
-                    "key": "ParseUser.h"
                 }
             }
         }
@@ -153,6 +174,7 @@
     "version": "1", 
     "flags": [
         "-DNS_BLOCK_ASSERTIONS=1", 
+        "-DDEBUG", 
         "-fwritable-strings", 
         "-fno-objc-arc", 
         "-fasm-blocks", 

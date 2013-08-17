@@ -24,46 +24,44 @@
  *
  */
 
-#import "SaveCallback.h"
+#import "GetDataCallback.h"
 #import "ParseException.h"
 
-@implementation SaveCallback
+@implementation GetDataCallback
+
 
 + (void)initializeJava
 {
     [super initializeJava];
 	
 	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
+	[GetDataCallback registerConstructor];
 	
-	//*- Java:  public abstract void done(ParseException e)
+	//*- Java:  public abstract void done(byte[] data,ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
-						   selector:@selector(done:)
-						returnValue:nil
-						  arguments:[ParseException className], nil];
+	[GetDataCallback registerCallback:@"done"
+						 selector:@selector(done:error:)
+					  returnValue:nil
+						arguments:[NSData className],[ParseException className], nil];
 	
 }
 
-
-
--(void)done:(ParseException*)error{
-//[self _done:error];
-	if(!error){
+-(void)done:(NSData*)data error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && data != nil){
 		//No error
-		ALog(@"Save Successful");
+		ALog(@"Object Retrieved Successfully");
 	}
 	else{
-		ALog(@"Save failed", [error getCode]);
+		ALog(@"Object retrieval failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.SaveCallback";
+    return @"com.parse.GetDataCallback";
 }
-
 
 @end

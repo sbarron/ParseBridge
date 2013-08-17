@@ -24,46 +24,9 @@
  *
  */
 
-#import "SaveCallback.h"
-#import "ParseException.h"
+#import <BridgeKit/JavaObject.h>
+@class ParseException;
 
-@implementation SaveCallback
-
-+ (void)initializeJava
-{
-    [super initializeJava];
-	
-	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
-	
-	//*- Java:  public abstract void done(ParseException e)
-	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
-	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
-						   selector:@selector(done:)
-						returnValue:nil
-						  arguments:[ParseException className], nil];
-	
-}
-
-
-
--(void)done:(ParseException*)error{
-//[self _done:error];
-	if(!error){
-		//No error
-		ALog(@"Save Successful");
-	}
-	else{
-		ALog(@"Save failed", [error getCode]);
-	}
-}
-
-
-+ (NSString *)className
-{
-    return @"com.parse.SaveCallback";
-}
-
+@interface RequestPasswordResetCallback : JavaObject
 
 @end

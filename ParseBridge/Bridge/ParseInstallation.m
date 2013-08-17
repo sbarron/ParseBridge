@@ -54,7 +54,7 @@
 	//*- Java:   public String getInstallationId()
 	//*- iOS Bridge Method:  -(NSString*)getInstallationId;
 	BOOL method3 = [ParseInstallation registerInstanceMethod:@"getInstallationId"
-													selector:@selector(getInstallationId)
+													selector:@selector(_getInstallationId)
 												 returnValue:[NSString className]
 												   arguments:nil];
 	
@@ -94,12 +94,12 @@
 }*/
 
 
-/*
+
 -(NSString*)getInstallationId{
 	NSString* installationID = [self _getInstallationId];
-	DLog(@"InstallationID is = %@",installationID);
-	return  installationID; //[NSString stringWithJavaString:(jstring)[self _getInstallationId];
-}*/
+	DLog(@"InstallationID = %@",installationID);
+	return  installationID; 
+}
 
 
 + (NSString *)className

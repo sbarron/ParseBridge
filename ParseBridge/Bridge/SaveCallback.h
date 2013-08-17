@@ -29,7 +29,7 @@
 
 @interface SaveCallback : JavaObject
 
-//*- Java: public abstract void done(ParseException e)
+-(id)init;
 -(void)done:(ParseException*)error;
 
 @end

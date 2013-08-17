@@ -28,9 +28,9 @@
 @class ParseUser;
 @class ParseException;
 
-@interface LogInCallBack: JavaObject
+@interface LogInCallback: JavaObject
 
--(void) initLoginCallBack;
--(void)done:(ParseUser*)user :(ParseException*)error;
+-(id)init;
+-(void)done:(ParseUser*)user error:(ParseException*)error;
 
 @end

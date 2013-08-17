@@ -24,46 +24,46 @@
  *
  */
 
-#import "SaveCallback.h"
+#import "FunctionCallback.h"
+#import <BridgeKit/JavaObject.h>
 #import "ParseException.h"
 
-@implementation SaveCallback
+@implementation FunctionCallback
+
 
 + (void)initializeJava
 {
     [super initializeJava];
 	
 	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
+	[FunctionCallback registerConstructor];
 	
-	//*- Java:  public abstract void done(ParseException e)
+	//*- Java:  done(T object, ParseException e) 
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
-						   selector:@selector(done:)
-						returnValue:nil
-						  arguments:[ParseException className], nil];
+	[FunctionCallback registerCallback:@"done"
+						  selector:@selector(done:error:)
+					   returnValue:nil
+						 arguments:[JavaObject className],[ParseException className], nil];
 	
 }
 
 
-
--(void)done:(ParseException*)error{
-//[self _done:error];
-	if(!error){
+-(void)done:(JavaObject*)obj error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && obj != nil){
 		//No error
-		ALog(@"Save Successful");
+		ALog(@"Cloud Function Successful");
 	}
 	else{
-		ALog(@"Save failed", [error getCode]);
+		ALog(@"Cloud Function failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.SaveCallback";
+    return @"com.parse.FunctionCallback";
 }
-
 
 @end
