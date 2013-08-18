@@ -24,44 +24,49 @@
  *
  */
 
-#import "GetDataCallback.h"
+#import "SendCallback.h"
 #import "ParseException.h"
 
-@implementation GetDataCallback
+@implementation SendCallback
 
 
 + (void)initializeJava
 {
     [super initializeJava];
+	BOOL results;
+	//*- Java: public SendCallback()
+	results = [SendCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
 	
-	//*- Java:  public SaveCallback()
-	[GetDataCallback registerConstructor];
 	
-	//*- Java:  public abstract void done(byte[] data,ParseException e)
-	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
+	//*- Java:  public abstract void done(ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[GetDataCallback registerCallback:@"done"
-						 selector:@selector(done:error:)
-					  returnValue:nil
-						arguments:[NSData className],[ParseException className], nil];
+	results = [SendCallback registerCallback:@"done"
+										  selector:@selector(done:)
+									   returnValue:nil
+										 arguments:[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
 	
 }
 
--(void)done:(NSData*)data error:(ParseException*)error{
+-(void)done:(ParseException*)error{
 	//[self _done:error];
-	if(!error && data != nil){
+	if(!error){
 		//No error
-		ALog(@"Object Retrieved Successfully");
+		ALog(@"Send success");
 	}
 	else{
-		ALog(@"Object retrieval failed", [error getCode]);
+		ALog(@"Send failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.GetDataCallback";
+    return @"com.parse.SendCallback";
 }
+
 
 @end

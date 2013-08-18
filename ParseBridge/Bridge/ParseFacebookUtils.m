@@ -28,7 +28,7 @@
 #import <BridgeKit/AndroidActivity.h>
 #import <BridgeKit/JavaList.h>
 #import <BridgeKit/JavaClass.h>
-#import "LogInCallBack.h"
+#import "LogInCallback.h"
 
 @implementation ParseFacebookUtils
 
@@ -59,7 +59,7 @@
 	[ParseFacebookUtils registerStaticMethod:@"login"
 									selector:@selector(logInWithPermissions:)
 								 returnValue:nil
-								   arguments:[JavaList className], [AndroidActivity className],[LogInCallBack className], NULL];
+								   arguments:[JavaList className], [AndroidActivity className],[LogInCallback className], NULL];
 				
 	[ParseFacebookUtils registerCallback:@"bridgeCallback"
 						 selector:@selector(logInWithPermissions)

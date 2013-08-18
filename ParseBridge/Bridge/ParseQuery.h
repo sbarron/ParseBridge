@@ -281,3 +281,4 @@
 //*- Java: public String getClassName()
 //Accessor for the class name.
 @end
+

@@ -34,8 +34,9 @@
 + (void)initializeJava
 {
     [super initializeJava];
-	
-	[PushCallback registerConstructor];
+	BOOL results;
+	results = [PushCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public void setChannel(String theChannel)
 	//*- iOS Bridge Method:  -(void)setChannel:(NSString*)channel;
@@ -52,7 +53,7 @@
 										  selector:@selector(setService:)
 									   returnValue:nil
 										 arguments:[JavaObject className], nil];
-	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"Registered setService  =  %@", (results ? @"YES" : @"NO"));
 	
 	
 	//*- Java: public void setPushData(JSONObject thePushData)
@@ -61,7 +62,7 @@
 										  selector:@selector(setPushData:)
 									   returnValue:nil
 										 arguments:[JavaObject className], nil];
-	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"Registered setPushData  =  %@", (results ? @"YES" : @"NO"));
 	
 	
 	//*- Java: public void setLocalData(JSONObject theLocalData)
@@ -70,7 +71,7 @@
 										  selector:@selector(setChannel:)
 									   returnValue:nil
 										 arguments:[JavaObject className], nil];
-	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	DLog(@"Registered setLocalData  =  %@", (results ? @"YES" : @"NO"));
 	
 }
 

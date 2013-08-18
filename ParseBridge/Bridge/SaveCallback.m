@@ -33,16 +33,19 @@
 {
     [super initializeJava];
 	
+	BOOL results;
 	//*- Java:  public SaveCallback()
-	[SaveCallback registerConstructor];
+	results = [SaveCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public abstract void done(ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SaveCallback registerCallback:@"done"
+	results = [SaveCallback registerCallback:@"done"
 						   selector:@selector(done:)
 						returnValue:nil
 						  arguments:[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
 }
 

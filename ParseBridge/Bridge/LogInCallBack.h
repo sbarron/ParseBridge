@@ -25,10 +25,11 @@
  */
 
 #import <BridgeKit/JavaObject.h>
-@class ParseUser;
-@class ParseException;
 
-@interface LogInCallback: JavaObject
+@class ParseException;
+@class ParseUser;
+
+@interface LogInCallback : JavaObject
 
 -(id)init;
 -(void)done:(ParseUser*)user error:(ParseException*)error;

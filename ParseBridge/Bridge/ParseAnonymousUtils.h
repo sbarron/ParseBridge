@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Apportable. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <BridgeKit/JavaObject.h>
 
 @interface ParseAnonymousUtils : JavaObject
 

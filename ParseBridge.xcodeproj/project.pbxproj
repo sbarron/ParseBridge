@@ -26,6 +26,42 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090A0E6317C0C5DC0023C28B /* CountCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallBack.h; path = Bridge/CountCallBack.h; sourceTree = "<group>"; };
+		090A0E6417C0C5DC0023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
+		090A0E6517C0C5DC0023C28B /* FindCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FindCallback.h; path = Bridge/FindCallback.h; sourceTree = "<group>"; };
+		090A0E6617C0C5DC0023C28B /* FindCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FindCallback.m; path = Bridge/FindCallback.m; sourceTree = "<group>"; };
+		090A0E6717C0C5DC0023C28B /* FunctionCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FunctionCallback.h; path = Bridge/FunctionCallback.h; sourceTree = "<group>"; };
+		090A0E6817C0C5DC0023C28B /* FunctionCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FunctionCallback.m; path = Bridge/FunctionCallback.m; sourceTree = "<group>"; };
+		090A0E6917C0C5DC0023C28B /* GetCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetCallback.h; path = Bridge/GetCallback.h; sourceTree = "<group>"; };
+		090A0E6A17C0C5DD0023C28B /* GetCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GetCallback.m; path = Bridge/GetCallback.m; sourceTree = "<group>"; };
+		090A0E6B17C0C5DD0023C28B /* GetDataCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetDataCallback.h; path = Bridge/GetDataCallback.h; sourceTree = "<group>"; };
+		090A0E6C17C0C5DD0023C28B /* GetDataCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GetDataCallback.m; path = Bridge/GetDataCallback.m; sourceTree = "<group>"; };
+		090A0E6D17C0C5DD0023C28B /* LocationCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationCallback.h; path = Bridge/LocationCallback.h; sourceTree = "<group>"; };
+		090A0E6E17C0C5DD0023C28B /* LocationCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationCallback.m; path = Bridge/LocationCallback.m; sourceTree = "<group>"; };
+		090A0E6F17C0C5DD0023C28B /* ProgressCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProgressCallback.h; path = Bridge/ProgressCallback.h; sourceTree = "<group>"; };
+		090A0E7017C0C5DD0023C28B /* ProgressCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProgressCallback.m; path = Bridge/ProgressCallback.m; sourceTree = "<group>"; };
+		090A0E7117C0C5DD0023C28B /* PushCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PushCallback.h; path = Bridge/PushCallback.h; sourceTree = "<group>"; };
+		090A0E7217C0C5DD0023C28B /* PushCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PushCallback.m; path = Bridge/PushCallback.m; sourceTree = "<group>"; };
+		090A0E7317C0C5DD0023C28B /* RefreshCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RefreshCallback.h; path = Bridge/RefreshCallback.h; sourceTree = "<group>"; };
+		090A0E7417C0C5DD0023C28B /* RefreshCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RefreshCallback.m; path = Bridge/RefreshCallback.m; sourceTree = "<group>"; };
+		090A0E7517C0C5DD0023C28B /* RequestPasswordResetCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RequestPasswordResetCallback.h; path = Bridge/RequestPasswordResetCallback.h; sourceTree = "<group>"; };
+		090A0E7617C0C5DD0023C28B /* RequestPasswordResetCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RequestPasswordResetCallback.m; path = Bridge/RequestPasswordResetCallback.m; sourceTree = "<group>"; };
+		090A0E7717C0C5DD0023C28B /* SendCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SendCallback.h; path = Bridge/SendCallback.h; sourceTree = "<group>"; };
+		090A0E7817C0C5DD0023C28B /* SendCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SendCallback.m; path = Bridge/SendCallback.m; sourceTree = "<group>"; };
+		090A0E7917C0C5DD0023C28B /* SignUpCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignUpCallback.h; path = Bridge/SignUpCallback.h; sourceTree = "<group>"; };
+		090A0E7A17C0C5DD0023C28B /* SignUpCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignUpCallback.m; path = Bridge/SignUpCallback.m; sourceTree = "<group>"; };
+		090A0E7B17C0C5DD0023C28B /* StandardPushCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StandardPushCallback.h; path = Bridge/StandardPushCallback.h; sourceTree = "<group>"; };
+		090A0E7C17C0C5DD0023C28B /* StandardPushCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StandardPushCallback.m; path = Bridge/StandardPushCallback.m; sourceTree = "<group>"; };
+		090A0E7D17C0C6910023C28B /* ParseAnonymousUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseAnonymousUtils.h; path = Bridge/ParseAnonymousUtils.h; sourceTree = "<group>"; };
+		090A0E7E17C0C6910023C28B /* ParseAnonymousUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseAnonymousUtils.m; path = Bridge/ParseAnonymousUtils.m; sourceTree = "<group>"; };
+		090A0E7F17C0C6910023C28B /* ParseCloud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseCloud.h; path = Bridge/ParseCloud.h; sourceTree = "<group>"; };
+		090A0E8017C0C6910023C28B /* ParseCloud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseCloud.m; path = Bridge/ParseCloud.m; sourceTree = "<group>"; };
+		090A0E8117C0C6910023C28B /* ParseImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseImageView.h; path = Bridge/ParseImageView.h; sourceTree = "<group>"; };
+		090A0E8217C0C6910023C28B /* ParseImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseImageView.m; path = Bridge/ParseImageView.m; sourceTree = "<group>"; };
+		090A0E8317C0C6910023C28B /* ParseRelation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseRelation.h; path = Bridge/ParseRelation.h; sourceTree = "<group>"; };
+		090A0E8417C0C6910023C28B /* ParseRelation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRelation.m; path = Bridge/ParseRelation.m; sourceTree = "<group>"; };
+		090A0E8517C0C6910023C28B /* ParseRole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseRole.h; path = Bridge/ParseRole.h; sourceTree = "<group>"; };
+		090A0E8617C0C6910023C28B /* ParseRole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRole.m; path = Bridge/ParseRole.m; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D4C17B0C79200B99928 /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseQuery.m; path = Bridge/ParseQuery.m; sourceTree = "<group>"; };
 		098A2D4D17B0C79200B99928 /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseUser.m; path = Bridge/ParseUser.m; sourceTree = "<group>"; };
@@ -65,18 +101,6 @@
 		09A1401F17BF51B000A3F1AE /* LogInCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogInCallback.h; path = Bridge/LogInCallback.h; sourceTree = "<group>"; };
 		09A1402017BF525000A3F1AE /* SaveCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SaveCallback.m; path = Bridge/SaveCallback.m; sourceTree = "<group>"; };
 		09A1402117BF525100A3F1AE /* SaveCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaveCallback.h; path = Bridge/SaveCallback.h; sourceTree = "<group>"; };
-		09A1402217BF532A00A3F1AE /* FindCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindCallback.h; sourceTree = "<group>"; };
-		09A1402317BF532C00A3F1AE /* FindCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindCallback.m; sourceTree = "<group>"; };
-		09A1402417BF534700A3F1AE /* FunctionCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionCallback.h; sourceTree = "<group>"; };
-		09A1402517BF534800A3F1AE /* FunctionCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionCallback.m; sourceTree = "<group>"; };
-		09A1402617BF53C400A3F1AE /* GetCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetCallback.h; sourceTree = "<group>"; };
-		09A1402717BF53C500A3F1AE /* GetCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetCallback.m; sourceTree = "<group>"; };
-		09A1402817BF546200A3F1AE /* GetDataCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDataCallback.h; sourceTree = "<group>"; };
-		09A1402917BF546300A3F1AE /* GetDataCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetDataCallback.m; sourceTree = "<group>"; };
-		09A1402A17BF54F200A3F1AE /* LocationCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationCallback.h; sourceTree = "<group>"; };
-		09A1402B17BF54F300A3F1AE /* LocationCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationCallback.m; sourceTree = "<group>"; };
-		09A1402C17BF551200A3F1AE /* LogInCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInCallback.h; sourceTree = "<group>"; };
-		09A1402D17BF551300A3F1AE /* LogInCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInCallback.m; sourceTree = "<group>"; };
 		09A5883A17BB4116004F48C1 /* ParseInstallation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseInstallation.h; path = Bridge/ParseInstallation.h; sourceTree = "<group>"; };
 		09A5883B17BB4116004F48C1 /* ParseInstallation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseInstallation.m; path = Bridge/ParseInstallation.m; sourceTree = "<group>"; };
 		09A5883C17BB517B004F48C1 /* PushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PushService.h; path = Bridge/PushService.h; sourceTree = "<group>"; };
@@ -87,32 +111,6 @@
 		09A9B9AF17B8DA1C00ACA1BD /* ParseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseHeaders.h; path = Bridge/ParseHeaders.h; sourceTree = "<group>"; };
 		09A9B9B317BA1D9200ACA1BD /* ParsePush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParsePush.h; path = Bridge/ParsePush.h; sourceTree = "<group>"; };
 		09A9B9B417BA1D9300ACA1BD /* ParsePush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParsePush.m; path = Bridge/ParsePush.m; sourceTree = "<group>"; };
-		09F2DF0A17BF570E000733E1 /* ParseAnonymousUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseAnonymousUtils.h; sourceTree = "<group>"; };
-		09F2DF0B17BF570E000733E1 /* ParseAnonymousUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseAnonymousUtils.m; sourceTree = "<group>"; };
-		09F2DF0C17BF579F000733E1 /* ParseCloud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseCloud.h; sourceTree = "<group>"; };
-		09F2DF0D17BF579F000733E1 /* ParseCloud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseCloud.m; sourceTree = "<group>"; };
-		09F2DF0E17BF57CA000733E1 /* ParseImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseImageView.h; sourceTree = "<group>"; };
-		09F2DF0F17BF57CA000733E1 /* ParseImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseImageView.m; sourceTree = "<group>"; };
-		09F2DF1017BF5801000733E1 /* ParseQueryAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseQueryAdapter.h; sourceTree = "<group>"; };
-		09F2DF1117BF5801000733E1 /* ParseQueryAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseQueryAdapter.m; sourceTree = "<group>"; };
-		09F2DF1217BF581E000733E1 /* ParseRelation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseRelation.h; sourceTree = "<group>"; };
-		09F2DF1317BF581E000733E1 /* ParseRelation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseRelation.m; sourceTree = "<group>"; };
-		09F2DF1417BF5836000733E1 /* ParseRole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseRole.h; sourceTree = "<group>"; };
-		09F2DF1517BF5836000733E1 /* ParseRole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseRole.m; sourceTree = "<group>"; };
-		09F2DF1717BF5878000733E1 /* ProgressCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressCallback.h; sourceTree = "<group>"; };
-		09F2DF1817BF5878000733E1 /* ProgressCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressCallback.m; sourceTree = "<group>"; };
-		09F2DF1D17BF5915000733E1 /* RefreshCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshCallback.h; sourceTree = "<group>"; };
-		09F2DF1E17BF5915000733E1 /* RefreshCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshCallback.m; sourceTree = "<group>"; };
-		09F2DF1F17BF5937000733E1 /* PushCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushCallback.h; sourceTree = "<group>"; };
-		09F2DF2017BF5939000733E1 /* PushCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushCallback.m; sourceTree = "<group>"; };
-		09F2DF2117BF598F000733E1 /* RequestPasswordResetCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestPasswordResetCallback.h; sourceTree = "<group>"; };
-		09F2DF2217BF5990000733E1 /* RequestPasswordResetCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestPasswordResetCallback.m; sourceTree = "<group>"; };
-		09F2DF2317BF59D3000733E1 /* SendCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendCallback.h; sourceTree = "<group>"; };
-		09F2DF2417BF59D4000733E1 /* SendCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendCallback.m; sourceTree = "<group>"; };
-		09F2DF2517BF59E9000733E1 /* SignUpCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpCallback.h; sourceTree = "<group>"; };
-		09F2DF2617BF59EA000733E1 /* SignUpCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpCallback.m; sourceTree = "<group>"; };
-		09F2DF2717BF5A02000733E1 /* StandardPushCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardPushCallback.h; sourceTree = "<group>"; };
-		09F2DF2817BF5A03000733E1 /* StandardPushCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardPushCallback.m; sourceTree = "<group>"; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,18 +160,12 @@
 				09A5883D17BB517B004F48C1 /* PushService.m */,
 				098A2D5217B0C79200B99928 /* ParseQuery.h */,
 				098A2D4C17B0C79200B99928 /* ParseQuery.m */,
-				09F2DF1017BF5801000733E1 /* ParseQueryAdapter.h */,
-				09F2DF1117BF5801000733E1 /* ParseQueryAdapter.m */,
 				098A2D5317B0C79200B99928 /* ParseUser.h */,
 				098A2D4D17B0C79200B99928 /* ParseUser.m */,
 				098A2D5117B0C79200B99928 /* ParseFacebookUtils.h */,
 				098A2D4F17B0C79200B99928 /* ParseFacebookUtils.m */,
 				098A2D5817B0C79200B99928 /* ParseObject.h */,
 				098A2D5017B0C79200B99928 /* ParseObject.m */,
-				09F2DF1217BF581E000733E1 /* ParseRelation.h */,
-				09F2DF1317BF581E000733E1 /* ParseRelation.m */,
-				09F2DF1417BF5836000733E1 /* ParseRole.h */,
-				09F2DF1517BF5836000733E1 /* ParseRole.m */,
 				09A5883A17BB4116004F48C1 /* ParseInstallation.h */,
 				09A5883B17BB4116004F48C1 /* ParseInstallation.m */,
 				098A2D5417B0C79200B99928 /* ParseFile.h */,
@@ -188,13 +180,17 @@
 				098A2D5E17B0C79200B99928 /* ParseException.m */,
 				09A9B9AD17B8DA1A00ACA1BD /* ParseACL.h */,
 				09A9B9AE17B8DA1B00ACA1BD /* ParseACL.m */,
+				090A0E7D17C0C6910023C28B /* ParseAnonymousUtils.h */,
+				090A0E7E17C0C6910023C28B /* ParseAnonymousUtils.m */,
+				090A0E7F17C0C6910023C28B /* ParseCloud.h */,
+				090A0E8017C0C6910023C28B /* ParseCloud.m */,
+				090A0E8117C0C6910023C28B /* ParseImageView.h */,
+				090A0E8217C0C6910023C28B /* ParseImageView.m */,
+				090A0E8317C0C6910023C28B /* ParseRelation.h */,
+				090A0E8417C0C6910023C28B /* ParseRelation.m */,
+				090A0E8517C0C6910023C28B /* ParseRole.h */,
+				090A0E8617C0C6910023C28B /* ParseRole.m */,
 				09A9B9AF17B8DA1C00ACA1BD /* ParseHeaders.h */,
-				09F2DF0A17BF570E000733E1 /* ParseAnonymousUtils.h */,
-				09F2DF0B17BF570E000733E1 /* ParseAnonymousUtils.m */,
-				09F2DF0C17BF579F000733E1 /* ParseCloud.h */,
-				09F2DF0D17BF579F000733E1 /* ParseCloud.m */,
-				09F2DF0E17BF57CA000733E1 /* ParseImageView.h */,
-				09F2DF0F17BF57CA000733E1 /* ParseImageView.m */,
 			);
 			name = Bridge;
 			sourceTree = "<group>";
@@ -218,38 +214,38 @@
 		09A1402E17BF558500A3F1AE /* callbacks */ = {
 			isa = PBXGroup;
 			children = (
+				090A0E6317C0C5DC0023C28B /* CountCallBack.h */,
+				090A0E6417C0C5DC0023C28B /* CountCallback.m */,
+				090A0E6517C0C5DC0023C28B /* FindCallback.h */,
+				090A0E6617C0C5DC0023C28B /* FindCallback.m */,
+				090A0E6717C0C5DC0023C28B /* FunctionCallback.h */,
+				090A0E6817C0C5DC0023C28B /* FunctionCallback.m */,
+				090A0E6917C0C5DC0023C28B /* GetCallback.h */,
+				090A0E6A17C0C5DD0023C28B /* GetCallback.m */,
+				090A0E6B17C0C5DD0023C28B /* GetDataCallback.h */,
+				090A0E6C17C0C5DD0023C28B /* GetDataCallback.m */,
+				090A0E6D17C0C5DD0023C28B /* LocationCallback.h */,
+				090A0E6E17C0C5DD0023C28B /* LocationCallback.m */,
+				090A0E6F17C0C5DD0023C28B /* ProgressCallback.h */,
+				090A0E7017C0C5DD0023C28B /* ProgressCallback.m */,
+				090A0E7117C0C5DD0023C28B /* PushCallback.h */,
+				090A0E7217C0C5DD0023C28B /* PushCallback.m */,
+				090A0E7317C0C5DD0023C28B /* RefreshCallback.h */,
+				090A0E7417C0C5DD0023C28B /* RefreshCallback.m */,
+				090A0E7517C0C5DD0023C28B /* RequestPasswordResetCallback.h */,
+				090A0E7617C0C5DD0023C28B /* RequestPasswordResetCallback.m */,
+				090A0E7717C0C5DD0023C28B /* SendCallback.h */,
+				090A0E7817C0C5DD0023C28B /* SendCallback.m */,
+				090A0E7917C0C5DD0023C28B /* SignUpCallback.h */,
+				090A0E7A17C0C5DD0023C28B /* SignUpCallback.m */,
+				090A0E7B17C0C5DD0023C28B /* StandardPushCallback.h */,
+				090A0E7C17C0C5DD0023C28B /* StandardPushCallback.m */,
 				09A1401C17BF51A000A3F1AE /* DeleteCallback.h */,
 				09A1401D17BF51A100A3F1AE /* DeleteCallback.m */,
 				09A1401E17BF51A700A3F1AE /* LogInCallback.m */,
 				09A1401F17BF51B000A3F1AE /* LogInCallback.h */,
 				09A1402017BF525000A3F1AE /* SaveCallback.m */,
 				09A1402117BF525100A3F1AE /* SaveCallback.h */,
-				09A1402217BF532A00A3F1AE /* FindCallback.h */,
-				09A1402317BF532C00A3F1AE /* FindCallback.m */,
-				09A1402417BF534700A3F1AE /* FunctionCallback.h */,
-				09A1402517BF534800A3F1AE /* FunctionCallback.m */,
-				09A1402617BF53C400A3F1AE /* GetCallback.h */,
-				09A1402717BF53C500A3F1AE /* GetCallback.m */,
-				09A1402817BF546200A3F1AE /* GetDataCallback.h */,
-				09A1402917BF546300A3F1AE /* GetDataCallback.m */,
-				09A1402A17BF54F200A3F1AE /* LocationCallback.h */,
-				09A1402B17BF54F300A3F1AE /* LocationCallback.m */,
-				09A1402C17BF551200A3F1AE /* LogInCallback.h */,
-				09A1402D17BF551300A3F1AE /* LogInCallback.m */,
-				09F2DF1717BF5878000733E1 /* ProgressCallback.h */,
-				09F2DF1817BF5878000733E1 /* ProgressCallback.m */,
-				09F2DF1F17BF5937000733E1 /* PushCallback.h */,
-				09F2DF2017BF5939000733E1 /* PushCallback.m */,
-				09F2DF1D17BF5915000733E1 /* RefreshCallback.h */,
-				09F2DF1E17BF5915000733E1 /* RefreshCallback.m */,
-				09F2DF2117BF598F000733E1 /* RequestPasswordResetCallback.h */,
-				09F2DF2217BF5990000733E1 /* RequestPasswordResetCallback.m */,
-				09F2DF2317BF59D3000733E1 /* SendCallback.h */,
-				09F2DF2417BF59D4000733E1 /* SendCallback.m */,
-				09F2DF2517BF59E9000733E1 /* SignUpCallback.h */,
-				09F2DF2617BF59EA000733E1 /* SignUpCallback.m */,
-				09F2DF2717BF5A02000733E1 /* StandardPushCallback.h */,
-				09F2DF2817BF5A03000733E1 /* StandardPushCallback.m */,
 			);
 			name = callbacks;
 			sourceTree = "<group>";

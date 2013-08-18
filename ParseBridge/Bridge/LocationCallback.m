@@ -23,43 +23,50 @@
  * THE SOFTWARE.
  *
  */
-#import "SignUpCallback.h"
-#import "ParseException.h"
 
-@implementation SignUpCallback
+#import "LocationCallback.h"
+#import "ParseException.h"
+#import "ParseGeoPoint.h"
+
+@implementation LocationCallback
+
+
 
 + (void)initializeJava
 {
     [super initializeJava];
+	BOOL results;
+	//*- Java:  public SaveCallback()
+	results = [LocationCallback registerConstructor];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
-	//*- Java: public SignUpCallback()
-	[SignUpCallback registerConstructor];
-	
-	//*- Java:  public abstract void done(ParseException e)
-	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
+	//*- Java:  public abstract void done(ParseGeoPoint geoPoint,ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[SignUpCallback registerCallback:@"done"
-						  selector:@selector(done:)
-					   returnValue:nil
-						 arguments:[ParseException className], nil];
+	results = [LocationCallback registerCallback:@"done"
+							 selector:@selector(done:error:)
+						  returnValue:nil
+							arguments:[ParseGeoPoint className],[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
 	
 }
 
--(void)done:(ParseException*)error{
+-(void)done:(ParseGeoPoint*)geoPoint error:(ParseException*)error{
 	//[self _done:error];
-	if(!error){
+	if(!error && geoPoint != nil){
 		//No error
-		ALog(@"Send success");
+		ALog(@"GeoPoint Retrieved Successfully");
 	}
 	else{
-		ALog(@"Send failed", [error getCode]);
+		ALog(@"Object retrieval failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.SignUpCallback";
+    return @"com.parse.LocationCallback";
 }
 
 

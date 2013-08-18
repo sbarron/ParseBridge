@@ -24,47 +24,47 @@
  *
  */
 
-#import "FindCallback.h"
-#import <BridgeKit/JavaList.h>
+#import "FunctionCallback.h"
+#import <BridgeKit/JavaObject.h>
 #import "ParseException.h"
 
-@implementation FindCallback
+@implementation FunctionCallback
 
 
 + (void)initializeJava
 {
     [super initializeJava];
-	
+	BOOL results;
 	//*- Java:  public SaveCallback()
-	[FindCallback registerConstructor];
-	
-	//*- Java:  public abstract void done(List<T> objects,ParseException e)
+	results = [FunctionCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
+	//*- Java:  public abstract void done(T object,ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[FindCallback registerCallback:@"done"
+	results = [FunctionCallback registerCallback:@"done"
 						  selector:@selector(done:error:)
 					   returnValue:nil
-						 arguments:[JavaList className],[ParseException className], nil];
+						 arguments:[JavaObject className],[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
 }
 
 
-
--(void)done:(JavaList*)list error:(ParseException*)error{
+-(void)done:(JavaObject*)obj error:(ParseException*)error{
 	//[self _done:error];
-	if(!error && list != nil){
+	if(!error && obj != nil){
 		//No error
-		ALog(@"Find Successful");
+		ALog(@"Cloud Function Successful");
 	}
 	else{
-		ALog(@"Find failed", [error getCode]);
+		ALog(@"Cloud Function failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.FindCallback";
+    return @"com.parse.FunctionCallback";
 }
 
 @end

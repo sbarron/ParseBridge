@@ -23,47 +23,46 @@
  * THE SOFTWARE.
  *
  */
-#import "LogInCallback.h"
-#import "ParseUser.h"
+#import "ProgressCallback.h"
+#import "ParseException.h"
+#import <BridgeKit/JavaClass.h>
 
-@implementation LogInCallback
-
-
+@implementation ProgressCallback
 
 + (void)initializeJava
 {
     [super initializeJava];
+	BOOL results;
+	//*- Java:  public ProgressCallback()
+	results = [ProgressCallback registerConstructor];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
-	//*- Java:  public LogInCallback()
-	[LogInCallback registerConstructor];
-	
-	//*- Java:  public abstract void done(ParseUser user,ParseException e)
-	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
+	//*- Java:  public abstract void done(Integer percentDone)
+	//*- iOS Bridge Method:  public abstract void done(Integer percentDone)
 	//Override this function with the code you want to run after the save is complete.
-	[LogInCallback registerCallback:@"done"
-							  selector:@selector(done:error:)
-						   returnValue:nil
-							 arguments:[ParseUser className],[ParseException className], nil];
+	results = [ProgressCallback registerCallback:@"done"
+						   selector:@selector(done:)
+						returnValue:nil
+						  arguments:[JavaClass intPrimitive], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
 	
 }
 
--(void)done:(ParseUser*)user error:(ParseException*)error{
-	//[self _done:error];
+-(void)done:(int)percentDone{
 	if(!error && user != nil){
-		//No error
-		ALog(@"User Retrieved Successfully");
+		ALog(@"%i",percentDone);
 	}
 	else{
-		ALog(@"User retrieval failed", [error getCode]);
+		ALog(@"progress percentage failed");
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.LogInCallback";
+    return @"com.parse.ProgressCallback";
 }
-
 
 
 @end

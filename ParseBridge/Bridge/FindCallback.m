@@ -23,43 +23,50 @@
  * THE SOFTWARE.
  *
  */
-#import "ProgressCallback.h"
-#import "ParseException.h"
-#import <BridgeKit/JavaClass.h>
 
-@implementation ProgressCallback
+#import "FindCallback.h"
+#import <BridgeKit/JavaList.h>
+#import "ParseException.h"
+
+@implementation FindCallback
+
 
 + (void)initializeJava
 {
     [super initializeJava];
+	BOOL results;
+	//*- Java:  public SaveCallback()
+	results = [FindCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
 	
-	//*- Java:  public ProgressCallback()
-	[ProgressCallback registerConstructor];
-	
-	//*- Java:  public abstract void done(Integer percentDone)
-	//*- iOS Bridge Method:  public abstract void done(Integer percentDone)
+	//*- Java:  public abstract void done(List<T> objects,ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
-	[ProgressCallback registerCallback:@"done"
-						   selector:@selector(done:)
-						returnValue:nil
-						  arguments:[JavaClass intPrimitive], nil];
+	results = [FindCallback registerCallback:@"done"
+						  selector:@selector(done:error:)
+					   returnValue:nil
+						 arguments:[JavaList className],[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
 }
 
--(void)done:(int)percentDone{
-	if(!error && user != nil){
-		ALog(@"%i",percentDone);
+
+
+-(void)done:(JavaList*)list error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && list != nil){
+		//No error
+		ALog(@"Find Successful");
 	}
 	else{
-		ALog(@"progress percentage failed");
+		ALog(@"Find failed", [error getCode]);
 	}
 }
 
 
 + (NSString *)className
 {
-    return @"com.parse.ProgressCallback";
+    return @"com.parse.FindCallback";
 }
-
 
 @end

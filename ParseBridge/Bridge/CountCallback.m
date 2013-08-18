@@ -1,13 +1,13 @@
 //
-//  ParseQueryAdapter.h
+//  CountCallBack.m
 //  ParseBridge
 //
 //  Created by Spencer Barron on 8/17/13.
 //  Copyright (c) 2013 Apportable. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CountCallBack.h"
 
-@interface ParseQueryAdapter : ParseObject
+@implementation CountCallBack
 
 @end

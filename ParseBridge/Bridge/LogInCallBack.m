@@ -23,44 +23,42 @@
  * THE SOFTWARE.
  *
  */
-
-#import "LogInCallBack.h"
+#import "LogInCallback.h"
 #import "ParseUser.h"
-#import "ParseException.h"
 
 @implementation LogInCallback
+
+
 
 + (void)initializeJava
 {
     [super initializeJava];
-		
-		//*- Java:  public SaveCallback()
-		[LogInCallback registerConstructor];
-		
-		//*- Java:  public abstract void done(ParseUser user,ParseException e)
-		//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
-		//Override this function with the code you want to run after the save is complete.
-		[LogInCallback registerCallback:@"done"
-								selector:@selector(done:error:)
-							 returnValue:nil
-							   arguments:[ParseException className], nil];
-		
+	BOOL results;
+	//*- Java:  public LogInCallback()
+	results = [LogInCallback registerConstructor];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
+	//*- Java:  public abstract void done(ParseUser user,ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
+	//Override this function with the code you want to run after the save is complete.
+	results = [LogInCallback registerCallback:@"done"
+							  selector:@selector(done:error:)
+						   returnValue:nil
+							 arguments:[ParseUser className],[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
+	
 }
 
- 
-	
--(void)done:(ParseUser*)user :(ParseException*)error{
-		//[self _done:error];
-		if(!error && user != nil){
-			//No error
-			ALog(@"Login Successful");
-		}
-		else if(user == nil){
-			ALog(@"username or password is invalid");
-		}
-		else{
-			ALog(@"username or password is invalid", [error getCode]);
-		}
+-(void)done:(ParseUser*)user error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && user != nil){
+		//No error
+		ALog(@"User Retrieved Successfully");
+	}
+	else{
+		ALog(@"User retrieval failed", [error getCode]);
+	}
 }
 
 

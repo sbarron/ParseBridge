@@ -23,15 +23,44 @@
  * THE SOFTWARE.
  *
  */
+#import "StandardPushCallback.h"
+#import "ParseException.h"
 
-#import <BridgeKit/JavaObject.h>
+@implementation StandardPushCallback
 
-@class ParseException;
-@class ParseUser;
+//public StandardPushCallback()
+//public void run()
 
-@interface LogInCallback : JavaObject
++ (void)initializeJava
+{
+    [super initializeJava];
+	BOOL results;
+	//*- Java: public SignUpCallback()
+	results = [StandardPushCallback registerConstructor];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
+	//*- Java:  public abstract void done(ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
+	//Override this function with the code you want to run after the save is complete.
+	results = [StandardPushCallback registerCallback:@"run"
+							selector:@selector(run:)
+						 returnValue:nil
+						   arguments:nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	
+	
+}
 
--(id)init;
--(void)done:(ParseUser*)user error:(ParseException*)error;
+-(void)run{
+	
+		ALog(@"running");
+	
+}
+
+
++ (NSString *)className
+{
+    return @"com.parse.StandardPushCallback";
+}
 
 @end

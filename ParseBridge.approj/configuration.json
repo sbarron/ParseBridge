@@ -183,6 +183,7 @@
     	"ParseBridge/Bridge/ParseQuery.m",
     	"ParseBridge/Bridge/ParseObject.m",
     	"ParseBridge/Bridge/ParseUser.m",
+    	"ParseBridge/Bridge/ParseRole.m",
     	"ParseBridge/Bridge/ParseAnalytics.m",
     	"ParseBridge/Bridge/ParseFacebookUtils.m",
     	"ParseBridge/Bridge/LogInCallBack.m",
@@ -194,6 +195,10 @@
     	"ParseBridge/Bridge/ParseInstallation.m",
     	"ParseBridge/Bridge/ParsePush.m",
     	"ParseBridge/Bridge/PushService.m",
+    	"ParseBridge/Bridge/ParseRelation.m",
+    	"ParseBridge/Bridge/ParseAnonymousUtils.m",
+    	"ParseBridge/Bridge/ParseCloud.m",
+    	"ParseBridge/Bridge/ParseImageView.m",
     ],
     
     // A list of glob inclusion filters for additional files.
