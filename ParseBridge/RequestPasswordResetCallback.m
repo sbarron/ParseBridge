@@ -28,5 +28,40 @@
 #import "ParseException.h"
 
 @implementation RequestPasswordResetCallback
+ 
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	//*- Java:  RequestPasswordResetCallback()
+	[RequestPasswordResetCallback registerConstructor];
+	
+	//*- Java:  public abstract void done(ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
+	//Override this function with the code you want to run after the save is complete.
+	[RequestPasswordResetCallback registerCallback:@"done"
+							 selector:@selector(done:)
+						  returnValue:nil
+							arguments:[ParseException className], nil];
+	
+}
+
+-(void)done:(ParseException*)error{
+	//[self _done:error];
+	if(!error){
+		//No error
+		ALog(@"Password reset request succesful");
+	}
+	else{
+		ALog(@"Password reset request failed", [error getCode]);
+	}
+}
+
+
++ (NSString *)className
+{
+    return @"com.parse.RequestPasswordResetCallback";
+}
+
 
 @end

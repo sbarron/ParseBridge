@@ -29,4 +29,7 @@
 
 @interface RefreshCallback : JavaObject
 
+-(id)init;
+-(void)done:(ParseObject*)object error:(ParseException*)error;
+
 @end

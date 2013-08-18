@@ -27,6 +27,70 @@
 #import "PushCallback.h"
 #import "ParseException.h"
 
+// VERIFY SUPPORT for JSONObjects and for Android Service
 @implementation PushCallback
+
+ 
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	[PushCallback registerConstructor];
+	
+	//*- Java:  public void setChannel(String theChannel)
+	//*- iOS Bridge Method:  -(void)setChannel:(NSString*)channel;
+	results = [PushCallback registerInstanceMethod:@"setChannel"
+										selector:@selector(setChannel:)
+									 returnValue:nil
+									   arguments:[NSString className], nil];
+	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	
+	
+	//*- Java: public void setService(Service theService)
+	//*- iOS Bridge Method:  -(void)setService:(JavaObject*)channel;
+	results = [PushCallback registerInstanceMethod:@"setService"
+										  selector:@selector(setService:)
+									   returnValue:nil
+										 arguments:[JavaObject className], nil];
+	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	
+	
+	//*- Java: public void setPushData(JSONObject thePushData)
+	//*- iOS Bridge Method:  -(void)setPushData:(JavaObject*)pushData;
+	results = [PushCallback registerInstanceMethod:@"setPushData"
+										  selector:@selector(setPushData:)
+									   returnValue:nil
+										 arguments:[JavaObject className], nil];
+	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	
+	
+	//*- Java: public void setLocalData(JSONObject theLocalData)
+	//*- iOS Bridge Method:  -(void)setLocalData:(JavaObject*)localData;
+	results = [PushCallback registerInstanceMethod:@"setLocalData"
+										  selector:@selector(setChannel:)
+									   returnValue:nil
+										 arguments:[JavaObject className], nil];
+	DLog(@"Registered setChannel  =  %@", (results ? @"YES" : @"NO"));
+	
+}
+
+-(void)done:(ParseUser*)user{
+	//[self _done:error];
+	if(!error && user != nil){
+		//No error
+		ALog(@"User Retrieved Successfully");
+	}
+	else{
+		ALog(@"Object retrieval failed", [error getCode]);
+	}
+}
+
+
++ (NSString *)className
+{
+    return @"com.parse.ProgressCallback";
+}
+
+
 
 @end

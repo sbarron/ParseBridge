@@ -25,6 +25,7 @@
  */
 #import "ProgressCallback.h"
 #import "ParseException.h"
+#import <BridgeKit/JavaClass.h>
 
 @implementation ProgressCallback
 
@@ -32,27 +33,25 @@
 {
     [super initializeJava];
 	
-	//*- Java:  public SaveCallback()
+	//*- Java:  public ProgressCallback()
 	[ProgressCallback registerConstructor];
 	
-	//*- Java:  done(Integer percentDone) 
-	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
+	//*- Java:  public abstract void done(Integer percentDone)
+	//*- iOS Bridge Method:  public abstract void done(Integer percentDone)
 	//Override this function with the code you want to run after the save is complete.
 	[ProgressCallback registerCallback:@"done"
 						   selector:@selector(done:)
 						returnValue:nil
-						  arguments:[ParseUser className],[ParseException className], nil];
+						  arguments:[JavaClass intPrimitive], nil];
 	
 }
 
--(void)done:(ParseUser*)user{
-	//[self _done:error];
+-(void)done:(int)percentDone{
 	if(!error && user != nil){
-		//No error
-		ALog(@"User Retrieved Successfully");
+		ALog(@"%i",percentDone);
 	}
 	else{
-		ALog(@"Object retrieval failed", [error getCode]);
+		ALog(@"progress percentage failed");
 	}
 }
 

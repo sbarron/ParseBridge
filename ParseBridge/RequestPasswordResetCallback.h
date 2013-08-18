@@ -29,4 +29,6 @@
 
 @interface RequestPasswordResetCallback : JavaObject
 
+-(void)done:(ParseException*)error;
+
 @end

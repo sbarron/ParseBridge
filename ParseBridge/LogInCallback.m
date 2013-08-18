@@ -34,10 +34,10 @@
 {
     [super initializeJava];
 	
-	//*- Java:  public SaveCallback()
+	//*- Java:  public LogInCallback()
 	[LogInCallback registerConstructor];
 	
-	//*- Java:  public abstract void done(ParseGeoPoint geoPoint,ParseException e)
+	//*- Java:  public abstract void done(ParseUser user,ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
 	[LogInCallback registerCallback:@"done"
@@ -54,7 +54,7 @@
 		ALog(@"User Retrieved Successfully");
 	}
 	else{
-		ALog(@"Object retrieval failed", [error getCode]);
+		ALog(@"User retrieval failed", [error getCode]);
 	}
 }
 

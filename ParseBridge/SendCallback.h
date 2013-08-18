@@ -26,6 +26,9 @@
 
 #import <BridgeKit/JavaObject.h>
 @class ParseException;
+
 @interface SendCallback : JavaObject
+
+-(void)done:(ParseException*)error;
 
 @end

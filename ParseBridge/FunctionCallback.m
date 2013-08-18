@@ -38,7 +38,7 @@
 	//*- Java:  public SaveCallback()
 	[FunctionCallback registerConstructor];
 	
-	//*- Java:  done(T object, ParseException e) 
+	//*- Java:  public abstract void done(T object,ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
 	[FunctionCallback registerCallback:@"done"

@@ -29,4 +29,40 @@
 
 @implementation SendCallback
 
+
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	//*- Java: public SendCallback()
+	[SendCallback registerConstructor];
+	
+	//*- Java:  public abstract void done(ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
+	//Override this function with the code you want to run after the save is complete.
+	[SendCallback registerCallback:@"done"
+										  selector:@selector(done:)
+									   returnValue:nil
+										 arguments:[ParseException className], nil];
+	
+}
+
+-(void)done:(ParseException*)error{
+	//[self _done:error];
+	if(!error){
+		//No error
+		ALog(@"Send success");
+	}
+	else{
+		ALog(@"Send failed", [error getCode]);
+	}
+}
+
+
++ (NSString *)className
+{
+    return @"com.parse.SendCallback";
+}
+
+
 @end

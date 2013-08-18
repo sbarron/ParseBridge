@@ -27,6 +27,13 @@
 #import <BridgeKit/JavaObject.h>
 @class ParseException;
 
+//Verfify support for android service and JSON Objects
 @interface PushCallback : ParseObject
+
+-(void)setChannel:(NSString*)channel;
+-(void)setService:(JavaObject*)channel;
+-(void)setLocalData:(JavaObject*)localData;
+-(void)setLocalData:(JavaObject*)channel;
+
 
 @end

@@ -37,7 +37,7 @@
 		//*- Java:  public SaveCallback()
 		[LogInCallback registerConstructor];
 		
-		//*- Java:  public abstract void done(ParseException e)
+		//*- Java:  public abstract void done(ParseUser user,ParseException e)
 		//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 		//Override this function with the code you want to run after the save is complete.
 		[LogInCallback registerCallback:@"done"

@@ -29,4 +29,42 @@
 
 @implementation RefreshCallback
 
+
+//public RefreshCallback()
+
+
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	//*- Java:  public SaveCallback()
+	[RefreshCallback registerConstructor];
+	
+	//*- Java:  public abstract void done(ParseObject object, ParseException e)
+	//*- iOS Bridge Method:  -(void)done:(ParseObject*)object error:(ParseException*)error;
+	//Override this function with the code you want to run after the save is complete.
+	[RefreshCallback registerCallback:@"done"
+						 selector:@selector(done:error:)
+					  returnValue:nil
+						arguments:[ParseObject className],[ParseException className], nil];
+	
+}
+
+-(void)done:(ParseObject*)obj error:(ParseException*)error{
+	//[self _done:error];
+	if(!error && obj != nil){
+		//No error
+		ALog(@"Object refreshed Successfully");
+	}
+	else{
+		ALog(@"Object failed to refresh", [error getCode]);
+	}
+}
+
+
++ (NSString *)className
+{
+    return @"com.parse.RefreshCallback";
+}
+
 @end

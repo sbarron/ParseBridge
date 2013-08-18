@@ -29,4 +29,6 @@
 
 @interface ProgressCallback : ParseObject
 
+-(void)done:(int)percentDone;
+
 @end
