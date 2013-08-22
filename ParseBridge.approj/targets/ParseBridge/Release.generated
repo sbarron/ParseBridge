@@ -97,6 +97,11 @@
                     "suffix": "LocationCallback.h", 
                     "key": "LocationCallback.h"
                 }, 
+                "CountCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "CountCallback.h", 
+                    "key": "CountCallback.h"
+                }, 
                 "SaveCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "SaveCallback.h", 
@@ -211,11 +216,6 @@
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseInstallation.h", 
                     "key": "ParseInstallation.h"
-                }, 
-                "CountCallBack.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "CountCallBack.h", 
-                    "key": "CountCallBack.h"
                 }, 
                 "LogInCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 

@@ -96,7 +96,7 @@
 
 
 -(NSString*)getInstallationId{
-	NSString* installationID = [self _getInstallationId];
+	NSString* installationID = [NSString stringWithJavaString:[self _getInstallationId]];
 	DLog(@"InstallationID = %@",installationID);
 	return  installationID; 
 }

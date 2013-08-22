@@ -37,7 +37,7 @@
 	BOOL results;
 	results = [PushCallback registerConstructor];
 	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
-	
+	/*
 	//*- Java:  public void setChannel(String theChannel)
 	//*- iOS Bridge Method:  -(void)setChannel:(NSString*)channel;
 	results = [PushCallback registerInstanceMethod:@"setChannel"
@@ -72,20 +72,8 @@
 									   returnValue:nil
 										 arguments:[JavaObject className], nil];
 	DLog(@"Registered setLocalData  =  %@", (results ? @"YES" : @"NO"));
-	
+	*/
 }
-
--(void)done:(ParseUser*)user{
-	//[self _done:error];
-	if(!error && user != nil){
-		//No error
-		ALog(@"User Retrieved Successfully");
-	}
-	else{
-		ALog(@"Object retrieval failed", [error getCode]);
-	}
-}
-
 
 + (NSString *)className
 {

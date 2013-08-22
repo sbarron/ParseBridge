@@ -56,10 +56,10 @@
 	//[self _done:error];
 	if(!error && list != nil){
 		//No error
-		ALog(@"Find Successful");
+		NSLog(@"Find Successful");
 	}
 	else{
-		ALog(@"Find failed", [error getCode]);
+		NSLog(@"Find failed", [error getCode]);
 	}
 }
 

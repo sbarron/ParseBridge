@@ -54,10 +54,10 @@
 	//[self _done:error];
 	if(!error){
 		//No error
-		ALog(@"Password reset request succesful");
+		NSLog(@"Password reset request succesful");
 	}
 	else{
-		ALog(@"Password reset request failed", [error getCode]);
+		NSLog(@"Password reset request failed", [error getCode]);
 	}
 }
 

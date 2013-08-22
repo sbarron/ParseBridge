@@ -27,15 +27,11 @@
 #import <BridgeKit/JavaObject.h>
 #import "ParseUser.h"
 
-@interface ParseFacebookUtils : JavaObject
+@class LogInCallback;
+@class SaveCallback;
+@class AndroidActivity;
 
-/*
- 
- PFFacebookUtils
- + initializeFacebook
- + isLinkedWithUser:(PFUser*)
- + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
- */
+@interface ParseFacebookUtils : JavaObject
 
 + (void)initializeFacebook:(NSString*)appId;
 
@@ -46,7 +42,9 @@
 + (BOOL)isLinkedWithUser:(ParseUser*)user;
 
 + (void)logInWithPermissions:(NSArray *)permissions;
-
++ (void)logIn:(AndroidActivity*)activity callback:(LogInCallback*)callback;
 + (void)linkUser:(id)user permissions:(NSArray *)permissions block:(id)block;
 
++ (void)saveLatestSessionDataWithCallback:(ParseUser*)user callback:(SaveCallback*)callback;
++ (void)saveLatestSessionData:(ParseUser*)user;
 @end

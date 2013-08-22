@@ -64,6 +64,23 @@
 
 	 //*- Java: void	setLongitude(double longitude)
 	//Set longitude.
++ (void)initializeJava
+{
+    [super initializeJava];
+	 
+	BOOL results;
+	//*- Java: public SendCallback()
+	results = [ParseGeoPoint registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
+	
+}
+ 
+
+
++ (NSString *)className
+{
+    return @"com.parse.ParseGeoPoint";
+}
 
 
 @end

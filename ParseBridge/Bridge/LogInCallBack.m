@@ -54,10 +54,10 @@
 	//[self _done:error];
 	if(!error && user != nil){
 		//No error
-		ALog(@"User Retrieved Successfully");
+		NSLog(@"User Retrieved Successfully");
 	}
 	else{
-		ALog(@"User retrieval failed", [error getCode]);
+		NSLog(@"User retrieval failed", [error getCode]);
 	}
 }
 

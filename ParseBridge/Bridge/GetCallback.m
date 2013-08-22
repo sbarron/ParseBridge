@@ -57,10 +57,10 @@
 	//[self _done:error];
 	if(!error && obj != nil){
 		//No error
-		ALog(@"Object Retrieved Successfully");
+		NSLog(@"Object Retrieved Successfully");
 	}
 	else{
-		ALog(@"Object retrieval failed", [error getCode]);
+		NSLog(@"Object retrieval failed", [error getCode]);
 	}
 }
 

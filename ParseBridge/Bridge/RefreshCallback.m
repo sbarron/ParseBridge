@@ -26,6 +26,7 @@
 
 #import "RefreshCallback.h"
 #import "ParseException.h"
+#import "ParseObject.h"
 
 @implementation RefreshCallback
 
@@ -58,10 +59,10 @@
 	//[self _done:error];
 	if(!error && obj != nil){
 		//No error
-		ALog(@"Object refreshed Successfully");
+		NSLog(@"Object refreshed Successfully");
 	}
 	else{
-		ALog(@"Object failed to refresh", [error getCode]);
+		NSLog(@"Object failed to refresh", [error getCode]);
 	}
 }
 

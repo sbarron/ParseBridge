@@ -25,7 +25,9 @@
  */
 #import "ProgressCallback.h"
 #import "ParseException.h"
+
 #import <BridgeKit/JavaClass.h>
+#import <BridgeKit/JavaNumbers.h>
 
 @implementation ProgressCallback
 
@@ -43,19 +45,14 @@
 	results = [ProgressCallback registerCallback:@"done"
 						   selector:@selector(done:)
 						returnValue:nil
-						  arguments:[JavaClass intPrimitive], nil];
+						  arguments:[JavaInteger className], nil];
 	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
 	
 }
 
 -(void)done:(int)percentDone{
-	if(!error && user != nil){
-		ALog(@"%i",percentDone);
-	}
-	else{
-		ALog(@"progress percentage failed");
-	}
+	 		NSLog(@"%i",percentDone);
 }
 
 

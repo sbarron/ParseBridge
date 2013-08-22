@@ -8,13 +8,7 @@
 
 #import "ParseBridgeAppDelegate.h"
 #ifdef ANDROID
-#import "Parse.h"
-#import "ParseUser.h"
-#import "ParseAnalytics.h"
-#import "ParseInstallation.h"
-#import "PushService.h"
-#import "ParseFacebookUtils.h"
-#import "ParseObject.h"
+#import "ParseHeaders.h"
 #import "ParseManager.h"
 #import <BridgeKit/AndroidActivity.h>
 #import <BridgeKit/AndroidIntent.h>
@@ -22,6 +16,7 @@
 #else
 #import <Parse/Parse.h>
 #endif
+
 #import <FacebookSDK/FacebookSDK.h>
 
 #define PARSE_APPLICATION_ID     @"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj"
@@ -40,9 +35,10 @@
 {
 #ifdef APPORTABLE
     NSString *result = @"Hello Android!!";
-	
+	[self initializeParse:launchOptions];
 #else
     NSString *result = @"Hello iOS!";
+	[self initializeParse:launchOptions];
 #endif
 	
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"BridgeKitDemo"
@@ -53,7 +49,7 @@
     [alert show];
     [alert release];
 	
-	[self initializeParse:launchOptions];
+	
 	
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -69,17 +65,20 @@
     
     [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
 	
-    DLog(@"Parse Android - Finished Android Init");
 	
+    
+	DLog(@"Parse Android - Finished Android Init");
+	
+	[self registerMethodsTest];
 	[self runParseTest];
-	[self startPushNotifications];
-	[self startAnalytics:launchOptions];
+	//[self startPushNotifications];
+	//[self startAnalytics:launchOptions];
 	
 #else
 	
     [Parse setApplicationId:PARSE_APPLICATION_ID
                   clientKey:PARSE_CLIENT_KEY];
-				
+	// [PFFacebookUtils initializeFacebook];
 	[self runParseTest];
 	[self startPushNotifications];
 	[self startAnalytics:launchOptions];
@@ -124,7 +123,7 @@
 
 -(void)startPushNotifications{
 #ifdef ANDROID
-    DLog(@"ParsePush Notifications");
+    DLog(@"Push Notifications initialized");
 	
 	[PushService setDefaultPushCallback:[AndroidActivity currentActivity] activitySubClass:[AndroidActivity currentActivity]];
 	
@@ -140,6 +139,46 @@
 #endif
 }
 
+-(void)registerMethodsTest{
+#ifdef ANDROID
+
+	[Parse initializeJava];
+	[ParseACL initializeJava];
+	[ParseQuery initializeJava];
+	[ParseObject initializeJava];
+	[ParseUser initializeJava];
+	[ParseRole initializeJava];
+	[ParseAnalytics initializeJava];
+	[ParseFacebookUtils initializeJava];
+	[ParseException initializeJava];
+	[ParseGeoPoint initializeJava];
+	[ParseTwitterUtils initializeJava];
+	[ParseFile initializeJava];
+	[ParseInstallation initializeJava];
+	[ParsePush initializeJava];
+	[PushService initializeJava];
+	[ParseRelation initializeJava];
+	[ParseAnonymousUtils initializeJava];
+	[ParseCloud initializeJava];
+	[ParseImageView initializeJava];
+	[SaveCallback initializeJava];
+	[LogInCallback initializeJava];
+	[DeleteCallback initializeJava];
+	[StandardPushCallback initializeJava];
+	[SignUpCallback initializeJava];
+	[SendCallback initializeJava];
+	[RequestPasswordResetCallback initializeJava];
+	[RefreshCallback initializeJava];
+	[PushCallback initializeJava];
+	[ProgressCallback initializeJava];
+	[LocationCallback initializeJava];
+	[GetDataCallback initializeJava];
+	[FunctionCallback initializeJava];
+	[FindCallback initializeJava];
+	[CountCallback initializeJava];
+	
+#endif
+}
 #ifdef ANDROID
 - (BOOL) canBecomeFirstResponder
 {

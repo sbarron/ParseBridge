@@ -53,10 +53,10 @@
 	//[self _done:error];
 	if(!error){
 		//No error
-		ALog(@"Send success");
+		NSLog(@"Send success");
 	}
 	else{
-		ALog(@"Send failed", [error getCode]);
+		NSLog(@"Send failed", [error getCode]);
 	}
 }
 

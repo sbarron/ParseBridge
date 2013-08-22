@@ -27,6 +27,8 @@
 #import <BridgeKit/JavaObject.h>
 @class ParseException;
 
-@interface CountCallBack : JavaObject
+@interface CountCallback : JavaObject
+
+-(void)done:(int)count error:(ParseException*)error;
 
 @end

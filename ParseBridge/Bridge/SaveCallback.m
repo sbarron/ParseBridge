@@ -55,10 +55,10 @@
 //[self _done:error];
 	if(!error){
 		//No error
-		ALog(@"Save Successful");
+		NSLog(@"Save Successful");
 	}
 	else{
-		ALog(@"Save failed", [error getCode]);
+		NSLog(@"Save failed", [error getCode]);
 	}
 }
 

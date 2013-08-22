@@ -36,7 +36,7 @@
 	BOOL results;
 	//*- Java:  public SaveCallback()
 	results = [GetDataCallback registerConstructor];
-	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public abstract void done(byte[] data,ParseException e)
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
@@ -53,10 +53,10 @@
 	//[self _done:error];
 	if(!error && data != nil){
 		//No error
-		ALog(@"Object Retrieved Successfully");
+		NSLog(@"Object Retrieved Successfully");
 	}
 	else{
-		ALog(@"Object retrieval failed", [error getCode]);
+		NSLog(@"Object retrieval failed", [error getCode]);
 	}
 }
 

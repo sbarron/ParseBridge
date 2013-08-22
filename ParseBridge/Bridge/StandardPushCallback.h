@@ -25,8 +25,11 @@
  */
 
 #import <BridgeKit/JavaObject.h>
+#import "PushCallback.h"
 @class ParseException;
 
-@interface StandardPushCallback : JavaObject
+@interface StandardPushCallback : PushCallback
+
+-(void)runStandardPushCallback;
 
 @end

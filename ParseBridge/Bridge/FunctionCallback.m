@@ -54,10 +54,10 @@
 	//[self _done:error];
 	if(!error && obj != nil){
 		//No error
-		ALog(@"Cloud Function Successful");
+		NSLog(@"Cloud Function Successful");
 	}
 	else{
-		ALog(@"Cloud Function failed", [error getCode]);
+		NSLog(@"Cloud Function failed", [error getCode]);
 	}
 }
 

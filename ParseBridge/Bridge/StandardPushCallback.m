@@ -40,10 +40,10 @@
 	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public abstract void done(ParseException e)
-	//*- iOS Bridge Method:  -(void)done:(ParseException*)error;
+	//*- iOS Bridge Method:  -(void)runStandardPushCallback;
 	//Override this function with the code you want to run after the save is complete.
 	results = [StandardPushCallback registerCallback:@"run"
-							selector:@selector(run:)
+							selector:@selector(runStandardPushCallback)
 						 returnValue:nil
 						   arguments:nil];
 	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
@@ -51,9 +51,9 @@
 	
 }
 
--(void)run{
+-(void)runStandardPushCallback{
 	
-		ALog(@"running");
+		NSLog(@"running StandardPushCallback");
 	
 }
 

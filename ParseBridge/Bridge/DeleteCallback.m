@@ -58,10 +58,10 @@
 	//[self _done:error];
 	if(!error){
 	     //No error
-		 ALog(@"Delete Successful");
+		 NSLog(@"Delete Successful");
 	}
 	else{
-		 ALog(@"Delete failed with error %i", [error getCode]);
+		 NSLog(@"Delete failed with error %i", [error getCode]);
 	}
 }
 

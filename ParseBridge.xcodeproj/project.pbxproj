@@ -26,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		090A0E6317C0C5DC0023C28B /* CountCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallBack.h; path = Bridge/CountCallBack.h; sourceTree = "<group>"; };
-		090A0E6417C0C5DC0023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
 		090A0E6517C0C5DC0023C28B /* FindCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FindCallback.h; path = Bridge/FindCallback.h; sourceTree = "<group>"; };
 		090A0E6617C0C5DC0023C28B /* FindCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FindCallback.m; path = Bridge/FindCallback.m; sourceTree = "<group>"; };
 		090A0E6717C0C5DC0023C28B /* FunctionCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FunctionCallback.h; path = Bridge/FunctionCallback.h; sourceTree = "<group>"; };
@@ -62,6 +60,8 @@
 		090A0E8417C0C6910023C28B /* ParseRelation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRelation.m; path = Bridge/ParseRelation.m; sourceTree = "<group>"; };
 		090A0E8517C0C6910023C28B /* ParseRole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseRole.h; path = Bridge/ParseRole.h; sourceTree = "<group>"; };
 		090A0E8617C0C6910023C28B /* ParseRole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRole.m; path = Bridge/ParseRole.m; sourceTree = "<group>"; };
+		090A0E8717C1F0430023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
+		090A0E8917C1F0630023C28B /* CountCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallback.h; path = Bridge/CountCallback.h; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D4C17B0C79200B99928 /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseQuery.m; path = Bridge/ParseQuery.m; sourceTree = "<group>"; };
 		098A2D4D17B0C79200B99928 /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseUser.m; path = Bridge/ParseUser.m; sourceTree = "<group>"; };
@@ -214,8 +214,8 @@
 		09A1402E17BF558500A3F1AE /* callbacks */ = {
 			isa = PBXGroup;
 			children = (
-				090A0E6317C0C5DC0023C28B /* CountCallBack.h */,
-				090A0E6417C0C5DC0023C28B /* CountCallback.m */,
+				090A0E8917C1F0630023C28B /* CountCallback.h */,
+				090A0E8717C1F0430023C28B /* CountCallback.m */,
 				090A0E6517C0C5DC0023C28B /* FindCallback.h */,
 				090A0E6617C0C5DC0023C28B /* FindCallback.m */,
 				090A0E6717C0C5DC0023C28B /* FunctionCallback.h */,

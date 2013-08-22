@@ -26,6 +26,7 @@
 
 #import <BridgeKit/JavaObject.h>
 @class ParseException;
+@class ParseObject;
 
 @interface RefreshCallback : JavaObject
 

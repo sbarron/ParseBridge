@@ -31,10 +31,7 @@
 
 + (void)initializeJava
 {
-	DLog(@"InitializeJava Parse.h bridge");
 	[super initializeJava];
-
-	DLog(@"Parse.h associated with %@", [[Parse javaClass] className]);
 	
     //*- Java: public static void initialize(Context context, String applicationId, String clientKey)
     //*- Objective-C: +(void)init:(AndroidContext*)context applicationId:(NSString *)applicationId clientKey:(NSString *)clientKey;

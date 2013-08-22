@@ -25,6 +25,7 @@
  */
 
 #import <BridgeKit/JavaObject.h>
+#import "ParseObject.h"
 @class ParseException;
 
 @interface ProgressCallback : ParseObject

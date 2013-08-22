@@ -186,9 +186,7 @@
     	"ParseBridge/Bridge/ParseRole.m",
     	"ParseBridge/Bridge/ParseAnalytics.m",
     	"ParseBridge/Bridge/ParseFacebookUtils.m",
-    	"ParseBridge/Bridge/LogInCallBack.m",
     	"ParseBridge/Bridge/ParseException.m",
-    	"ParseBridge/Bridge/SaveCallback.m",
     	"ParseBridge/Bridge/ParseGeoPoint.m",
     	"ParseBridge/Bridge/ParseTwitterUtils.m",
     	"ParseBridge/Bridge/ParseFile.m",
@@ -199,6 +197,22 @@
     	"ParseBridge/Bridge/ParseAnonymousUtils.m",
     	"ParseBridge/Bridge/ParseCloud.m",
     	"ParseBridge/Bridge/ParseImageView.m",
+    	"ParseBridge/Bridge/SaveCallback.m",
+    	"ParseBridge/Bridge/LogInCallback.m",
+    	"ParseBridge/Bridge/DeleteCallback.m",
+    	"ParseBridge/Bridge/StandardPushCallback.m",
+    	"ParseBridge/Bridge/SignUpCallback.m",
+    	"ParseBridge/Bridge/SendCallback.m",
+    	"ParseBridge/Bridge/RequestPasswordResetCallback.m",
+    	"ParseBridge/Bridge/RefreshCallback.m",
+    	"ParseBridge/Bridge/PushCallback.m",
+    	"ParseBridge/Bridge/ProgressCallback.m",
+    	"ParseBridge/Bridge/LocationCallback.m",
+    	"ParseBridge/Bridge/GetDataCallback.m",
+    	"ParseBridge/Bridge/FunctionCallback.m",
+    	"ParseBridge/Bridge/FindCallback.m",
+    	"ParseBridge/Bridge/CountCallback.m",
+    	"ParseBridge/Bridge/GetCallback.m",
     ],
     
     // A list of glob inclusion filters for additional files.
@@ -277,8 +291,8 @@
    
     // A list of dependencies.  Typically these correspond to
     // frameworks in the xcode project.
-    "deps": [],
-    
+    "deps": ["FacebookSDK",
+    ],
     // A list of source files (e.g. .m, .mm, .c, .cc, and .cpp) files to remove from the build.
     // e.g. "./External/Reachabilty/Reachability.m"
     "sources": [],

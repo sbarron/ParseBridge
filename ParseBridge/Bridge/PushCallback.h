@@ -25,6 +25,7 @@
  */
 
 #import <BridgeKit/JavaObject.h>
+#import "ParseObject.h"
 @class ParseException;
 
 //Verfify support for android service and JSON Objects

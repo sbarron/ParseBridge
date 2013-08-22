@@ -31,6 +31,7 @@
 
 #import <BridgeKit/JavaObject.h>
 
+/*
 typedef enum logLevel : int {
 	LOG_LEVEL_DEBUG		= 3,
 	LOG_LEVEL_ERROR		= 6,
@@ -39,6 +40,7 @@ typedef enum logLevel : int {
 	LOG_LEVEL_VERBOSE	= 2,
 	LOG_LEVEL_WARNING	= 5,
 } logLevel;
+*/
  
 @class AndroidContext;
 
