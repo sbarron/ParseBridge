@@ -42,21 +42,15 @@
 	//*- Java:  public abstract void done(ParseException e)
 	//*- iOS Bridge Method:  -(void)runStandardPushCallback;
 	//Override this function with the code you want to run after the save is complete.
-	results = [StandardPushCallback registerCallback:@"run"
-							selector:@selector(runStandardPushCallback)
-						 returnValue:nil
-						   arguments:nil];
-	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	results = [ParseObject registerInstanceMethod:@"run"
+											  selector:@selector(runStandardPushCallback)
+										   returnValue:nil
+											 arguments:nil];
+	DLog(@"Registered run = %@", (results ? @"YES" : @"NO"));
 	
 	
 }
-
--(void)runStandardPushCallback{
-	
-		NSLog(@"running StandardPushCallback");
-	
-}
-
+ 
 
 + (NSString *)className
 {

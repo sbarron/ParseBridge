@@ -26,42 +26,156 @@
 
 #import <BridgeKit/JavaObject.h>
 
+
 @class JavaClass;
+@class JavaList;
+@class JavaSet;
+@class ParseRelation;
+@class ParseACL;
+@class ParseGeoPoint;
+@class ParseFile;
+@class ParseUser;
+@class SaveCallback;
+@class RefreshCallback;
+@class GetCallback;
+@class DeleteCallback;
+@class FindCallback;
+
 
 @interface ParseObject : JavaObject
 
-
-/*
- PFObject
- + objectWithClassName:(NSString*)
- + saveAll:(NSArray*) error:(NSError*)
- + objectWithoutDataWithClassName:(NSString*) objectId:(NSString*)
- */
-
-//*- ParseObject(String theClassName) - Constructor
 -(id)initParseObject:(NSString*)name;
-
-//*- public void put(String key, Object value)
--(void)forKey:(NSString *)key setObject:(id)value;
-
-//*- public final void saveEventually()
 -(void)saveEventually;
 
-//*- public final void saveInBackground()
 -(void)saveInBackground;
 
-//*- Java: public final void save()
 -(void)save;
-
-//*- public static ParseObject create(String className)
+-(void)forKey:(NSString *)key setObject:(id)value;
 + (ParseObject*)objectWithClassName:(NSString*)className;
 
-//*- public static void saveAll(List<ParseObject> objects) throws ParseException
-+ (void)saveAll:(NSArray*)objects;
++ (ParseObject*)objectWithClass:(JavaClass*)subclass;
 
-//*- public static ParseObject createWithoutData(String className, String objectId)
-//+ (ParseObject*)objectWithoutDataWithClassName:(NSString*)className objectId:(NSString*)objectId;
++ (ParseObject*)objectWithoutDataWithClassName:(NSString*)className objectId:(NSString*)objectId;
 
-//*- Java: public static <T extends ParseObject> T create(Class<T> subclass)
-//+ (ParseObject*)create:(JavaClass*)object;
++(ParseObject*)objectWithoutDataWithClass:(JavaClass*)subclass objectId:(NSString*)objectId;
+
++(void)registerSubclass:(JavaClass*)subclass;
+
+-(NSString*)getClassName;
+
+-(JavaSet*)keySet;
+
+//-(NSDate*)getUpdatedAt;
+
+//-(NSDate*)getCreatedAt;
+
+-(NSString*)getObjectId;
+
+-(void)setObjectId:(NSString*)newObjectId;
+
+-(void)saveInBackgroundWithCallback:(SaveCallback*)callback;
+
+-(void)saveInBackground;
+
+-(void)saveEventually;
+
+-(void)saveEventuallyWithCallback:(SaveCallback*)callback;
+
+-(void)deleteEventually;
+
+-(void)deleteEventuallyWithCallback:(DeleteCallback*)callback;
+
+-(void)refresh;
+
+-(void)refreshInBackground:(RefreshCallback*)callback;
+
+-(ParseObject*)fetch;
+
+-(void)fetchInBackground:(GetCallback*)callback;
+
+-(ParseObject*)fetchIfNeeded;
+
+-(void)fetchIfNeededInBackground:(GetCallback*)callback;
+
+-(void)delete;
+
+-(void)deleteInBackgroundWithCallback:(DeleteCallback*)callback;
+
+-(void)deleteInBackground;
+
+//-(void)deleteAll:(JavaList*)objects;
+
+//+(void)deleteAllInBackground:(JavaList*)objects callback:(DeleteCallback*)callback;
+
++(void)saveAll:(JavaList*)objects;
+
+//+(JavaList*)fetchAllIfNeeded:(JavaList*)objects;
+
++(void)fetchAllIfNeededInBackground:(JavaList*)objects callback:(FindCallback*)callback;
+
+//+(JavaList*)fetchAll:(JavaList*)objects;
+
++(void)fetchAllInBackground:(JavaList*)objects callback:(FindCallback*)callback;
+
+-(void)saveAllInBackgroundWithCallback:(JavaList*)objects callback:(SaveCallback*)callback;
+
+-(void)saveAllInBackground:(JavaList*)objects;
+
+-(void)remove:(NSString*)key;
+
+-(bool)has:(NSString*)key;
+
+-(void)put:(NSString*)key value:(JavaObject*)value;
+
+-(void)increment:(NSString*)key;
+
+//-(void)incrementWithKeyandAmount:(NSString*)key amount:(JavaObject*)amount;
+
+-(void)add:(NSString*)key value:(JavaObject*)value;
+
+//-(void)addAll:(NSString*)key values:(JavaObject*)values;
+
+-(void)addUnique:(NSString*)key value:(JavaObject*)value;
+
+//-(void)addAllUnique:(NSString*)key values:(JavaObject*)values;
+
+//-(void)removeAll:(NSString*)key values:(JavaObject*)values;
+
+-(bool)containsKey:(NSString*)key;
+
+-(NSString*)getString:(NSString*)key;
+
+-(JavaList*)getList:(NSString*)key;
+
+-(int)getInt:(NSString*)key;
+
+-(double)getDouble:(NSString*)key;
+
+-(long)getLong:(NSString*)key;
+
+-(bool)getBoolean:(NSString*)key;
+
+-(ParseObject*)getParseObject:(NSString*)key;
+
+-(ParseUser*)getParseUser:(NSString*)key;
+
+-(ParseFile*)getParseFile:(NSString*)key;
+
+-(ParseGeoPoint*)getParseGeoPoint:(NSString*)key;
+
+-(ParseACL*)getACL;
+
+-(void)setACL:(ParseACL*)acl;
+
+-(bool)isDataAvailable;
+
+-(ParseRelation*)getRelation:(NSString*)key;
+
+-(JavaObject*)get:(NSString*)key;
+
+-(bool)hasSameId:(ParseObject*)other;
+
+
+
+
 @end

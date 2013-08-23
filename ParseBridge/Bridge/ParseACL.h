@@ -26,6 +26,10 @@
  
 #import <BridgeKit/JavaObject.h>
 
+@class ParseUser;
+
 @interface ParseACL : JavaObject
+
+-(id)initWithUser:(ParseUser*)owner;
 
 @end

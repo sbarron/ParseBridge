@@ -28,4 +28,7 @@
 
 @interface ParseFile : JavaObject
 
+-(id)initWithData:(NSData*)owner;
+-(id)initWithNameandData:(NSString*)fileName data:(NSData*)data;
+
 @end

@@ -65,10 +65,6 @@
     
     [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
 	
-	
-    
-	DLog(@"Parse Android - Finished Android Init");
-	
 	[self registerMethodsTest];
 	[self runParseTest];
 	//[self startPushNotifications];
