@@ -37,16 +37,16 @@
 	BOOL results;
 	//*- Java: public SignUpCallback()
 	results = [StandardPushCallback registerConstructor];
-	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+	DLog(@"Registered contructor = %@", (results ? @"YES" : @"NO"));
 	
 	//*- Java:  public abstract void done(ParseException e)
 	//*- iOS Bridge Method:  -(void)runStandardPushCallback;
 	//Override this function with the code you want to run after the save is complete.
-	results = [ParseObject registerInstanceMethod:@"run"
-											  selector:@selector(runStandardPushCallback)
-										   returnValue:nil
-											 arguments:nil];
-	DLog(@"Registered run = %@", (results ? @"YES" : @"NO"));
+	//results = [ParseObject registerInstanceMethod:@"run"
+	//										  selector:@selector(runStandardPushCallback)
+	//									   returnValue:nil
+	//										 arguments:nil];
+	//DLog(@"Registered run = %@", (results ? @"YES" : @"NO"));
 	
 	
 }

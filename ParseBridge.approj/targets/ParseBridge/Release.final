@@ -18,7 +18,8 @@
             "access_network_state", 
             "internet", 
             "receive_boot_completed", 
-            "vibrate"
+            "vibrate", 
+            "notifications"
         ], 
         "SHORT_VERSION": "1.0", 
         "APPLICATION_NAME": "ParseBridge", 

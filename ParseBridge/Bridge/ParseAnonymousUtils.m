@@ -10,4 +10,17 @@
 
 @implementation ParseAnonymousUtils
 
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	
+	
+}
+
++(NSString *)className
+{
+    return @"com.parse.ParseAnonymousUtils";
+}
+
 @end

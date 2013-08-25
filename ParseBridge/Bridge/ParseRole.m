@@ -10,4 +10,14 @@
 
 @implementation ParseRole
 
++ (void)initializeJava
+{
+    [super initializeJava];
+}
+
++(NSString *)className
+{
+    return @"com.parse.ParseRole";
+}
+
 @end

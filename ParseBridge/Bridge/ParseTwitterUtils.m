@@ -28,6 +28,18 @@
 
 @implementation ParseTwitterUtils
 
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	
+	
+}
+
++(NSString *)className
+{
+    return @"com.parse.ParseTwitterUtils";
+}
 
  
  

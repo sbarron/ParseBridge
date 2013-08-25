@@ -57,11 +57,11 @@
 	
     //*- Java: public static void link(ParseUser user, Collection<String> permissions, Activity activity, SaveCallback callback)
     //*- ObjC: + linkUser:(PFUser*) permissions:(NSSArray*) block:(BOOL succeeded, NSError *error)
-    result = [ParseFacebookUtils registerStaticMethod:@"link"
-                                    selector:@selector(linkUser:permissions:block:)
-                                 returnValue:nil
-                                   arguments:[ParseUser className], [JavaList className], [AndroidActivity className], [SaveCallback className],nil];
-	DLog(@"Registered link = %@", (result ? @"YES" : @"NO"));
+    //result = [ParseFacebookUtils registerStaticMethod:@"link"
+    //                                selector:@selector(linkUser:permissions:block:)
+    //                             returnValue:nil
+    //                               arguments:[ParseUser className], [JavaList className], [AndroidActivity className], [SaveCallback className],nil];
+	//DLog(@"Registered link = %@", (result ? @"YES" : @"NO"));
 				
 	
 	//*- Java: public static void link(ParseUser user, String facebookId, String accessToken,Date expirationDate)

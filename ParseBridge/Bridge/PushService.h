@@ -45,10 +45,10 @@
 + (void)unsubscribe:(AndroidContext*)context channel:(NSString*)channel;
 
 //*- Java:   public static void setDefaultPushCallback(Context context,Class<? extends Activity> cls)
-+ (void)setDefaultPushCallback:(AndroidContext*)context activitySubClass:(AndroidActivity*)activitySubClass;
++ (void)setDefaultPushCallback:(AndroidContext*)context activitySubClass:(JavaClass*)activitySubClass;
 
 //*- Java:  public static void setDefaultPushCallback(Context context,Class<? extends Activity> cls,int icon)
-+ (void)setDefaultPushCallbackWithIcon:(AndroidContext*)context activitySubClass:(AndroidActivity*)activitySubClass icon:(int)icon;
++ (void)setDefaultPushCallbackWithIcon:(AndroidContext*)context activitySubClass:(JavaClass*)activitySubClass icon:(int)icon;
 
 //*- Java:   public static Set<String> getSubscriptions(Context context)
 + (NSArray*)getSubscriptions:(AndroidContext*)context;

@@ -10,4 +10,19 @@
 
 @implementation ParseImageView
 
+
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	
+	
+}
+
++(NSString *)className
+{
+    return @"com.parse.ParseImageView";
+}
+
+
 @end

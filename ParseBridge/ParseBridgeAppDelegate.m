@@ -65,9 +65,9 @@
     
     [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
 	
-	[self registerMethodsTest];
+	//[self registerMethodsTest];
 	[self runParseTest];
-	//[self startPushNotifications];
+	[self startPushNotifications:activity];
 	//[self startAnalytics:launchOptions];
 	
 #else
@@ -117,20 +117,22 @@
 #endif
 }
 
--(void)startPushNotifications{
+
 #ifdef ANDROID
-    DLog(@"Push Notifications initialized");
+-(void)startPushNotifications:(AndroidActivity*)activity{
+    DLog(@"Push Notifications initialized - Actiity = %@", activity);
 	
-	[PushService setDefaultPushCallback:[AndroidActivity currentActivity] activitySubClass:[AndroidActivity currentActivity]];
-	
-	//ParseInstallation.getCurrentInstallation().saveInBackground();
+	//PushService.subscribe(context, "the_channel_name", YourActivity.class);
+	[PushService subscribe:[AndroidActivity currentActivity] channel:@"TEST_PUSH" activitySubClass:[AndroidActivity currentActivity]];
 
 	ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
-	DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
+	//DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
 
+	//ParseInstallation.getCurrentInstallation().saveInBackground();
 	[[myInstallation getCurrentInstallation] saveInBackground];
 	
 #else
+-(void)startPushNotifications{
 	 //Requires setup in iTunesConnect
 #endif
 }

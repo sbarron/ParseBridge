@@ -10,4 +10,19 @@
 
 @implementation ParseCloud
 
+
++ (void)initializeJava
+{
+    [super initializeJava];
+	
+	
+	
+}
+
++(NSString *)className
+{
+    return @"com.parse.ParseCloud";
+}
+
+
 @end

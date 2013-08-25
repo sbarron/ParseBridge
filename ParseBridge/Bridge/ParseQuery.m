@@ -286,21 +286,21 @@
 	//*- Java: public ParseQuery<T> whereContainedIn(String key,Collection<? extends Object> values)
 	//*- ObjC: -(ParseQuery*)whereContainedIn:(NSString*)key values:(JavaArrayList*)values;
 	//Add a constraint to the query that requires a particular key's value to be contained in the provided list of values.
-	results = [ParseQuery registerInstanceMethod:@"whereContainedIn"
-										selector:@selector(whereContainedIn:values:)
-									 returnValue:[ParseQuery className]
-									   arguments:[NSString className],[JavaArrayList className], nil];
-	DLog(@"Registered whereContainedIn  =  %@", (results ? @"YES" : @"NO"));
+	//results = [ParseQuery registerInstanceMethod:@"whereContainedIn"
+	//									selector:@selector(whereContainedIn:values:)
+	//								 returnValue:[ParseQuery className]
+	//								   arguments:[NSString className],[JavaArrayList className], nil];
+	//DLog(@"Registered whereContainedIn  =  %@", (results ? @"YES" : @"NO"));
 
 
 	//*- Java: public ParseQuery<T> whereContainsAll(String key,Collection<?> values)
 	//*- ObjC: -(ParseQuery*)whereContainsAll:(NSString*)key values:(JavaArrayList*)values;
 	//Add a constraint to the query that requires a particular key's value match another ParseQuery. This only works on keys whose values are ParseObjects or lists of ParseObjects. Add a constraint to the query that requires a particular key's value to contain every one of the provided list of values.
-	results = [ParseQuery registerInstanceMethod:@"whereContainsAll"
-										selector:@selector(whereContainsAll:values:)
-									 returnValue:[ParseQuery className]
-									   arguments:[NSString className],[JavaObject className], nil];
-	DLog(@"Registered whereContainsAll  =  %@", (results ? @"YES" : @"NO"));
+	//results = [ParseQuery registerInstanceMethod:@"whereContainsAll"
+	//									selector:@selector(whereContainsAll:values:)
+	//								 returnValue:[ParseQuery className]
+	//								   arguments:[NSString className],[JavaObject className], nil];
+	//DLog(@"Registered whereContainsAll  =  %@", (results ? @"YES" : @"NO"));
 
 	//*- Java: public ParseQuery<T> whereMatchesQuery(String key,ParseQuery<?> query)
 	//*- ObjC: -(ParseQuery*)whereMatchesQuery:(NSString*)key query:(ParseQuery*)query;
@@ -345,11 +345,11 @@
 	//*- Java: public ParseQuery<T> whereNotContainedIn(String key,Collection<? extends Object> values)
 	//*- ObjC: -(ParseQuery*)whereNotContainedIn:(NSString*)key values:(JavaArrayList*)values;
 	//Add a constraint to the query that requires a particular key's value not be contained in the provided list of values.
-	results = [ParseQuery registerInstanceMethod:@"whereNotContainedIn"
-										selector:@selector(whereNotContainedIn:values:)
-									 returnValue:[ParseQuery className]
-									   arguments:[NSString className],[JavaArrayList className], nil];
-	DLog(@"Registered whereNotContainedIn  =  %@", (results ? @"YES" : @"NO"));
+	//results = [ParseQuery registerInstanceMethod:@"whereNotContainedIn"
+	//									selector:@selector(whereNotContainedIn:values:)
+	//								 returnValue:[ParseQuery className]
+	//								   arguments:[NSString className],[JavaArrayList className], nil];
+	//DLog(@"Registered whereNotContainedIn  =  %@", (results ? @"YES" : @"NO"));
 
 
 	//*- Java: public ParseQuery<T> whereNear(String key,ParseGeoPoint point)
@@ -452,18 +452,18 @@
 	//Include nested ParseObjects for the provided key. You can use dot notation to specify which fields in the included object that are also fetched.
 	results = [ParseQuery registerInstanceMethod:@"include"
 										selector:@selector(include:)
-									 returnValue:[ParseQuery className]
+									 returnValue:nil
 									   arguments:[NSString className], nil];
 	DLog(@"Registered include = %@", (results ? @"YES" : @"NO"));
 
 	//*- Java: public void selectKeys(Collection<String> keys)
 	//*- ObjC: -(void)selectKeys:(JavaArrayList*)keys;
 	//Restrict the fields of returned ParseObjects to only include the provided keys. If this is called multiple times, then all of the keys specified in each of the calls will be included.
-	results = [ParseQuery registerInstanceMethod:@"selectKeys"
-										selector:@selector(selectKeys:)
-									 returnValue:nil
-									   arguments:[JavaArrayList className], nil];
-	DLog(@"Registered selectKeys = %@", (results ? @"YES" : @"NO"));
+	//results = [ParseQuery registerInstanceMethod:@"selectKeys"
+	//									selector:@selector(selectKeys:)
+	//								 returnValue:nil
+	//								   arguments:[JavaList className], nil];
+	//DLog(@"Registered selectKeys = %@", (results ? @"YES" : @"NO"));
 
 	//*- Java: public ParseQuery<T> whereExists(String key)
 	//*- ObjC: -(ParseQuery*)whereExists:(NSString*)key;
@@ -535,11 +535,11 @@
 	//*- Java: public void setTrace(boolean shouldTrace)
 	//*- ObjC: -(void)setTrace:(bool)shouldTrace;
 	//Turn on performance tracing of finds. If performance tracing is already turned on this does nothing. In general you don't need to call trace.
-	results = [ParseQuery registerInstanceMethod:@"shouldTrace"
-										selector:@selector(shouldTrace:)
-									 returnValue:nil
-									   arguments:[JavaClass boolPrimitive], nil];
-	DLog(@"Registered shouldTrace = %@", (results ? @"YES" : @"NO"));
+	//results = [ParseQuery registerInstanceMethod:@"shouldTrace"
+	//									selector:@selector(shouldTrace:)
+	//								 returnValue:nil
+	//								   arguments:[JavaClass boolPrimitive], nil];
+	//DLog(@"Registered shouldTrace = %@", (results ? @"YES" : @"NO"));
 
 
 	//*- Java: public int getLimit()
