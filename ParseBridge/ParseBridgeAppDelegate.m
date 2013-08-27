@@ -120,17 +120,19 @@
 
 #ifdef ANDROID
 -(void)startPushNotifications:(AndroidActivity*)activity{
-    DLog(@"Push Notifications initialized - Actiity = %@", activity);
+	DLog(@"Push Notifications initialized - Activity = %@", activity);
 	
 	//PushService.subscribe(context, "the_channel_name", YourActivity.class);
-	[PushService subscribe:[AndroidActivity currentActivity] channel:@"TEST_PUSH" activitySubClass:[AndroidActivity currentActivity]];
-
-	ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
-	//DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
-
-	//ParseInstallation.getCurrentInstallation().saveInBackground();
-	[[myInstallation getCurrentInstallation] saveInBackground];
+	//[PushService subscribe:[AndroidActivity currentActivity] channel:@"DEFAULT" activitySubClass:[AndroidActivity currentActivity]];
+	[PushService subscribe:activity channel:@"DEFAULT" activitySubClass:[activity javaClass]];
 	
+	//ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
+	//DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
+	
+	//ParseInstallation.getCurrentInstallation().saveInBackground();
+	[[ParseInstallation getCurrentInstallation] saveInBackground];
+	DLog(@"Installation subscriptions = %@", [[ParseInstallation getCurrentInstallation] getSubscriptions]);
+
 #else
 -(void)startPushNotifications{
 	 //Requires setup in iTunesConnect
