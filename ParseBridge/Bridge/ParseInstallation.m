@@ -87,12 +87,6 @@
 
 }
 
-/*
--(void)forKey:(NSString*)key setObject:(id)value{
-	DLog(@"ParseInstallation Value = %@");
-	[self _forKey:key setObject:value];
-}*/
-
 
 
 -(NSString*)getInstallationId{

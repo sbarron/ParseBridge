@@ -27,7 +27,7 @@
 #import <BridgeKit/JavaObject.h>
 
 @class ParseUser;
-@class LogInCallback;
+@class MyLogInCallback;
 @class SignUpCallback;
 @class RequestPasswordResetCallback;
 @class ParseQuery;
@@ -36,7 +36,7 @@
 
 + (ParseUser*) currentUser; 
 + (void)logOut;
-- (void)initUser;
+- (id)initUser;
 - (BOOL)isAuthenticated;
 - (void)forKey:(NSString *)key setObject:(id)value;
 - (BOOL)isAuthenticated;
@@ -54,7 +54,7 @@
 - (void)signUp;
 - (void)signUpInBackground:(SignUpCallback*)callback;
 + (ParseUser*)logIn:(NSString*)username password:(NSString*)password;
-+ (void)logInInBackground:(NSString*)username password:(NSString*)password callback:(LogInCallback*)callback;
++ (void)logInInBackground:(NSString*)username password:(NSString*)password callback:(MyLogInCallback*)callback;
 + (void)requestPasswordReset:(NSString*)email;
 + (void)requestPasswordResetInBackground:(NSString*)email callback:(RequestPasswordResetCallback*)callback;
 - (void)fetchIfNeeded;

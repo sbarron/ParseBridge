@@ -30,7 +30,7 @@
 #import <BridgeKit/AndroidActivity.h>
 #import <BridgeKit/JavaList.h>
 #import <BridgeKit/JavaClass.h>
-#import "LogInCallback.h"
+#import "MyLogInCallback.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @implementation ParseFacebookUtils
@@ -105,7 +105,7 @@
 	result = [ParseFacebookUtils registerStaticMethod:@"login"
 									selector:@selector(logInWithPermissions:)
 								 returnValue:nil
-								   arguments:[AndroidActivity className],[LogInCallback className], NULL];
+								   arguments:[AndroidActivity className],[MyLogInCallback className], NULL];
 	DLog(@"Registered login = %@", (result ? @"YES" : @"NO"));
 	
 //*- Java: public static com.facebook.Session getSession()

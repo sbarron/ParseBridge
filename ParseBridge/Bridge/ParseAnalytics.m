@@ -43,7 +43,7 @@
 				   selector:@selector(trackAppOpened:)
 				returnValue:nil
 				  arguments:[AndroidIntent className], nil];
-	 DLog(@"ParseAnalytics method registration = %i, %i", method1, method2);
+	 DLog(@"trackAppOpened registration = %i, %i", method1, method2);
 	 
 }
 

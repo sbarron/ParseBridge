@@ -7,6 +7,7 @@
 //
 
 #import "ParseBridgeAppDelegate.h"
+#import "ParseBridgeViewController.h"
 #ifdef ANDROID
 #import "ParseHeaders.h"
 #import "ParseManager.h"
@@ -34,12 +35,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifdef APPORTABLE
+	[UIScreen mainScreen].currentMode =
+	[UIScreenMode emulatedMode:UIScreenBestEmulatedMode];
+	
     NSString *result = @"Hello Android!!";
 	[self initializeParse:launchOptions];
 #else
     NSString *result = @"Hello iOS!";
 	[self initializeParse:launchOptions];
 #endif
+	
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor clearColor];
+	self.viewController = [[ParseBridgeViewController alloc] initWithNibName:@"ParseBridgeViewController" bundle:nil];
+	self.window.rootViewController = self.viewController;
+	
+    [self.window makeKeyAndVisible];
+	
 	
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"BridgeKitDemo"
                                                     message:result
@@ -50,11 +63,6 @@
     [alert release];
 	
 	
-	
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -67,6 +75,12 @@
 	
 	//[self registerMethodsTest];
 	[self runParseTest];
+	
+	//ParseACL defaultACL = new ParseACL();
+	// Optionally enable public read access while disabling public write access.
+	// defaultACL.setPublicReadAccess(true);
+	//ParseACL.setDefaultACL(defaultACL, true);
+	
 	[self startPushNotifications:activity];
 	//[self startAnalytics:launchOptions];
 	
@@ -74,8 +88,16 @@
 	
     [Parse setApplicationId:PARSE_APPLICATION_ID
                   clientKey:PARSE_CLIENT_KEY];
-	// [PFFacebookUtils initializeFacebook];
-	[self runParseTest];
+				
+	//[PFFacebookUtils initializeFacebook];
+	//[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
+	
+	// Set default ACLs
+    PFACL *defaultACL = [PFACL ACL];
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+	//[self runParseTest];
 	[self startPushNotifications];
 	[self startAnalytics:launchOptions];
     
@@ -123,15 +145,11 @@
 	DLog(@"Push Notifications initialized - Activity = %@", activity);
 	
 	//PushService.subscribe(context, "the_channel_name", YourActivity.class);
-	//[PushService subscribe:[AndroidActivity currentActivity] channel:@"DEFAULT" activitySubClass:[AndroidActivity currentActivity]];
 	[PushService subscribe:activity channel:@"DEFAULT" activitySubClass:[activity javaClass]];
-	
-	//ParseInstallation* myInstallation = [ParseInstallation getCurrentInstallation];
-	//DLog(@"Installation ID = %@  is a %@", [myInstallation getInstallationId], [myInstallation isa]); //testing value
-	
+
 	//ParseInstallation.getCurrentInstallation().saveInBackground();
 	[[ParseInstallation getCurrentInstallation] saveInBackground];
-	DLog(@"Installation subscriptions = %@", [[ParseInstallation getCurrentInstallation] getSubscriptions]);
+	DLog(@"Installation subscriptions = %@", [PushService getSubscriptions:activity]);
 
 #else
 -(void)startPushNotifications{
@@ -162,7 +180,7 @@
 	[ParseCloud initializeJava];
 	[ParseImageView initializeJava];
 	[SaveCallback initializeJava];
-	[LogInCallback initializeJava];
+	[MyLogInCallback initializeJava];
 	[DeleteCallback initializeJava];
 	[StandardPushCallback initializeJava];
 	[SignUpCallback initializeJava];
@@ -223,11 +241,25 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	//[FBSession.activeSession handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#ifdef ANDROID
+#else
+	// Facebook oauth callback
+	- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+		return [PFFacebookUtils handleOpenURL:url];
+	}
+	
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+#endif	
 
 @end

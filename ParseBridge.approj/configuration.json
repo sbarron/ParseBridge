@@ -198,7 +198,7 @@
     	"ParseBridge/Bridge/ParseCloud.m",
     	"ParseBridge/Bridge/ParseImageView.m",
     	"ParseBridge/Bridge/SaveCallback.m",
-    	"ParseBridge/Bridge/LogInCallback.m",
+    	"ParseBridge/Bridge/MyLogInCallback.m",
     	"ParseBridge/Bridge/DeleteCallback.m",
     	"ParseBridge/Bridge/StandardPushCallback.m",
     	"ParseBridge/Bridge/SignUpCallback.m",
@@ -234,8 +234,20 @@
     "infoplists": [],
 
     //A list of specific java sources file to compile
+    //java/src/com/parsebridge/parsebridge/MyFunctionCallback.java
+    //java/src/com/parsebridge/parsebridge/MyFindCallback.java
+  	//java/src/com/parsebridge/parsebridge/MyGetCallback.java
 	"java_sources": [
-        "java/src/com/parsebridge/parsebridge/ParseManager.java",
+        "java/src/com/parsebridge/parsebridge/MyLogInCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyCountCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyGetDataCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyLocationCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyProgressCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyRefreshCallback.java",
+        "java/src/com/parsebridge/parsebridge/MyRequestPasswordResetCallback.java",
+        "java/src/com/parsebridge/parsebridge/MySaveCallback.java",
+        "java/src/com/parsebridge/parsebridge/MySendCallback.java",
+        "java/src/com/parsebridge/parsebridge/MySignUpCallback.java",
     ],
     "java_sourcepaths": [
         "java/src",
@@ -295,7 +307,10 @@
     ],
     // A list of source files (e.g. .m, .mm, .c, .cc, and .cpp) files to remove from the build.
     // e.g. "./External/Reachabilty/Reachability.m"
-    "sources": [],
+    "sources": [
+    	"ParseBridge/MySignUpViewController.m",
+    	"ParseBridge/MyLogInViewController.m",
+    ],
     
     // A list of glob removal filters to filter out source files.
     // e.g. "./Server/Level_[0-9].m"

@@ -28,7 +28,7 @@
 #import "ParseUser.h"
 #import "ParseQuery.h"
 #import <BridgeKit/JavaClass.h>
-#import "LogInCallback.h"
+#import "MyLogInCallback.h"
 #import "SignUpCallback.h"
 #import "RequestPasswordResetCallback.h"
 
@@ -113,7 +113,7 @@
 	//*- ObjC: -(NSString*)getUsername;
 	//Retrieves the username.
     result = [ParseUser registerInstanceMethod:@"getUsername"
-							 selector:@selector(setUsername)
+							 selector:@selector(getUsername)
 						  returnValue:[NSString className]
 							arguments:nil];
 	DLog(@"Registered getUsername = %@", (result ? @"YES" : @"NO"));

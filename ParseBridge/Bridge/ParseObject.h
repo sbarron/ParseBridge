@@ -63,7 +63,7 @@
 
 -(NSString*)getClassName;
 
--(JavaSet*)keySet;
+-(NSArray*)keySet;
 
 //-(NSDate*)getUpdatedAt;
 

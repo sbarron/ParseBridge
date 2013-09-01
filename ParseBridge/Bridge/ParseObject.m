@@ -159,10 +159,10 @@
  
 
 	//*- Java: public Set<String> keySet()
-	//*- ObjC: -(JavaSet*)keySet;
+	//*- ObjC: -(NSArray*)keySet;
 	//Returns a set view of the keys contained in this object. This does not include createdAt, updatedAt, authData, or objectId. It does include things like username and ACL.
 	result = [ParseObject registerInstanceMethod:@"keySet"
-										selector:@selector(keySet:)
+										selector:@selector(_keySet)
 									 returnValue:[JavaSet className]
 									   arguments:nil];
 	DLog(@"ParseObject Registered keySet  =  %@", (result ? @"YES" : @"NO"));
@@ -706,6 +706,10 @@
 									   arguments:[ParseObject className],nil];
 	DLog(@"ParseObject Registered hasSameId = %@", (result ? @"YES" : @"NO"));
 	
+}
+
+-(NSArray*)keySet{
+	return [[self _keySet] toArray];
 }
 
 + (NSString *)className

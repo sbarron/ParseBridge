@@ -27,7 +27,7 @@
 #import <BridgeKit/JavaObject.h>
 #import "ParseUser.h"
 
-@class LogInCallback;
+@class MyLogInCallback;
 @class SaveCallback;
 @class AndroidActivity;
 
@@ -42,7 +42,7 @@
 + (BOOL)isLinkedWithUser:(ParseUser*)user;
 
 + (void)logInWithPermissions:(NSArray *)permissions;
-+ (void)logIn:(AndroidActivity*)activity callback:(LogInCallback*)callback;
++ (void)logIn:(AndroidActivity*)activity callback:(MyLogInCallback*)callback;
 + (void)linkUser:(id)user permissions:(NSArray *)permissions block:(id)block;
 
 + (void)saveLatestSessionDataWithCallback:(ParseUser*)user callback:(SaveCallback*)callback;

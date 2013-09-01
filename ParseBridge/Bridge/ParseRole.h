@@ -10,6 +10,11 @@
 #import <BridgeKit/JavaObject.h>
 #import "ParseObject.h"
 
+@class ParseACL;
+
 @interface ParseRole : ParseObject
+
+-(id)initWithName:(NSString*)name;
+-(id)initWithNameandACL:(NSString*)name acl:(ParseACL*)acl;
 
 @end

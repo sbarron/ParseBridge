@@ -46,7 +46,7 @@
 #import "GetCallback.h"
 #import "GetDataCallback.h"
 #import "LocationCallback.h"
-#import "LogInCallback.h"
+#import "MyLogInCallback.h"
 #import "ParseAnonymousUtils.h"
 #import "ParseCloud.h"
 #import "ParseImageView.h"

@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */; };
+		092CFB1E17CF108A0020DD97 /* ParseBridgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */; };
+		092CFB2F17D06B510020DD97 /* SubclassConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */; };
+		092CFB3017D06B510020DD97 /* SubclassConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */; };
+		092CFB3117D06B510020DD97 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2C17D06B510020DD97 /* MyLogInViewController.m */; };
+		092CFB3217D06B510020DD97 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2E17D06B510020DD97 /* MySignUpViewController.m */; };
+		092CFB4017D06B6D0020DD97 /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3417D06B6D0020DD97 /* Exit.png */; };
+		092CFB4117D06B6D0020DD97 /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3517D06B6D0020DD97 /* ExitDown.png */; };
+		092CFB4217D06B6D0020DD97 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3617D06B6D0020DD97 /* Facebook.png */; };
+		092CFB4317D06B6D0020DD97 /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3717D06B6D0020DD97 /* FacebookDown.png */; };
+		092CFB4417D06B6D0020DD97 /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */; };
+		092CFB4517D06B6D0020DD97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3917D06B6D0020DD97 /* Logo.png */; };
+		092CFB4617D06B6D0020DD97 /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3A17D06B6D0020DD97 /* MainBG.png */; };
+		092CFB4717D06B6D0020DD97 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3B17D06B6D0020DD97 /* SignUp.png */; };
+		092CFB4817D06B6D0020DD97 /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3C17D06B6D0020DD97 /* SignUpDown.png */; };
+		092CFB4917D06B6D0020DD97 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */; };
+		092CFB4A17D06B6D0020DD97 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3E17D06B6D0020DD97 /* Twitter.png */; };
+		092CFB4B17D06B6D0020DD97 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3F17D06B6D0020DD97 /* TwitterDown.png */; };
+		092CFB4F17D1A8570020DD97 /* MyBasicLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */; };
+		092CFB5017D1A8570020DD97 /* MyBasicLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */; };
 		098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */; };
 		098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */; };
 		098A2D6817B0CEDA00B99928 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */; };
@@ -62,6 +82,31 @@
 		090A0E8617C0C6910023C28B /* ParseRole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRole.m; path = Bridge/ParseRole.m; sourceTree = "<group>"; };
 		090A0E8717C1F0430023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
 		090A0E8917C1F0630023C28B /* CountCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallback.h; path = Bridge/CountCallback.h; sourceTree = "<group>"; };
+		092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeViewController.h; sourceTree = "<group>"; };
+		092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeViewController.m; sourceTree = "<group>"; };
+		092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeViewController.xib; sourceTree = "<group>"; };
+		092CFB2817D06B510020DD97 /* SubclassConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassConfigViewController.h; sourceTree = "<group>"; };
+		092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassConfigViewController.m; sourceTree = "<group>"; };
+		092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubclassConfigViewController.xib; sourceTree = "<group>"; };
+		092CFB2B17D06B510020DD97 /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
+		092CFB2C17D06B510020DD97 /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
+		092CFB2D17D06B510020DD97 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
+		092CFB2E17D06B510020DD97 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
+		092CFB3417D06B6D0020DD97 /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
+		092CFB3517D06B6D0020DD97 /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitDown.png; sourceTree = "<group>"; };
+		092CFB3617D06B6D0020DD97 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		092CFB3717D06B6D0020DD97 /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookDown.png; sourceTree = "<group>"; };
+		092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFieldBG.png; sourceTree = "<group>"; };
+		092CFB3917D06B6D0020DD97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		092CFB3A17D06B6D0020DD97 /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
+		092CFB3B17D06B6D0020DD97 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
+		092CFB3C17D06B6D0020DD97 /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpDown.png; sourceTree = "<group>"; };
+		092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
+		092CFB3E17D06B6D0020DD97 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		092CFB3F17D06B6D0020DD97 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		092CFB4C17D1A8540020DD97 /* MyBasicLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBasicLoginViewController.h; sourceTree = "<group>"; };
+		092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBasicLoginViewController.m; sourceTree = "<group>"; };
+		092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBasicLoginViewController.xib; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D4C17B0C79200B99928 /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseQuery.m; path = Bridge/ParseQuery.m; sourceTree = "<group>"; };
 		098A2D4D17B0C79200B99928 /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseUser.m; path = Bridge/ParseUser.m; sourceTree = "<group>"; };
@@ -97,8 +142,8 @@
 		099DAEB9178FC84300CBF872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		09A1401C17BF51A000A3F1AE /* DeleteCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DeleteCallback.h; path = Bridge/DeleteCallback.h; sourceTree = "<group>"; };
 		09A1401D17BF51A100A3F1AE /* DeleteCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DeleteCallback.m; path = Bridge/DeleteCallback.m; sourceTree = "<group>"; };
-		09A1401E17BF51A700A3F1AE /* LogInCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LogInCallback.m; path = Bridge/LogInCallback.m; sourceTree = "<group>"; };
-		09A1401F17BF51B000A3F1AE /* LogInCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogInCallback.h; path = Bridge/LogInCallback.h; sourceTree = "<group>"; };
+		09A1401E17BF51A700A3F1AE /* MyLogInCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyLogInCallback.m; path = Bridge/MyLogInCallback.m; sourceTree = "<group>"; };
+		09A1401F17BF51B000A3F1AE /* MyLogInCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyLogInCallback.h; path = Bridge/MyLogInCallback.h; sourceTree = "<group>"; };
 		09A1402017BF525000A3F1AE /* SaveCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SaveCallback.m; path = Bridge/SaveCallback.m; sourceTree = "<group>"; };
 		09A1402117BF525100A3F1AE /* SaveCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaveCallback.h; path = Bridge/SaveCallback.h; sourceTree = "<group>"; };
 		09A5883A17BB4116004F48C1 /* ParseInstallation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseInstallation.h; path = Bridge/ParseInstallation.h; sourceTree = "<group>"; };
@@ -148,6 +193,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092CFB2717D06AD60020DD97 /* ParseLoginExample */ = {
+			isa = PBXGroup;
+			children = (
+				092CFB3317D06B570020DD97 /* images */,
+				092CFB2817D06B510020DD97 /* SubclassConfigViewController.h */,
+				092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */,
+				092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */,
+				092CFB4C17D1A8540020DD97 /* MyBasicLoginViewController.h */,
+				092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */,
+				092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */,
+				092CFB2B17D06B510020DD97 /* MyLogInViewController.h */,
+				092CFB2C17D06B510020DD97 /* MyLogInViewController.m */,
+				092CFB2D17D06B510020DD97 /* MySignUpViewController.h */,
+				092CFB2E17D06B510020DD97 /* MySignUpViewController.m */,
+			);
+			name = ParseLoginExample;
+			sourceTree = "<group>";
+		};
+		092CFB3317D06B570020DD97 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				092CFB3417D06B6D0020DD97 /* Exit.png */,
+				092CFB3517D06B6D0020DD97 /* ExitDown.png */,
+				092CFB3617D06B6D0020DD97 /* Facebook.png */,
+				092CFB3717D06B6D0020DD97 /* FacebookDown.png */,
+				092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */,
+				092CFB3917D06B6D0020DD97 /* Logo.png */,
+				092CFB3A17D06B6D0020DD97 /* MainBG.png */,
+				092CFB3B17D06B6D0020DD97 /* SignUp.png */,
+				092CFB3C17D06B6D0020DD97 /* SignUpDown.png */,
+				092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */,
+				092CFB3E17D06B6D0020DD97 /* Twitter.png */,
+				092CFB3F17D06B6D0020DD97 /* TwitterDown.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		099CA3AD179B9E8A000F39DD /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +324,8 @@
 				090A0E7C17C0C5DD0023C28B /* StandardPushCallback.m */,
 				09A1401C17BF51A000A3F1AE /* DeleteCallback.h */,
 				09A1401D17BF51A100A3F1AE /* DeleteCallback.m */,
-				09A1401E17BF51A700A3F1AE /* LogInCallback.m */,
-				09A1401F17BF51B000A3F1AE /* LogInCallback.h */,
+				09A1401E17BF51A700A3F1AE /* MyLogInCallback.m */,
+				09A1401F17BF51B000A3F1AE /* MyLogInCallback.h */,
 				09A1402017BF525000A3F1AE /* SaveCallback.m */,
 				09A1402117BF525100A3F1AE /* SaveCallback.h */,
 			);
@@ -289,8 +371,12 @@
 		7A3FC60217533CA900EF7EE1 /* ParseBridge */ = {
 			isa = PBXGroup;
 			children = (
+				092CFB2717D06AD60020DD97 /* ParseLoginExample */,
 				098A2D8A17B0DA0000B99928 /* ParseBridgeAppDelegate.h */,
 				098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */,
+				092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */,
+				092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */,
+				092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */,
 				099CA3AD179B9E8A000F39DD /* Bridge */,
 				099DAEA6178FC20100CBF872 /* Parse */,
 				099DAEA3178FC1CF00CBF872 /* FaceBook */,
@@ -365,6 +451,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092CFB1E17CF108A0020DD97 /* ParseBridgeViewController.xib in Resources */,
+				092CFB3017D06B510020DD97 /* SubclassConfigViewController.xib in Resources */,
+				092CFB4017D06B6D0020DD97 /* Exit.png in Resources */,
+				092CFB4117D06B6D0020DD97 /* ExitDown.png in Resources */,
+				092CFB4217D06B6D0020DD97 /* Facebook.png in Resources */,
+				092CFB4317D06B6D0020DD97 /* FacebookDown.png in Resources */,
+				092CFB4417D06B6D0020DD97 /* LoginFieldBG.png in Resources */,
+				092CFB4517D06B6D0020DD97 /* Logo.png in Resources */,
+				092CFB4617D06B6D0020DD97 /* MainBG.png in Resources */,
+				092CFB4717D06B6D0020DD97 /* SignUp.png in Resources */,
+				092CFB4817D06B6D0020DD97 /* SignUpDown.png in Resources */,
+				092CFB4917D06B6D0020DD97 /* SignUpFieldBG.png in Resources */,
+				092CFB4A17D06B6D0020DD97 /* Twitter.png in Resources */,
+				092CFB4B17D06B6D0020DD97 /* TwitterDown.png in Resources */,
+				092CFB5017D1A8570020DD97 /* MyBasicLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +478,11 @@
 			files = (
 				098A2D8C17B0DA0000B99928 /* ParseBridgeAppDelegate.m in Sources */,
 				098A2D8E17B0DE4400B99928 /* main.m in Sources */,
+				092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */,
+				092CFB2F17D06B510020DD97 /* SubclassConfigViewController.m in Sources */,
+				092CFB3117D06B510020DD97 /* MyLogInViewController.m in Sources */,
+				092CFB3217D06B510020DD97 /* MySignUpViewController.m in Sources */,
+				092CFB4F17D1A8570020DD97 /* MyBasicLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

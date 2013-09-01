@@ -29,9 +29,24 @@
 @class ParseException;
 @class ParseUser;
 
+typedef void (^callbackBlock)(ParseUser*, ParseException*);
+
 @interface LogInCallback : JavaObject
 
 -(id)init;
 -(void)done:(ParseUser*)user error:(ParseException*)error;
 
 @end
+
+
+@interface MyLogInCallback : LogInCallback
+
+@property(readwrite, copy) callbackBlock handler;
+
++ (MyLogInCallback *)callbackWithHandler:(callbackBlock)myHandler;
+- (void)done:(JavaObject *)userObj error:(JavaObject *)errorObj;
+
+@end
+
+
+

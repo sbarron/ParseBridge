@@ -23,18 +23,57 @@
  * THE SOFTWARE.
  *
  */
-#import "LogInCallback.h"
+#import "MyLogInCallback.h"
 #import "ParseUser.h"
+#import "ParseException.h"
+
+
+@implementation MyLogInCallback
+
+@synthesize handler = _handler;
+
++ (void)initializeJava
+{
+	[super initializeJava];
+	BOOL results = [MyLogInCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
+	
+	//MyLoginCallback implements LoginCallback (abstract class)
+	//*- Java:  public abstract void done(ParseUser user,ParseException e)
+	results = [MyLogInCallback registerCallback:@"done" selector:@selector(done:error:) returnValue:nil arguments:[ParseUser className], [ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+}
+
++ (NSString *)className { return @"com.parsebridge.MyLogInCallback"; }
+
++ (MyLogInCallback *)callbackWithHandler:(callbackBlock)myHandler
+{
+	MyLogInCallback *callback = [MyLogInCallback new];
+	callback.handler = myHandler;
+	return callback;
+}
+										  
+- (void)done:(JavaObject *)userObj error:(JavaObject *)errorObj
+{
+	if (_handler) {
+		ParseUser *user = [ParseUser typecast:userObj]; // this is to work around a bug in the trampolines when calling back (hopefully we will have that fixed in the near future
+		ParseException *ex = [ParseException typecast:errorObj];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			_handler(user, ex);
+		});
+	}
+}
+										  
+@end
+
+
 
 @implementation LogInCallback
-
-
 
 + (void)initializeJava
 {
     [super initializeJava];
 	BOOL results;
-	//*- Java:  public LogInCallback()
 	results = [LogInCallback registerConstructor];
 	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
@@ -42,31 +81,17 @@
 	//*- iOS Bridge Method:  -(void)done:(ParseUser*)user :(ParseException*)error;
 	//Override this function with the code you want to run after the save is complete.
 	results = [LogInCallback registerCallback:@"done"
-							  selector:@selector(done:error:)
-						   returnValue:nil
-							 arguments:[ParseUser className],[ParseException className], nil];
+									 selector:@selector(done:error:)
+								  returnValue:nil
+									arguments:[ParseUser className],[ParseException className], nil];
 	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
 	
-	
 }
-
--(void)done:(ParseUser*)user error:(ParseException*)error{
-	//[self _done:error];
-	if(!error && user != nil){
-		//No error
-		NSLog(@"User Retrieved Successfully");
-	}
-	else{
-		NSLog(@"User retrieval failed", [error getCode]);
-	}
-}
-
 
 + (NSString *)className
 {
     return @"com.parse.LogInCallback";
 }
 
-
-
 @end
+										  
