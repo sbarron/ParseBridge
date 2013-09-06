@@ -8,25 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */; };
-		092CFB1E17CF108A0020DD97 /* ParseBridgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */; };
-		092CFB2F17D06B510020DD97 /* SubclassConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */; };
-		092CFB3017D06B510020DD97 /* SubclassConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */; };
-		092CFB3117D06B510020DD97 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2C17D06B510020DD97 /* MyLogInViewController.m */; };
-		092CFB3217D06B510020DD97 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB2E17D06B510020DD97 /* MySignUpViewController.m */; };
-		092CFB4017D06B6D0020DD97 /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3417D06B6D0020DD97 /* Exit.png */; };
-		092CFB4117D06B6D0020DD97 /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3517D06B6D0020DD97 /* ExitDown.png */; };
-		092CFB4217D06B6D0020DD97 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3617D06B6D0020DD97 /* Facebook.png */; };
-		092CFB4317D06B6D0020DD97 /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3717D06B6D0020DD97 /* FacebookDown.png */; };
-		092CFB4417D06B6D0020DD97 /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */; };
-		092CFB4517D06B6D0020DD97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3917D06B6D0020DD97 /* Logo.png */; };
-		092CFB4617D06B6D0020DD97 /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3A17D06B6D0020DD97 /* MainBG.png */; };
-		092CFB4717D06B6D0020DD97 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3B17D06B6D0020DD97 /* SignUp.png */; };
-		092CFB4817D06B6D0020DD97 /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3C17D06B6D0020DD97 /* SignUpDown.png */; };
-		092CFB4917D06B6D0020DD97 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */; };
-		092CFB4A17D06B6D0020DD97 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3E17D06B6D0020DD97 /* Twitter.png */; };
-		092CFB4B17D06B6D0020DD97 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB3F17D06B6D0020DD97 /* TwitterDown.png */; };
-		092CFB4F17D1A8570020DD97 /* MyBasicLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */; };
-		092CFB5017D1A8570020DD97 /* MyBasicLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */; };
 		098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */; };
 		098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */; };
 		098A2D6817B0CEDA00B99928 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */; };
@@ -42,7 +23,31 @@
 		098A2D8917B0D00600B99928 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */; };
 		098A2D8C17B0DA0000B99928 /* ParseBridgeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */; };
 		098A2D8E17B0DE4400B99928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8D17B0DE4400B99928 /* main.m */; };
+		099CA76217D463FA007C2D9E /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75617D463FA007C2D9E /* Exit.png */; };
+		099CA76317D463FA007C2D9E /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75717D463FA007C2D9E /* ExitDown.png */; };
+		099CA76417D463FA007C2D9E /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75817D463FA007C2D9E /* Facebook.png */; };
+		099CA76517D463FA007C2D9E /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75917D463FA007C2D9E /* FacebookDown.png */; };
+		099CA76617D463FA007C2D9E /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75A17D463FA007C2D9E /* LoginFieldBG.png */; };
+		099CA76717D463FA007C2D9E /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75B17D463FA007C2D9E /* Logo.png */; };
+		099CA76817D463FA007C2D9E /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75C17D463FA007C2D9E /* MainBG.png */; };
+		099CA76917D463FA007C2D9E /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75D17D463FA007C2D9E /* SignUp.png */; };
+		099CA76A17D463FA007C2D9E /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75E17D463FA007C2D9E /* SignUpDown.png */; };
+		099CA76B17D463FA007C2D9E /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA75F17D463FA007C2D9E /* SignUpFieldBG.png */; };
+		099CA76C17D463FA007C2D9E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA76017D463FA007C2D9E /* Twitter.png */; };
+		099CA76D17D463FA007C2D9E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA76117D463FA007C2D9E /* TwitterDown.png */; };
+		099CA77217D4684F007C2D9E /* LoginDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA76E17D4684F007C2D9E /* LoginDown.png */; };
+		099CA77317D4684F007C2D9E /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA76F17D4684F007C2D9E /* Login.png */; };
+		099CA77417D4684F007C2D9E /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77017D4684F007C2D9E /* Logout.png */; };
+		099CA77517D4684F007C2D9E /* LogoutDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77117D4684F007C2D9E /* LogoutDown.png */; };
+		099CA77C17D5CA6E007C2D9E /* ParseBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77B17D5CA6E007C2D9E /* ParseBridge.storyboard */; };
 		09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */; };
+		09F2689017D8625100931604 /* ParseBridgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2688F17D8625100931604 /* ParseBridgeViewController.xib */; };
+		09F2689417D8690E00931604 /* ParseBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2689217D8690D00931604 /* ParseBridgeVC.m */; };
+		09F2689517D8690E00931604 /* ParseBridgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2689317D8690E00931604 /* ParseBridgeVC.xib */; };
+		09F2689917D8801300931604 /* ParseBridgeLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2689717D8801200931604 /* ParseBridgeLoginVC.m */; };
+		09F2689A17D8801300931604 /* ParseBridgeLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2689817D8801200931604 /* ParseBridgeLoginVC.xib */; };
+		09F2689E17D8870600931604 /* ParseBridgeSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2689C17D8870600931604 /* ParseBridgeSignUpVC.m */; };
+		09F2689F17D8870600931604 /* ParseBridgeSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2689D17D8870600931604 /* ParseBridgeSignUpVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +71,8 @@
 		090A0E7617C0C5DD0023C28B /* RequestPasswordResetCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RequestPasswordResetCallback.m; path = Bridge/RequestPasswordResetCallback.m; sourceTree = "<group>"; };
 		090A0E7717C0C5DD0023C28B /* SendCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SendCallback.h; path = Bridge/SendCallback.h; sourceTree = "<group>"; };
 		090A0E7817C0C5DD0023C28B /* SendCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SendCallback.m; path = Bridge/SendCallback.m; sourceTree = "<group>"; };
-		090A0E7917C0C5DD0023C28B /* SignUpCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignUpCallback.h; path = Bridge/SignUpCallback.h; sourceTree = "<group>"; };
-		090A0E7A17C0C5DD0023C28B /* SignUpCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignUpCallback.m; path = Bridge/SignUpCallback.m; sourceTree = "<group>"; };
+		090A0E7917C0C5DD0023C28B /* MySignUpCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MySignUpCallback.h; path = Bridge/MySignUpCallback.h; sourceTree = "<group>"; };
+		090A0E7A17C0C5DD0023C28B /* MySignUpCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MySignUpCallback.m; path = Bridge/MySignUpCallback.m; sourceTree = "<group>"; };
 		090A0E7B17C0C5DD0023C28B /* StandardPushCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StandardPushCallback.h; path = Bridge/StandardPushCallback.h; sourceTree = "<group>"; };
 		090A0E7C17C0C5DD0023C28B /* StandardPushCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StandardPushCallback.m; path = Bridge/StandardPushCallback.m; sourceTree = "<group>"; };
 		090A0E7D17C0C6910023C28B /* ParseAnonymousUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseAnonymousUtils.h; path = Bridge/ParseAnonymousUtils.h; sourceTree = "<group>"; };
@@ -84,29 +89,6 @@
 		090A0E8917C1F0630023C28B /* CountCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallback.h; path = Bridge/CountCallback.h; sourceTree = "<group>"; };
 		092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeViewController.h; sourceTree = "<group>"; };
 		092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeViewController.m; sourceTree = "<group>"; };
-		092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeViewController.xib; sourceTree = "<group>"; };
-		092CFB2817D06B510020DD97 /* SubclassConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassConfigViewController.h; sourceTree = "<group>"; };
-		092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassConfigViewController.m; sourceTree = "<group>"; };
-		092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubclassConfigViewController.xib; sourceTree = "<group>"; };
-		092CFB2B17D06B510020DD97 /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
-		092CFB2C17D06B510020DD97 /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
-		092CFB2D17D06B510020DD97 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
-		092CFB2E17D06B510020DD97 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
-		092CFB3417D06B6D0020DD97 /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
-		092CFB3517D06B6D0020DD97 /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitDown.png; sourceTree = "<group>"; };
-		092CFB3617D06B6D0020DD97 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
-		092CFB3717D06B6D0020DD97 /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookDown.png; sourceTree = "<group>"; };
-		092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFieldBG.png; sourceTree = "<group>"; };
-		092CFB3917D06B6D0020DD97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		092CFB3A17D06B6D0020DD97 /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
-		092CFB3B17D06B6D0020DD97 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
-		092CFB3C17D06B6D0020DD97 /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpDown.png; sourceTree = "<group>"; };
-		092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
-		092CFB3E17D06B6D0020DD97 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
-		092CFB3F17D06B6D0020DD97 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
-		092CFB4C17D1A8540020DD97 /* MyBasicLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBasicLoginViewController.h; sourceTree = "<group>"; };
-		092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBasicLoginViewController.m; sourceTree = "<group>"; };
-		092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBasicLoginViewController.xib; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		098A2D4C17B0C79200B99928 /* ParseQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseQuery.m; path = Bridge/ParseQuery.m; sourceTree = "<group>"; };
 		098A2D4D17B0C79200B99928 /* ParseUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseUser.m; path = Bridge/ParseUser.m; sourceTree = "<group>"; };
@@ -131,6 +113,23 @@
 		098A2D8A17B0DA0000B99928 /* ParseBridgeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeAppDelegate.h; sourceTree = "<group>"; };
 		098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeAppDelegate.m; sourceTree = "<group>"; };
 		098A2D8D17B0DE4400B99928 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		099CA75617D463FA007C2D9E /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Exit.png; path = resources/Exit.png; sourceTree = "<group>"; };
+		099CA75717D463FA007C2D9E /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ExitDown.png; path = resources/ExitDown.png; sourceTree = "<group>"; };
+		099CA75817D463FA007C2D9E /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Facebook.png; path = resources/Facebook.png; sourceTree = "<group>"; };
+		099CA75917D463FA007C2D9E /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FacebookDown.png; path = resources/FacebookDown.png; sourceTree = "<group>"; };
+		099CA75A17D463FA007C2D9E /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LoginFieldBG.png; path = resources/LoginFieldBG.png; sourceTree = "<group>"; };
+		099CA75B17D463FA007C2D9E /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = resources/Logo.png; sourceTree = "<group>"; };
+		099CA75C17D463FA007C2D9E /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainBG.png; path = resources/MainBG.png; sourceTree = "<group>"; };
+		099CA75D17D463FA007C2D9E /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUp.png; path = resources/SignUp.png; sourceTree = "<group>"; };
+		099CA75E17D463FA007C2D9E /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpDown.png; path = resources/SignUpDown.png; sourceTree = "<group>"; };
+		099CA75F17D463FA007C2D9E /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpFieldBG.png; path = resources/SignUpFieldBG.png; sourceTree = "<group>"; };
+		099CA76017D463FA007C2D9E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter.png; path = resources/Twitter.png; sourceTree = "<group>"; };
+		099CA76117D463FA007C2D9E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TwitterDown.png; path = resources/TwitterDown.png; sourceTree = "<group>"; };
+		099CA76E17D4684F007C2D9E /* LoginDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LoginDown.png; path = resources/LoginDown.png; sourceTree = "<group>"; };
+		099CA76F17D4684F007C2D9E /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Login.png; path = resources/Login.png; sourceTree = "<group>"; };
+		099CA77017D4684F007C2D9E /* Logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logout.png; path = resources/Logout.png; sourceTree = "<group>"; };
+		099CA77117D4684F007C2D9E /* LogoutDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoutDown.png; path = resources/LogoutDown.png; sourceTree = "<group>"; };
+		099CA77B17D5CA6E007C2D9E /* ParseBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParseBridge.storyboard; sourceTree = "<group>"; };
 		099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		099DAEAB178FC80400CBF872 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		099DAEAD178FC81200CBF872 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -156,6 +155,16 @@
 		09A9B9AF17B8DA1C00ACA1BD /* ParseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseHeaders.h; path = Bridge/ParseHeaders.h; sourceTree = "<group>"; };
 		09A9B9B317BA1D9200ACA1BD /* ParsePush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParsePush.h; path = Bridge/ParsePush.h; sourceTree = "<group>"; };
 		09A9B9B417BA1D9300ACA1BD /* ParsePush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParsePush.m; path = Bridge/ParsePush.m; sourceTree = "<group>"; };
+		09F2688F17D8625100931604 /* ParseBridgeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeViewController.xib; sourceTree = "<group>"; };
+		09F2689117D8690D00931604 /* ParseBridgeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeVC.h; sourceTree = "<group>"; };
+		09F2689217D8690D00931604 /* ParseBridgeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeVC.m; sourceTree = "<group>"; };
+		09F2689317D8690E00931604 /* ParseBridgeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeVC.xib; sourceTree = "<group>"; };
+		09F2689617D8801200931604 /* ParseBridgeLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeLoginVC.h; sourceTree = "<group>"; };
+		09F2689717D8801200931604 /* ParseBridgeLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeLoginVC.m; sourceTree = "<group>"; };
+		09F2689817D8801200931604 /* ParseBridgeLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeLoginVC.xib; sourceTree = "<group>"; };
+		09F2689B17D8870500931604 /* ParseBridgeSignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeSignUpVC.h; sourceTree = "<group>"; };
+		09F2689C17D8870600931604 /* ParseBridgeSignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeSignUpVC.m; sourceTree = "<group>"; };
+		09F2689D17D8870600931604 /* ParseBridgeSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeSignUpVC.xib; sourceTree = "<group>"; };
 		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -197,16 +206,15 @@
 			isa = PBXGroup;
 			children = (
 				092CFB3317D06B570020DD97 /* images */,
-				092CFB2817D06B510020DD97 /* SubclassConfigViewController.h */,
-				092CFB2917D06B510020DD97 /* SubclassConfigViewController.m */,
-				092CFB2A17D06B510020DD97 /* SubclassConfigViewController.xib */,
-				092CFB4C17D1A8540020DD97 /* MyBasicLoginViewController.h */,
-				092CFB4D17D1A8550020DD97 /* MyBasicLoginViewController.m */,
-				092CFB4E17D1A8560020DD97 /* MyBasicLoginViewController.xib */,
-				092CFB2B17D06B510020DD97 /* MyLogInViewController.h */,
-				092CFB2C17D06B510020DD97 /* MyLogInViewController.m */,
-				092CFB2D17D06B510020DD97 /* MySignUpViewController.h */,
-				092CFB2E17D06B510020DD97 /* MySignUpViewController.m */,
+				09F2689117D8690D00931604 /* ParseBridgeVC.h */,
+				09F2689217D8690D00931604 /* ParseBridgeVC.m */,
+				09F2689317D8690E00931604 /* ParseBridgeVC.xib */,
+				09F2689617D8801200931604 /* ParseBridgeLoginVC.h */,
+				09F2689717D8801200931604 /* ParseBridgeLoginVC.m */,
+				09F2689817D8801200931604 /* ParseBridgeLoginVC.xib */,
+				09F2689B17D8870500931604 /* ParseBridgeSignUpVC.h */,
+				09F2689C17D8870600931604 /* ParseBridgeSignUpVC.m */,
+				09F2689D17D8870600931604 /* ParseBridgeSignUpVC.xib */,
 			);
 			name = ParseLoginExample;
 			sourceTree = "<group>";
@@ -214,18 +222,23 @@
 		092CFB3317D06B570020DD97 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				092CFB3417D06B6D0020DD97 /* Exit.png */,
-				092CFB3517D06B6D0020DD97 /* ExitDown.png */,
-				092CFB3617D06B6D0020DD97 /* Facebook.png */,
-				092CFB3717D06B6D0020DD97 /* FacebookDown.png */,
-				092CFB3817D06B6D0020DD97 /* LoginFieldBG.png */,
-				092CFB3917D06B6D0020DD97 /* Logo.png */,
-				092CFB3A17D06B6D0020DD97 /* MainBG.png */,
-				092CFB3B17D06B6D0020DD97 /* SignUp.png */,
-				092CFB3C17D06B6D0020DD97 /* SignUpDown.png */,
-				092CFB3D17D06B6D0020DD97 /* SignUpFieldBG.png */,
-				092CFB3E17D06B6D0020DD97 /* Twitter.png */,
-				092CFB3F17D06B6D0020DD97 /* TwitterDown.png */,
+				099CA76E17D4684F007C2D9E /* LoginDown.png */,
+				099CA76F17D4684F007C2D9E /* Login.png */,
+				099CA77017D4684F007C2D9E /* Logout.png */,
+				099CA77117D4684F007C2D9E /* LogoutDown.png */,
+				099CA75617D463FA007C2D9E /* Exit.png */,
+				099CA75717D463FA007C2D9E /* ExitDown.png */,
+				099CA75817D463FA007C2D9E /* Facebook.png */,
+				099CA75917D463FA007C2D9E /* FacebookDown.png */,
+				099CA75A17D463FA007C2D9E /* LoginFieldBG.png */,
+				099CA75B17D463FA007C2D9E /* Logo.png */,
+				099CA75C17D463FA007C2D9E /* MainBG.png */,
+				099CA75D17D463FA007C2D9E /* SignUp.png */,
+				099CA75E17D463FA007C2D9E /* SignUpDown.png */,
+				099CA75F17D463FA007C2D9E /* SignUpFieldBG.png */,
+				099CA76017D463FA007C2D9E /* Twitter.png */,
+				099CA76117D463FA007C2D9E /* TwitterDown.png */,
+				099CA77B17D5CA6E007C2D9E /* ParseBridge.storyboard */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -318,8 +331,8 @@
 				090A0E7617C0C5DD0023C28B /* RequestPasswordResetCallback.m */,
 				090A0E7717C0C5DD0023C28B /* SendCallback.h */,
 				090A0E7817C0C5DD0023C28B /* SendCallback.m */,
-				090A0E7917C0C5DD0023C28B /* SignUpCallback.h */,
-				090A0E7A17C0C5DD0023C28B /* SignUpCallback.m */,
+				090A0E7917C0C5DD0023C28B /* MySignUpCallback.h */,
+				090A0E7A17C0C5DD0023C28B /* MySignUpCallback.m */,
 				090A0E7B17C0C5DD0023C28B /* StandardPushCallback.h */,
 				090A0E7C17C0C5DD0023C28B /* StandardPushCallback.m */,
 				09A1401C17BF51A000A3F1AE /* DeleteCallback.h */,
@@ -376,7 +389,7 @@
 				098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */,
 				092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */,
 				092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */,
-				092CFB1C17CF10890020DD97 /* ParseBridgeViewController.xib */,
+				09F2688F17D8625100931604 /* ParseBridgeViewController.xib */,
 				099CA3AD179B9E8A000F39DD /* Bridge */,
 				099DAEA6178FC20100CBF872 /* Parse */,
 				099DAEA3178FC1CF00CBF872 /* FaceBook */,
@@ -451,21 +464,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092CFB1E17CF108A0020DD97 /* ParseBridgeViewController.xib in Resources */,
-				092CFB3017D06B510020DD97 /* SubclassConfigViewController.xib in Resources */,
-				092CFB4017D06B6D0020DD97 /* Exit.png in Resources */,
-				092CFB4117D06B6D0020DD97 /* ExitDown.png in Resources */,
-				092CFB4217D06B6D0020DD97 /* Facebook.png in Resources */,
-				092CFB4317D06B6D0020DD97 /* FacebookDown.png in Resources */,
-				092CFB4417D06B6D0020DD97 /* LoginFieldBG.png in Resources */,
-				092CFB4517D06B6D0020DD97 /* Logo.png in Resources */,
-				092CFB4617D06B6D0020DD97 /* MainBG.png in Resources */,
-				092CFB4717D06B6D0020DD97 /* SignUp.png in Resources */,
-				092CFB4817D06B6D0020DD97 /* SignUpDown.png in Resources */,
-				092CFB4917D06B6D0020DD97 /* SignUpFieldBG.png in Resources */,
-				092CFB4A17D06B6D0020DD97 /* Twitter.png in Resources */,
-				092CFB4B17D06B6D0020DD97 /* TwitterDown.png in Resources */,
-				092CFB5017D1A8570020DD97 /* MyBasicLoginViewController.xib in Resources */,
+				099CA76217D463FA007C2D9E /* Exit.png in Resources */,
+				099CA76317D463FA007C2D9E /* ExitDown.png in Resources */,
+				099CA76417D463FA007C2D9E /* Facebook.png in Resources */,
+				099CA76517D463FA007C2D9E /* FacebookDown.png in Resources */,
+				099CA76617D463FA007C2D9E /* LoginFieldBG.png in Resources */,
+				099CA76717D463FA007C2D9E /* Logo.png in Resources */,
+				099CA76817D463FA007C2D9E /* MainBG.png in Resources */,
+				099CA76917D463FA007C2D9E /* SignUp.png in Resources */,
+				099CA76A17D463FA007C2D9E /* SignUpDown.png in Resources */,
+				099CA76B17D463FA007C2D9E /* SignUpFieldBG.png in Resources */,
+				099CA76C17D463FA007C2D9E /* Twitter.png in Resources */,
+				099CA76D17D463FA007C2D9E /* TwitterDown.png in Resources */,
+				099CA77217D4684F007C2D9E /* LoginDown.png in Resources */,
+				099CA77317D4684F007C2D9E /* Login.png in Resources */,
+				099CA77417D4684F007C2D9E /* Logout.png in Resources */,
+				099CA77517D4684F007C2D9E /* LogoutDown.png in Resources */,
+				099CA77C17D5CA6E007C2D9E /* ParseBridge.storyboard in Resources */,
+				09F2689017D8625100931604 /* ParseBridgeViewController.xib in Resources */,
+				09F2689517D8690E00931604 /* ParseBridgeVC.xib in Resources */,
+				09F2689A17D8801300931604 /* ParseBridgeLoginVC.xib in Resources */,
+				09F2689F17D8870600931604 /* ParseBridgeSignUpVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,10 +498,9 @@
 				098A2D8C17B0DA0000B99928 /* ParseBridgeAppDelegate.m in Sources */,
 				098A2D8E17B0DE4400B99928 /* main.m in Sources */,
 				092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */,
-				092CFB2F17D06B510020DD97 /* SubclassConfigViewController.m in Sources */,
-				092CFB3117D06B510020DD97 /* MyLogInViewController.m in Sources */,
-				092CFB3217D06B510020DD97 /* MySignUpViewController.m in Sources */,
-				092CFB4F17D1A8570020DD97 /* MyBasicLoginViewController.m in Sources */,
+				09F2689417D8690E00931604 /* ParseBridgeVC.m in Sources */,
+				09F2689917D8801300931604 /* ParseBridgeLoginVC.m in Sources */,
+				09F2689E17D8870600931604 /* ParseBridgeSignUpVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

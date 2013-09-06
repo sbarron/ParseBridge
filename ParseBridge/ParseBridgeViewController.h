@@ -7,22 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#ifdef ANDROID
+#import "ParseHeaders.h"
+#import "ParseManager.h"
+#else
+#import <Parse/Parse.h>
+#endif
 
 @interface ParseBridgeViewController : UIViewController{
 
-		IBOutlet UIButton* loginButton;
+	//	IBOutlet UIButton* loginButton;
+	//	IBOutlet UIButton* logOutButton;
 		
-		UIButton* loginButton2;
-		UIButton* loginButton3;
-		
-		IBOutlet UILabel* resultsLabel;
+	//	IBOutlet UILabel* statusLabel;
 
 }
 
-@property (nonatomic, retain) IBOutlet UIButton* loginButton;
-@property (nonatomic, retain) IBOutlet UILabel* resultsLabel;
+//@property (nonatomic, retain) IBOutlet UIButton* loginButton;
+//@property (nonatomic, retain) IBOutlet UIButton* logoutButton;
+//@property (nonatomic, retain) IBOutlet UILabel* statusLabel;
 
-- (IBAction)loginToParse:(id)sender;
+//- (IBAction)logOutParse:(id)sender;
 
 @end

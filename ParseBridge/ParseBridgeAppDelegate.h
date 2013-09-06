@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class ParseBridgeViewController;
-
 @interface ParseBridgeAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ParseBridgeViewController *viewController;
+@property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) UINavigationController *navController;
 
 @end

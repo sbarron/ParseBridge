@@ -7,6 +7,8 @@
 //
 
 #import "ParseBridgeViewController.h"
+//#import <FacebookSDK/FacebookSDK.h>
+
 #ifdef ANDROID
 #import "ParseHeaders.h"
 #import "ParseManager.h"
@@ -14,26 +16,20 @@
 #import <Parse/Parse.h>
 #endif
 
-#import "SubclassConfigViewController.h"
-#import <FacebookSDK/FacebookSDK.h>
-
-
 @interface ParseBridgeViewController ()
 
 @end
 
 @implementation ParseBridgeViewController
 
+//@synthesize statusLabel,logoutButton,loginButton;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-	
-		CGSize screenSize =  self.view.frame.size;
-		NSLog(@"Width %f x Height %f", screenSize.width, screenSize.height);
-		
-		// Custom initialization
-
+        // Custom initialization
     }
     return self;
 }
@@ -44,24 +40,43 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)showLoginView{
- 
-	[self presentViewController:[[SubclassConfigViewController alloc] init]];
-	
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginToParse:(id)sender{
+/*
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 	
-	NSLog(@"Login To Parse");
-	[self showLoginView];
+#ifdef ANDROID
+	if ([ParseUser currentUser] != nil) {
+        self.statusLabel.text = (@"Welcome %@!", [[ParseUser currentUser] getUsername]);
+    } else {
+        self.statusLabel.text = @"Not logged in";
+    }
+#else
+    if ([PFUser currentUser]) {
+        self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+    } else {
+        self.statusLabel.text = NSLocalizedString(@"Not logged in", nil);
+    }
+#endif
+}*/
+/*
+- (IBAction)logOutParse:(id)sender{
+#ifdef ANDROID
+	NSLog(@"Logout User");
+    [ParseUser logOut];
+	statusLabel.text = @"Logged out";
+#else
+	NSLog(@"Logout User");
+    [PFUser logOut];
+	statusLabel.text = @"Logged out";
+#endif
 }
-
+*/
 /*
 - (IBAction)submitRandomScore:(id)sender{
 	int scoreToSubmit = (arc4random()%(100-0))+0;
@@ -81,32 +96,6 @@
 #endif
 }*/
 
-
-//Presenting Interfaces
--(UIViewController*) getRootViewController
-{
-		return [UIApplication sharedApplication].keyWindow.rootViewController;
-}
-	 
--(void) presentViewController:(UIViewController*)vc
-{
-		UIViewController* rootVC = [self getRootViewController];
-		//[rootVC presentModalViewController:vc animated:YES];
-		[rootVC presentViewController:vc animated:YES completion:^{
-			NSLog(@"ViewController Presented");
-		}];
-		
-}
-	 
--(void) dismissModalViewController
-{
-		UIViewController* rootVC = [self getRootViewController];
-		//[rootVC dismissModalViewControllerAnimated:YES];
-		[rootVC dismissViewControllerAnimated:YES completion:^{
-			NSLog(@"Viewcontroller dismissed");
-		}];
-		
-}
 
 
 @end

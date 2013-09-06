@@ -4,27 +4,6 @@
         {
             "language": "objc", 
             "header_paths": [], 
-            "source": "ParseBridge/MyBasicLoginViewController.m", 
-            "flags": [], 
-            "defines": {}
-        }, 
-        {
-            "language": "objc", 
-            "header_paths": [], 
-            "source": "ParseBridge/MyLogInViewController.m", 
-            "flags": [], 
-            "defines": {}
-        }, 
-        {
-            "language": "objc", 
-            "header_paths": [], 
-            "source": "ParseBridge/MySignUpViewController.m", 
-            "flags": [], 
-            "defines": {}
-        }, 
-        {
-            "language": "objc", 
-            "header_paths": [], 
             "source": "ParseBridge/ParseBridgeAppDelegate.m", 
             "flags": [], 
             "defines": {}
@@ -32,14 +11,28 @@
         {
             "language": "objc", 
             "header_paths": [], 
-            "source": "ParseBridge/ParseBridgeViewController.m", 
+            "source": "ParseBridge/ParseBridgeLoginVC.m", 
             "flags": [], 
             "defines": {}
         }, 
         {
             "language": "objc", 
             "header_paths": [], 
-            "source": "ParseBridge/SubclassConfigViewController.m", 
+            "source": "ParseBridge/ParseBridgeSignUpVC.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "ParseBridge/ParseBridgeVC.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "ParseBridge/ParseBridgeViewController.m", 
             "flags": [], 
             "defines": {}
         }, 
@@ -67,7 +60,71 @@
     ], 
     "assets": [
         {
-            "asset": "ParseBridge/SubclassConfigViewController.xib", 
+            "asset": "ParseBridge/resources/Exit.png", 
+            "target": "Exit.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/Facebook.png", 
+            "target": "Facebook.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/ExitDown.png", 
+            "target": "ExitDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/FacebookDown.png", 
+            "target": "FacebookDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/LoginFieldBG.png", 
+            "target": "LoginFieldBG.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/Logo.png", 
+            "target": "Logo.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/MainBG.png", 
+            "target": "MainBG.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/SignUp.png", 
+            "target": "SignUp.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/SignUpDown.png", 
+            "target": "SignUpDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/SignUpFieldBG.png", 
+            "target": "SignUpFieldBG.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/Twitter.png", 
+            "target": "Twitter.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/TwitterDown.png", 
+            "target": "TwitterDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/LoginDown.png", 
+            "target": "LoginDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/Login.png", 
+            "target": "Login.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/Logout.png", 
+            "target": "Logout.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/LogoutDown.png", 
+            "target": "LogoutDown.png"
+        }, 
+        {
+            "asset": "ParseBridge/ParseBridge.storyboard", 
             "target": null
         }, 
         {
@@ -75,55 +132,15 @@
             "target": null
         }, 
         {
-            "asset": "ParseBridge/Exit.png", 
-            "target": "Exit.png"
+            "asset": "ParseBridge/ParseBridgeVC.xib", 
+            "target": null
         }, 
         {
-            "asset": "ParseBridge/ExitDown.png", 
-            "target": "ExitDown.png"
+            "asset": "ParseBridge/ParseBridgeLoginVC.xib", 
+            "target": null
         }, 
         {
-            "asset": "ParseBridge/Facebook.png", 
-            "target": "Facebook.png"
-        }, 
-        {
-            "asset": "ParseBridge/FacebookDown.png", 
-            "target": "FacebookDown.png"
-        }, 
-        {
-            "asset": "ParseBridge/LoginFieldBG.png", 
-            "target": "LoginFieldBG.png"
-        }, 
-        {
-            "asset": "ParseBridge/Logo.png", 
-            "target": "Logo.png"
-        }, 
-        {
-            "asset": "ParseBridge/MainBG.png", 
-            "target": "MainBG.png"
-        }, 
-        {
-            "asset": "ParseBridge/SignUp.png", 
-            "target": "SignUp.png"
-        }, 
-        {
-            "asset": "ParseBridge/SignUpDown.png", 
-            "target": "SignUpDown.png"
-        }, 
-        {
-            "asset": "ParseBridge/SignUpFieldBG.png", 
-            "target": "SignUpFieldBG.png"
-        }, 
-        {
-            "asset": "ParseBridge/Twitter.png", 
-            "target": "Twitter.png"
-        }, 
-        {
-            "asset": "ParseBridge/TwitterDown.png", 
-            "target": "TwitterDown.png"
-        }, 
-        {
-            "asset": "ParseBridge/MyBasicLoginViewController.xib", 
+            "asset": "ParseBridge/ParseBridgeSignUpVC.xib", 
             "target": null
         }
     ], 
@@ -168,11 +185,6 @@
                     "suffix": "ParseException.h", 
                     "key": "ParseException.h"
                 }, 
-                "MyLogInViewController.h": {
-                    "prefix": "ParseBridge/", 
-                    "suffix": "MyLogInViewController.h", 
-                    "key": "MyLogInViewController.h"
-                }, 
                 "ParsePush.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParsePush.h", 
@@ -208,6 +220,11 @@
                     "suffix": "ParseAnonymousUtils.h", 
                     "key": "ParseAnonymousUtils.h"
                 }, 
+                "ParseInstallation.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseInstallation.h", 
+                    "key": "ParseInstallation.h"
+                }, 
                 "ParseObject.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseObject.h", 
@@ -238,10 +255,10 @@
                     "suffix": "ParseHeaders.h", 
                     "key": "ParseHeaders.h"
                 }, 
-                "RefreshCallback.h": {
+                "ParseGeoPoint.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "RefreshCallback.h", 
-                    "key": "RefreshCallback.h"
+                    "suffix": "ParseGeoPoint.h", 
+                    "key": "ParseGeoPoint.h"
                 }, 
                 "GetDataCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -268,20 +285,15 @@
                     "suffix": "ParseFacebookUtils.h", 
                     "key": "ParseFacebookUtils.h"
                 }, 
-                "SignUpCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "SignUpCallback.h", 
-                    "key": "SignUpCallback.h"
-                }, 
                 "ParseQuery.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseQuery.h", 
                     "key": "ParseQuery.h"
                 }, 
-                "ParseGeoPoint.h": {
+                "RefreshCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseGeoPoint.h", 
-                    "key": "ParseGeoPoint.h"
+                    "suffix": "RefreshCallback.h", 
+                    "key": "RefreshCallback.h"
                 }, 
                 "ProgressCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -308,10 +320,15 @@
                     "suffix": "FindCallback.h", 
                     "key": "FindCallback.h"
                 }, 
-                "SubclassConfigViewController.h": {
+                "ParseBridgeLoginVC.h": {
                     "prefix": "ParseBridge/", 
-                    "suffix": "SubclassConfigViewController.h", 
-                    "key": "SubclassConfigViewController.h"
+                    "suffix": "ParseBridgeLoginVC.h", 
+                    "key": "ParseBridgeLoginVC.h"
+                }, 
+                "MySignUpCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "MySignUpCallback.h", 
+                    "key": "MySignUpCallback.h"
                 }, 
                 "DeleteCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -323,25 +340,20 @@
                     "suffix": "RequestPasswordResetCallback.h", 
                     "key": "RequestPasswordResetCallback.h"
                 }, 
-                "MySignUpViewController.h": {
+                "ParseBridgeSignUpVC.h": {
                     "prefix": "ParseBridge/", 
-                    "suffix": "MySignUpViewController.h", 
-                    "key": "MySignUpViewController.h"
-                }, 
-                "ParseInstallation.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseInstallation.h", 
-                    "key": "ParseInstallation.h"
+                    "suffix": "ParseBridgeSignUpVC.h", 
+                    "key": "ParseBridgeSignUpVC.h"
                 }, 
                 "ParseBridgeViewController.h": {
                     "prefix": "ParseBridge/", 
                     "suffix": "ParseBridgeViewController.h", 
                     "key": "ParseBridgeViewController.h"
                 }, 
-                "MyBasicLoginViewController.h": {
+                "ParseBridgeVC.h": {
                     "prefix": "ParseBridge/", 
-                    "suffix": "MyBasicLoginViewController.h", 
-                    "key": "MyBasicLoginViewController.h"
+                    "suffix": "ParseBridgeVC.h", 
+                    "key": "ParseBridgeVC.h"
                 }, 
                 "SendCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 

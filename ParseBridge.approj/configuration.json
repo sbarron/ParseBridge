@@ -201,7 +201,7 @@
     	"ParseBridge/Bridge/MyLogInCallback.m",
     	"ParseBridge/Bridge/DeleteCallback.m",
     	"ParseBridge/Bridge/StandardPushCallback.m",
-    	"ParseBridge/Bridge/SignUpCallback.m",
+    	"ParseBridge/Bridge/MySignUpCallback.m",
     	"ParseBridge/Bridge/SendCallback.m",
     	"ParseBridge/Bridge/RequestPasswordResetCallback.m",
     	"ParseBridge/Bridge/RefreshCallback.m",

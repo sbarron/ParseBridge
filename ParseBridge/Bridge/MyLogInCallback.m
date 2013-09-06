@@ -46,7 +46,7 @@
 
 + (NSString *)className { return @"com.parsebridge.MyLogInCallback"; }
 
-+ (MyLogInCallback *)callbackWithHandler:(callbackBlock)myHandler
++ (MyLogInCallback *)callbackWithHandler:(loginCallbackBlock)myHandler
 {
 	MyLogInCallback *callback = [MyLogInCallback new];
 	callback.handler = myHandler;
@@ -56,8 +56,15 @@
 - (void)done:(JavaObject *)userObj error:(JavaObject *)errorObj
 {
 	if (_handler) {
-		ParseUser *user = [ParseUser typecast:userObj]; // this is to work around a bug in the trampolines when calling back (hopefully we will have that fixed in the near future
+		
+		ParseUser *user = [ParseUser typecast:userObj];
+		// this is to work around a bug in the trampolines when calling back (hopefully we will have that fixed in the near future
 		ParseException *ex = [ParseException typecast:errorObj];
+		
+
+		//NSLog(@"Exception is %@", ex);
+		//NSLog(@"Excpetion is %i", [ex getCode]);
+		
 		dispatch_async(dispatch_get_main_queue(), ^{
 			_handler(user, ex);
 		});

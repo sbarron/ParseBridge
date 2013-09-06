@@ -29,7 +29,7 @@
 #import "ParseQuery.h"
 #import <BridgeKit/JavaClass.h>
 #import "MyLogInCallback.h"
-#import "SignUpCallback.h"
+#import "MySignUpCallback.h"
 #import "RequestPasswordResetCallback.h"
 
 @implementation ParseUser

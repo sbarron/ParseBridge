@@ -17,36 +17,32 @@
 
 @interface MyBasicLoginViewController : UIViewController{
 
-IBOutlet UIButton* signUpButton;
-IBOutlet UIButton* facebookLogInButton;
-IBOutlet UIButton* twitterLoginButton;
-IBOutlet UIButton* parseLoginButton;
-IBOutlet UIButton* exitLoginButton;
+//IBOutlet UIButton* signUpButton;
+//IBOutlet UIButton* facebookLogInButton;
+//IBOutlet UIButton* twitterLoginButton;
+//IBOutlet UIButton* parseLoginButton;
 
-IBOutlet UITextField* userName;
-IBOutlet UITextField* password;
-IBOutlet UITextField* email;
+//IBOutlet UITextField* userName;
+//IBOutlet UITextField* password;
 
-UIActivityIndicatorView* activityIndicator;
+//UIActivityIndicatorView* activityIndicator;
 
 NSArray* facebookPermissions;
 
-#ifdef ANDROID
-MyLogInCallback* loginCallback;
-#endif
-
 }
 
-- (IBAction)loginWithFacebook:(id)sender;
-- (IBAction)loginWithTwitter:(id)sender;
-- (IBAction)registerAccount:(id)sender;
-- (IBAction)loginParse:(id)sender;
-- (IBAction)exitLogin:(id)sender;
+//- (IBAction)loginWithFacebook:(id)sender;
+//- (IBAction)loginWithTwitter:(id)sender;
+//- (IBAction)loginParse:(id)sender;
  
 @property (nonatomic, retain) NSArray* facebookPermissions;
 
 #ifdef ANDROID
 @property (nonatomic, retain) MyLogInCallback* loginCallback;
 #endif
+
+
+
+
 
 @end

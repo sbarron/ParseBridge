@@ -27,8 +27,20 @@
 #import <BridgeKit/JavaObject.h>
 @class ParseException;
 
+typedef void (^signupCallbackBlock)(ParseException*);
+
 @interface SignUpCallback : JavaObject
 
 -(void)done:(ParseException*)error;
+
+@end
+
+
+@interface MySignUpCallback : SignUpCallback
+
+@property(readwrite, copy) signupCallbackBlock handler;
+
++ (MySignUpCallback *)callbackWithHandler:(signupCallbackBlock)myHandler;
+- (void)done:(JavaObject *)errorObj;
 
 @end

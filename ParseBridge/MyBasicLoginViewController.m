@@ -7,7 +7,6 @@
 //
 
 #import "MyBasicLoginViewController.h"
-#import "ParseHeaders.h"
 
 @interface MyBasicLoginViewController()
 
@@ -29,10 +28,13 @@
     return self;
 }
 
+
 -(void)dealloc{
 
 #ifdef ANDROID
-	[loginCallback release];
+	if(loginCallback != nil){
+		[loginCallback release];
+	}
 #endif
 	[super dealloc];
 	
@@ -41,6 +43,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	facebookPermissions = @[@"friends_about_me"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +51,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/*
 - (IBAction)loginWithFacebook:(id)sender{
 	NSLog(@"Login Facebook");
 }
@@ -58,23 +61,12 @@
 - (IBAction)registerAccount:(id)sender{
 	NSLog(@"Show registration view controller");
 }
+
 - (IBAction)loginParse:(id)sender{
 	NSLog(@"Login user with Parse");
 	BOOL valid = [self validateLoginInfo];
 	if(valid){
-		//Java Example
-		/*
-		ParseUser.logInInBackground("Jerry", "showmethemoney", new LogInCallback() {
-			public void done(ParseUser user, ParseException e) {
-				if (user != null) {
-					// Hooray! The user is logged in.
-				} else {
-					// Signup failed. Look at the ParseException to see what happened.
-				}
-			}
-		});*/
-		//callbackWithHandler:(void (^)(ParseUser *, ParseException *)handler
-		
+	#ifdef ANDROID
 		MyLogInCallback* loginCallback = [[MyLogInCallback callbackWithHandler:^(ParseUser* user, ParseException* ex){
 				if(user != NULL){
 					NSLog(@"User is %@", user);
@@ -86,10 +78,15 @@
 		}] retain];
 		[ParseUser logInInBackground:userName.text password:password.text callback:loginCallback];
 	}
-}
-
-- (IBAction)exitLogin:(id)sender{
-	[self dismissViewControllerAnimated:YES completion:NULL];
+	#else
+		[PFUser logInWithUsernameInBackground:userName.text password:password.text  block:^(PFUser *user, NSError *error) {
+					if (user) {
+							// Do stuff after successful login.
+					} else {
+							// The login failed. Check error to see why.
+					}
+			}];
+	#endif
 }
 
 -(BOOL)validateLoginInfo{
@@ -102,5 +99,5 @@
 		return NO;
 		
 }
-
+*/
 @end

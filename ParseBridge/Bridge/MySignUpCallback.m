@@ -23,8 +23,50 @@
  * THE SOFTWARE.
  *
  */
-#import "SignUpCallback.h"
+#import "MySignUpCallback.h"
 #import "ParseException.h"
+
+@implementation MySignUpCallback
+
+@synthesize handler = _handler;
+
++ (void)initializeJava
+{
+	[super initializeJava];
+	BOOL results = [MySignUpCallback registerConstructor];
+	DLog(@"Registered constructor = %@", (results ? @"YES" : @"NO"));
+	
+	results = [MySignUpCallback registerCallback:@"done" selector:@selector(done:) returnValue:nil arguments:[ParseException className], nil];
+	DLog(@"Registered done = %@", (results ? @"YES" : @"NO"));
+}
+
++ (NSString *)className { return @"com.parsebridge.MySignUpCallback"; }
+
++ (MySignUpCallback *)callbackWithHandler:(signupCallbackBlock)myHandler
+{
+	MySignUpCallback *callback = [MySignUpCallback new];
+	callback.handler = myHandler;
+	return callback;
+}
+
+- (void)done:(JavaObject *)errorObj
+{
+	if (_handler) {
+		// this is to work around a bug in the trampolines when calling back (hopefully we will have that fixed in the near future
+		ParseException *ex = [ParseException typecast:errorObj];
+		
+		NSLog(@"Exception is %@", ex);
+		NSLog(@"Excpetion is %i", [ex getCode]);
+		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			_handler(ex);
+		});
+	}
+}
+
+@end
+
+
 
 @implementation SignUpCallback
 

@@ -58,7 +58,7 @@
 #import "RequestPasswordResetCallback.h"
 #import "SaveCallback.h"
 #import "SendCallback.h"
-#import "SignUpCallback.h"
+#import "MySignUpCallback.h"
 #import "StandardPushCallback.h"
 
 //-*  NOT IMPLEMENTED  

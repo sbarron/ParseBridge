@@ -7,7 +7,7 @@
 //
 
 #import "ParseBridgeAppDelegate.h"
-#import "ParseBridgeViewController.h"
+#import "ParseBridgeVC.h"
 #ifdef ANDROID
 #import "ParseHeaders.h"
 #import "ParseManager.h"
@@ -25,6 +25,8 @@
 
 
 @implementation ParseBridgeAppDelegate
+
+@synthesize window = _window;
 
 - (void)dealloc
 {
@@ -48,8 +50,16 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor clearColor];
-	self.viewController = [[ParseBridgeViewController alloc] initWithNibName:@"ParseBridgeViewController" bundle:nil];
-	self.window.rootViewController = self.viewController;
+	
+	ParseBridgeVC* myViewController = [[ParseBridgeVC alloc]initWithNibName:@"ParseBridgeVC" bundle:nil];
+	//ParseBridgeViewController* myViewController = [[ParseBridgeViewController alloc]initWithNibName:@"ParseBridgeViewController" bundle:nil];
+	
+	//UIViewController* myViewController = [[UIViewController alloc]init];
+	
+	self.navController = [[UINavigationController alloc] initWithRootViewController:myViewController];
+	self.navController.title = @"ParseBridge";
+	
+	self.window.rootViewController = self.navController;
 	
     [self.window makeKeyAndVisible];
 	
