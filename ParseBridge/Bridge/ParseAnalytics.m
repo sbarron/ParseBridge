@@ -43,8 +43,18 @@
 				   selector:@selector(trackAppOpened:)
 				returnValue:nil
 				  arguments:[AndroidIntent className], nil];
-	 DLog(@"trackAppOpened registration = %i, %i", method1, method2);
+ 
 	 
+	//*- Java:   public static void trackEvent(String name)
+	BOOL method3 = [ParseAnalytics registerStaticMethod:@"trackEvent"
+											   selector:@selector(trackEvent:)
+											returnValue:nil
+											  arguments:[NSString className], nil];
+	
+	DLog(@"ParseAnalytics registrations = %i, %i, %i", method1, method2, method3);
+	
+	//*- Java:  public static void trackEvent(String name,  Map<String,String> dimensions)
+
 }
 
 + (NSString *)className

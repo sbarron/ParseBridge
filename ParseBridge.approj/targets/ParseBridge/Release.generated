@@ -60,16 +60,16 @@
     ], 
     "assets": [
         {
+            "asset": "ParseBridge/resources/ExitDown.png", 
+            "target": "ExitDown.png"
+        }, 
+        {
             "asset": "ParseBridge/resources/Exit.png", 
             "target": "Exit.png"
         }, 
         {
             "asset": "ParseBridge/resources/Facebook.png", 
             "target": "Facebook.png"
-        }, 
-        {
-            "asset": "ParseBridge/resources/ExitDown.png", 
-            "target": "ExitDown.png"
         }, 
         {
             "asset": "ParseBridge/resources/FacebookDown.png", 
@@ -416,7 +416,6 @@
     ], 
     "deps": [
         "UIKit", 
-        "Parse", 
         "AudioToolbox", 
         "CFNetwork", 
         "CoreGraphics", 
@@ -428,7 +427,8 @@
         "SystemConfiguration", 
         "UIKit", 
         "Foundation", 
-        "FacebookSDK"
+        "FacebookSDK", 
+        "Parse"
     ], 
     "config": {
         "APPLICATION_IDENTIFIER": "com.SpencerBarron.ParseBridge", 

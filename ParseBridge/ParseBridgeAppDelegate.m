@@ -92,7 +92,7 @@
 	//ParseACL.setDefaultACL(defaultACL, true);
 	
 	[self startPushNotifications:activity];
-	//[self startAnalytics:launchOptions];
+	[self startAnalytics:launchOptions];
 	
 #else
 	
@@ -142,7 +142,7 @@
 #ifdef ANDROID
     DLog(@"ParseAnalytics");
 
-	[ParseAnalytics trackAppOpened:nil]; //NOT WORKING
+	[ParseAnalytics trackAppOpened:nil]; //NOT WORKING?
   
 #else
 	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

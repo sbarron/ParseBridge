@@ -58,12 +58,21 @@
 	if (_handler) {
 		
 		ParseUser *user = [ParseUser typecast:userObj];
-		// this is to work around a bug in the trampolines when calling back (hopefully we will have that fixed in the near future
+		if([user respondsToSelector:@selector(getUsername)]){
+		    NSLog(@"Username is %@", [user getUsername]);
+		}
+		else{
+			user = nil;
+		}
+ 
 		ParseException *ex = [ParseException typecast:errorObj];
 		
-
-		//NSLog(@"Exception is %@", ex);
-		//NSLog(@"Excpetion is %i", [ex getCode]);
+		if([ex respondsToSelector:@selector(getCode)]){
+		    NSLog(@"Exception is %@", ex);
+		}
+		else{
+			ex = nil;
+		}
 		
 		dispatch_async(dispatch_get_main_queue(), ^{
 			_handler(user, ex);

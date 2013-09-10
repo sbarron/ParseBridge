@@ -30,5 +30,7 @@
 @interface ParseAnalytics : JavaObject
 
 +(void)trackAppOpened:(AndroidIntent*)intent;
++(void)trackEvent:(NSString*)eventName;
+
 
 @end

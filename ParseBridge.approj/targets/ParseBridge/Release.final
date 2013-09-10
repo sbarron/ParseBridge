@@ -47,16 +47,16 @@
     ], 
     "assets": [
         {
+            "asset": "ParseBridge/resources/ExitDown.png", 
+            "target": "ExitDown.png"
+        }, 
+        {
             "asset": "ParseBridge/resources/Exit.png", 
             "target": "Exit.png"
         }, 
         {
             "asset": "ParseBridge/resources/Facebook.png", 
             "target": "Facebook.png"
-        }, 
-        {
-            "asset": "ParseBridge/resources/ExitDown.png", 
-            "target": "ExitDown.png"
         }, 
         {
             "asset": "ParseBridge/resources/FacebookDown.png", 
@@ -613,7 +613,6 @@
     ], 
     "deps": [
         "UIKit", 
-        "Parse", 
         "AudioToolbox", 
         "CFNetwork", 
         "CoreGraphics", 
@@ -636,7 +635,7 @@
     "java_res_dirs": [], 
     "type": "app", 
     "java_libs": [
-        "java/libs/Parse-1.3.3.jar"
+        "java/libs/Parse-1.3.5.jar"
     ], 
     "defines": {
         "DEBUG": 1, 

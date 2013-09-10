@@ -81,5 +81,6 @@ typedef enum parseErrorCode : int {
 -(id)initParseExceptionWithCause:(JavaThrowable*)throwable;
 
 -(int)getCode;
+-(NSString*)getMessage;
 
 @end

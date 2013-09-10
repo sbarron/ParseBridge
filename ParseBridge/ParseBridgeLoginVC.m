@@ -77,16 +77,27 @@
 	#ifdef ANDROID
 	if(valid){
 		MyLogInCallback* loginCallback = [[MyLogInCallback callbackWithHandler:^(ParseUser* user, ParseException* ex){
-			if(user != NULL && ex == NULL){
+			if(user != nil && ex == nil){
 				NSLog(@"User is %@", user);
 				NSLog(@"Hooray! %@ is logged in.", [user getUsername]);
 				[self logInSuccessful];
 			}
 			else{
-				NSLog(@"Signup failed with error. %@", ex);
+				NSLog(@"Login failed with error. %@", ex);
+				
+				password.text = @"";
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed"
+																message:[ex getMessage]
+															   delegate:nil
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+				[alert release];
+
 			}
 			
-			NSLog(@"Error not null. %@", ex);
+			
 		}] retain];
 		[ParseUser logInInBackground:userName.text password:password.text callback:loginCallback];
 	}
@@ -100,6 +111,7 @@
 			// The login failed. Check error to see why.
 			NSLog(@"Error! %@", error);
 			[self logInFailed:error];
+		
 		}
 	}];
 	}

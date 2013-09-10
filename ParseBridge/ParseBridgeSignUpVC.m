@@ -64,27 +64,6 @@
  NSLog(@"Register user with Parse");
  BOOL valid = [self validateRegisterInfo];
  if(valid){
- //Java Example
- /*
- ParseUser user = new ParseUser();
- user.setUsername("my name");
- user.setPassword("my pass");
- user.setEmail("email@example.com");
- 
- // other fields can be set just like with ParseObject
- user.put("phone", "650-253-0000");
- 
- user.signUpInBackground(new SignUpCallback() {
- public void done(ParseException e) {
- if (e == null) {
- // Hooray! Let them use the app now.
- } else {
- // Sign up didn't succeed. Look at the ParseException
- // to figure out what went wrong
- }
- }
- });*/
-  //callbackWithHandler:(void (^)(ParseUser *, ParseException *)handler
 #ifdef ANDROID
 		ParseUser* user = [[[ParseUser alloc]initUser] autorelease];
 		[user setEmail:email.text];
@@ -92,12 +71,21 @@
 		[user setUsername:userName.text];
 		[activityIndicator startAnimating];
 		MySignUpCallback* signUpCallback = [[MySignUpCallback callbackWithHandler:^(ParseException* ex){
-			if(ex){
-				NSLog(@"Signup error. %@", ex);
+			if(!ex){
+				
+				[self registerSuccessful];
 			}
 			else{
-				NSLog(@"User signed in");
-				[self logInSuccessful];
+				NSLog(@"Signup error. %@", [ex getMessage]);
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed"
+																message:[ex getMessage]
+															   delegate:nil
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+				[alert release];
+				
 			}
 		}] retain];
 		
@@ -162,14 +150,18 @@
 	userName.text = @"";
 	password.text = @"";
 	email.text = @"";
-	
+
+#ifdef ANDROID
+
+#else
 	if(error.code == 101){
 		[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Registration Failed!", nil) message:NSLocalizedString(@"Registration Failed.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
 	}
 	else{
 		[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Registration Failed!", nil) message:NSLocalizedString(@"Error!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
 	}
-	
+#endif
+
 }
 
 @end

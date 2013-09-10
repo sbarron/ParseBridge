@@ -73,6 +73,12 @@
 		
 	
 	
+	results = [ParseException registerInstanceMethod:@"getMessage"
+											selector:@selector(getMessage)
+										 returnValue:[NSString className] 
+										   arguments:nil];
+	DLog(@"ParseException Registered for getMessage =  %@", (results ? @"YES" : @"NO"));
+	
 	
 
 	

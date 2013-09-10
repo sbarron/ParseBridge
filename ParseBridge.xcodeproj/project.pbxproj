@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090B03EC17DED25700E89B81 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090B03EB17DED25700E89B81 /* Parse.framework */; };
 		092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */; };
 		098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */; };
 		098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */; };
@@ -19,7 +20,6 @@
 		098A2D8317B0CF6E00B99928 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAD178FC81200CBF872 /* CoreLocation.framework */; };
 		098A2D8417B0CF8100B99928 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAB178FC80400CBF872 /* CFNetwork.framework */; };
 		098A2D8517B0CF8700B99928 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEA9178FC7FF00CBF872 /* AudioToolbox.framework */; };
-		098A2D8617B0CFB000B99928 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E65A31017AEA12000924194 /* Parse.framework */; };
 		098A2D8917B0D00600B99928 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099DAEAF178FC81E00CBF872 /* libz.1.1.3.dylib */; };
 		098A2D8C17B0DA0000B99928 /* ParseBridgeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8B17B0DA0000B99928 /* ParseBridgeAppDelegate.m */; };
 		098A2D8E17B0DE4400B99928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A2D8D17B0DE4400B99928 /* main.m */; };
@@ -87,6 +87,7 @@
 		090A0E8617C0C6910023C28B /* ParseRole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseRole.m; path = Bridge/ParseRole.m; sourceTree = "<group>"; };
 		090A0E8717C1F0430023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
 		090A0E8917C1F0630023C28B /* CountCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallback.h; path = Bridge/CountCallback.h; sourceTree = "<group>"; };
+		090B03EB17DED25700E89B81 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeViewController.h; sourceTree = "<group>"; };
 		092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeViewController.m; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -165,7 +166,6 @@
 		09F2689B17D8870500931604 /* ParseBridgeSignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeSignUpVC.h; sourceTree = "<group>"; };
 		09F2689C17D8870600931604 /* ParseBridgeSignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeSignUpVC.m; sourceTree = "<group>"; };
 		09F2689D17D8870600931604 /* ParseBridgeSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseBridgeSignUpVC.xib; sourceTree = "<group>"; };
-		6E65A31017AEA12000924194 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A3FC60017533CA900EF7EE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				098A2D8917B0D00600B99928 /* libz.1.1.3.dylib in Frameworks */,
-				098A2D8617B0CFB000B99928 /* Parse.framework in Frameworks */,
 				098A2D8517B0CF8700B99928 /* AudioToolbox.framework in Frameworks */,
 				098A2D8417B0CF8100B99928 /* CFNetwork.framework in Frameworks */,
 				098A2D6817B0CEDA00B99928 /* CoreGraphics.framework in Frameworks */,
@@ -196,6 +195,7 @@
 				098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */,
 				098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */,
 				09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */,
+				090B03EC17DED25700E89B81 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 		099DAEA6178FC20100CBF872 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				6E65A31017AEA12000924194 /* Parse.framework */,
+				090B03EB17DED25700E89B81 /* Parse.framework */,
 			);
 			name = Parse;
 			sourceTree = "<group>";

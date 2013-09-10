@@ -1300,7 +1300,6 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="email">UITextField</string>
 						<string key="facebookLogInButton">UIButton</string>
 						<string key="parseRegisterButton">UIButton</string>
 						<string key="password">UITextField</string>
@@ -1308,10 +1307,6 @@
 						<string key="userName">UITextField</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="email">
-							<string key="name">email</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="facebookLogInButton">
 							<string key="name">facebookLogInButton</string>
 							<string key="candidateClassName">UIButton</string>
