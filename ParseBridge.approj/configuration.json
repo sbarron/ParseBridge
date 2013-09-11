@@ -197,7 +197,7 @@
     	"ParseBridge/Bridge/ParseAnonymousUtils.m",
     	"ParseBridge/Bridge/ParseCloud.m",
     	"ParseBridge/Bridge/ParseImageView.m",
-    	"ParseBridge/Bridge/SaveCallback.m",
+    	"ParseBridge/Bridge/MySaveCallback.m",
     	"ParseBridge/Bridge/MyLogInCallback.m",
     	"ParseBridge/Bridge/DeleteCallback.m",
     	"ParseBridge/Bridge/StandardPushCallback.m",
@@ -302,7 +302,7 @@
     "defines": {},
    
     // A list of dependencies.  Typically these correspond to
-    // frameworks in the xcode project.
+    // frameworks in the xcode project. - Or frameworks packaged with apportable that may cause a conflict.
     "deps": ["FacebookSDK","Parse"
     ],
     // A list of source files (e.g. .m, .mm, .c, .cc, and .cpp) files to remove from the build.

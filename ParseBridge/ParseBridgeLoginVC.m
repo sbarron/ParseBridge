@@ -63,7 +63,50 @@
 }
 
 - (IBAction)loginWithFacebook:(id)sender{
-	NSLog(@"Login Facebook");
+	
+	/*
+	 ParseFacebookUtils.logIn(this, new LogInCallback() {
+	 @Override
+	 public void done(ParseUser user, ParseException err) {
+	 if (user == null) {
+	 Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
+	 } else if (user.isNew()) {
+	 Log.d("MyApp", "User signed up and logged in through Facebook!");
+	 } else {
+	 Log.d("MyApp", "User logged in through Facebook!");
+	 }
+	 }
+	 });
+
+	*/
+#ifdef ANDROID
+
+		AndroidActivity *activity = [[AndroidActivity currentActivity] autorelease];
+		MyLogInCallback* loginCallback = [[MyLogInCallback callbackWithHandler:^(ParseUser* user, ParseException* ex){
+			if(user != nil && ex == nil){
+				NSLog(@"User is %@", user);
+				NSLog(@"Hooray! %@ is logged in.", [user getUsername]);
+				[self logInSuccessful];
+			}
+			else{
+				NSLog(@"Facebook Login failed with error. %@", ex);
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed"
+																message:[ex getMessage]
+															   delegate:nil
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+				[alert release];
+				
+			}	
+		}] retain];
+		NSLog(@"Login Facebook");
+		[ParseFacebookUtils logIn:activity:loginCallback];
+	
+#else
+
+#endif
 }
 
 - (IBAction)loginWithTwitter:(id)sender{

@@ -56,7 +56,7 @@
 #import "PushCallback.h"
 #import "RefreshCallback.h"
 #import "RequestPasswordResetCallback.h"
-#import "SaveCallback.h"
+#import "MySaveCallback.h"
 #import "SendCallback.h"
 #import "MySignUpCallback.h"
 #import "StandardPushCallback.h"

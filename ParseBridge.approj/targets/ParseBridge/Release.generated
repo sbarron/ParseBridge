@@ -60,12 +60,12 @@
     ], 
     "assets": [
         {
-            "asset": "ParseBridge/resources/ExitDown.png", 
-            "target": "ExitDown.png"
-        }, 
-        {
             "asset": "ParseBridge/resources/Exit.png", 
             "target": "Exit.png"
+        }, 
+        {
+            "asset": "ParseBridge/resources/ExitDown.png", 
+            "target": "ExitDown.png"
         }, 
         {
             "asset": "ParseBridge/resources/Facebook.png", 
@@ -147,93 +147,183 @@
     "type": "app", 
     "header_paths": [
         {
-            "type": "iquote", 
-            "header_path": "ParseBridge-generated-files.hmap", 
-            "hmap": {}
-        }, 
-        {
             "type": "I", 
-            "header_path": "ParseBridge-own-target-headers.hmap", 
-            "hmap": {}
-        }, 
-        {
-            "type": "I", 
-            "header_path": "ParseBridge-all-target-headers.hmap", 
-            "hmap": {}
-        }, 
-        {
-            "type": "iquote", 
-            "header_path": "ParseBridge-project-headers.hmap", 
+            "header_path": "ParseBridge.hmap", 
             "hmap": {
-                "ParseImageView.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseImageView.h", 
-                    "key": "ParseImageView.h"
+                "FBSession.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSession.h", 
+                    "key": "FBSession.h"
                 }, 
-                "ParseCloud.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseCloud.h", 
-                    "key": "ParseCloud.h"
-                }, 
-                "ParseAnalytics.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseAnalytics.h", 
-                    "key": "ParseAnalytics.h"
-                }, 
-                "ParseException.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseException.h", 
-                    "key": "ParseException.h"
+                "FBAccessTokenData.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAccessTokenData.h", 
+                    "key": "FBAccessTokenData.h"
                 }, 
                 "ParsePush.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParsePush.h", 
                     "key": "ParsePush.h"
                 }, 
-                "FunctionCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "FunctionCallback.h", 
-                    "key": "FunctionCallback.h"
+                "FBErrorUtility+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBErrorUtility+Internal.h", 
+                    "key": "FBErrorUtility+Internal.h"
                 }, 
                 "StandardPushCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "StandardPushCallback.h", 
                     "key": "StandardPushCallback.h"
                 }, 
-                "LocationCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "LocationCallback.h", 
-                    "key": "LocationCallback.h"
-                }, 
                 "CountCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "CountCallback.h", 
                     "key": "CountCallback.h"
                 }, 
-                "SaveCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "SaveCallback.h", 
-                    "key": "SaveCallback.h"
+                "MyBasicSignUpViewController.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "MyBasicSignUpViewController.h", 
+                    "key": "MyBasicSignUpViewController.h"
                 }, 
-                "ParseAnonymousUtils.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseAnonymousUtils.h", 
-                    "key": "ParseAnonymousUtils.h"
+                "FBViewController.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBViewController.h", 
+                    "key": "FBViewController.h"
+                }, 
+                "FBFriendPickerCacheDescriptor.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFriendPickerCacheDescriptor.h", 
+                    "key": "FBFriendPickerCacheDescriptor.h"
+                }, 
+                "FBGraphPlace.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphPlace.h", 
+                    "key": "FBGraphPlace.h"
                 }, 
                 "ParseInstallation.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseInstallation.h", 
                     "key": "ParseInstallation.h"
                 }, 
-                "ParseObject.h": {
+                "ParseRole.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseObject.h", 
-                    "key": "ParseObject.h"
+                    "suffix": "ParseRole.h", 
+                    "key": "ParseRole.h"
                 }, 
-                "ParseRelation.h": {
+                "FBTestSession+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBTestSession+Internal.h", 
+                    "key": "FBTestSession+Internal.h"
+                }, 
+                "FBDataDiskCache.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDataDiskCache.h", 
+                    "key": "FBDataDiskCache.h"
+                }, 
+                "ParseHeaders.h": {
                     "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseRelation.h", 
-                    "key": "ParseRelation.h"
+                    "suffix": "ParseHeaders.h", 
+                    "key": "ParseHeaders.h"
+                }, 
+                "RefreshCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "RefreshCallback.h", 
+                    "key": "RefreshCallback.h"
+                }, 
+                "FBAppLinkData+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppLinkData+Internal.h", 
+                    "key": "FBAppLinkData+Internal.h"
+                }, 
+                "GetDataCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "GetDataCallback.h", 
+                    "key": "GetDataCallback.h"
+                }, 
+                "Parse.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "Parse.h", 
+                    "key": "Parse.h"
+                }, 
+                "FBGraphUser.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphUser.h", 
+                    "key": "FBGraphUser.h"
+                }, 
+                "FBNativeDialogs.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBNativeDialogs.h", 
+                    "key": "FBNativeDialogs.h"
+                }, 
+                "FBDialog.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialog.h", 
+                    "key": "FBDialog.h"
+                }, 
+                "FBFetchedAppSettings.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFetchedAppSettings.h", 
+                    "key": "FBFetchedAppSettings.h"
+                }, 
+                "FBSDKVersion.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSDKVersion.h", 
+                    "key": "FBSDKVersion.h"
+                }, 
+                "FBOpenGraphAction.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBOpenGraphAction.h", 
+                    "key": "FBOpenGraphAction.h"
+                }, 
+                "FBDialogsData+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogsData+Internal.h", 
+                    "key": "FBDialogsData+Internal.h"
+                }, 
+                "MyLogInCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "MyLogInCallback.h", 
+                    "key": "MyLogInCallback.h"
+                }, 
+                "FBGraphObjectTableDataSource.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphObjectTableDataSource.h", 
+                    "key": "FBGraphObjectTableDataSource.h"
+                }, 
+                "FBWebDialogs.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBWebDialogs.h", 
+                    "key": "FBWebDialogs.h"
+                }, 
+                "FBDialogs.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogs.h", 
+                    "key": "FBDialogs.h"
+                }, 
+                "ParseBridgeSignUpVC.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridgeSignUpVC.h", 
+                    "key": "ParseBridgeSignUpVC.h"
+                }, 
+                "FBRequestConnection.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBRequestConnection.h", 
+                    "key": "FBRequestConnection.h"
+                }, 
+                "FBAppCall+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppCall+Internal.h", 
+                    "key": "FBAppCall+Internal.h"
+                }, 
+                "FBDialogsData.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogsData.h", 
+                    "key": "FBDialogsData.h"
+                }, 
+                "FBAppBridge.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppBridge.h", 
+                    "key": "FBAppBridge.h"
                 }, 
                 "PushCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
@@ -245,120 +335,80 @@
                     "suffix": "ParseBridge-Prefix.pch", 
                     "key": "ParseBridge-Prefix.pch"
                 }, 
-                "ParseRole.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseRole.h", 
-                    "key": "ParseRole.h"
+                "FBShareDialogParams.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBShareDialogParams.h", 
+                    "key": "FBShareDialogParams.h"
                 }, 
-                "ParseHeaders.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseHeaders.h", 
-                    "key": "ParseHeaders.h"
+                "FBInsights.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBInsights.h", 
+                    "key": "FBInsights.h"
                 }, 
                 "ParseGeoPoint.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseGeoPoint.h", 
                     "key": "ParseGeoPoint.h"
                 }, 
-                "GetDataCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "GetDataCallback.h", 
-                    "key": "GetDataCallback.h"
+                "FBSessionInsightsState.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSessionInsightsState.h", 
+                    "key": "FBSessionInsightsState.h"
                 }, 
-                "MyLogInCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "MyLogInCallback.h", 
-                    "key": "MyLogInCallback.h"
+                "FBUserSettingsViewController.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBUserSettingsViewController.h", 
+                    "key": "FBUserSettingsViewController.h"
                 }, 
-                "Parse.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "Parse.h", 
-                    "key": "Parse.h"
+                "FBRequestBody.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBRequestBody.h", 
+                    "key": "FBRequestBody.h"
                 }, 
-                "ParseTwitterUtils.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseTwitterUtils.h", 
-                    "key": "ParseTwitterUtils.h"
-                }, 
-                "ParseFacebookUtils.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseFacebookUtils.h", 
-                    "key": "ParseFacebookUtils.h"
-                }, 
-                "ParseQuery.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseQuery.h", 
-                    "key": "ParseQuery.h"
-                }, 
-                "RefreshCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "RefreshCallback.h", 
-                    "key": "RefreshCallback.h"
-                }, 
-                "ProgressCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ProgressCallback.h", 
-                    "key": "ProgressCallback.h"
+                "FBAppBridgeTypeToJSONConverter.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppBridgeTypeToJSONConverter.h", 
+                    "key": "FBAppBridgeTypeToJSONConverter.h"
                 }, 
                 "GetCallback.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "GetCallback.h", 
                     "key": "GetCallback.h"
                 }, 
-                "ParseACL.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "ParseACL.h", 
-                    "key": "ParseACL.h"
+                "FBCacheDescriptor.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBCacheDescriptor.h", 
+                    "key": "FBCacheDescriptor.h"
                 }, 
-                "PushService.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "PushService.h", 
-                    "key": "PushService.h"
+                "FBGraphObjectPagingLoader.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphObjectPagingLoader.h", 
+                    "key": "FBGraphObjectPagingLoader.h"
                 }, 
-                "FindCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "FindCallback.h", 
-                    "key": "FindCallback.h"
+                "FBLoginView.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBLoginView.h", 
+                    "key": "FBLoginView.h"
                 }, 
-                "ParseBridgeLoginVC.h": {
-                    "prefix": "ParseBridge/", 
-                    "suffix": "ParseBridgeLoginVC.h", 
-                    "key": "ParseBridgeLoginVC.h"
+                "FBDialogs+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogs+Internal.h", 
+                    "key": "FBDialogs+Internal.h"
                 }, 
-                "MySignUpCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "MySignUpCallback.h", 
-                    "key": "MySignUpCallback.h"
-                }, 
-                "DeleteCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "DeleteCallback.h", 
-                    "key": "DeleteCallback.h"
-                }, 
-                "RequestPasswordResetCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "RequestPasswordResetCallback.h", 
-                    "key": "RequestPasswordResetCallback.h"
-                }, 
-                "ParseBridgeSignUpVC.h": {
-                    "prefix": "ParseBridge/", 
-                    "suffix": "ParseBridgeSignUpVC.h", 
-                    "key": "ParseBridgeSignUpVC.h"
+                "FBGraphObject.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphObject.h", 
+                    "key": "FBGraphObject.h"
                 }, 
                 "ParseBridgeViewController.h": {
                     "prefix": "ParseBridge/", 
                     "suffix": "ParseBridgeViewController.h", 
                     "key": "ParseBridgeViewController.h"
                 }, 
-                "ParseBridgeVC.h": {
+                "MyBasicLoginViewController.h": {
                     "prefix": "ParseBridge/", 
-                    "suffix": "ParseBridgeVC.h", 
-                    "key": "ParseBridgeVC.h"
-                }, 
-                "SendCallback.h": {
-                    "prefix": "ParseBridge/Bridge/", 
-                    "suffix": "SendCallback.h", 
-                    "key": "SendCallback.h"
+                    "suffix": "MyBasicLoginViewController.h", 
+                    "key": "MyBasicLoginViewController.h"
                 }, 
                 "ParseBridgeAppDelegate.h": {
                     "prefix": "ParseBridge/", 
@@ -370,12 +420,460 @@
                     "suffix": "ParseFile.h", 
                     "key": "ParseFile.h"
                 }, 
+                "ParseImageView.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseImageView.h", 
+                    "key": "ParseImageView.h"
+                }, 
+                "MySaveCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "MySaveCallback.h", 
+                    "key": "MySaveCallback.h"
+                }, 
+                "ParseException.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseException.h", 
+                    "key": "ParseException.h"
+                }, 
+                "PushService.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "PushService.h", 
+                    "key": "PushService.h"
+                }, 
+                "FBSystemAccountStoreAdapter.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSystemAccountStoreAdapter.h", 
+                    "key": "FBSystemAccountStoreAdapter.h"
+                }, 
+                "FindCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "FindCallback.h", 
+                    "key": "FindCallback.h"
+                }, 
+                "FBInsights+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBInsights+Internal.h", 
+                    "key": "FBInsights+Internal.h"
+                }, 
+                "FBSession+Protected.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSession+Protected.h", 
+                    "key": "FBSession+Protected.h"
+                }, 
+                "FBDialogsParams.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogsParams.h", 
+                    "key": "FBDialogsParams.h"
+                }, 
+                "ParseObject.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseObject.h", 
+                    "key": "ParseObject.h"
+                }, 
+                "ParseRelation.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseRelation.h", 
+                    "key": "ParseRelation.h"
+                }, 
+                "FBAccessTokenData+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAccessTokenData+Internal.h", 
+                    "key": "FBAccessTokenData+Internal.h"
+                }, 
+                "FBFriendPickerViewController+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFriendPickerViewController+Internal.h", 
+                    "key": "FBFriendPickerViewController+Internal.h"
+                }, 
+                "FBFrictionlessRequestSettings.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFrictionlessRequestSettings.h", 
+                    "key": "FBFrictionlessRequestSettings.h"
+                }, 
+                "FBCacheIndex.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBCacheIndex.h", 
+                    "key": "FBCacheIndex.h"
+                }, 
+                "FBSettings.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSettings.h", 
+                    "key": "FBSettings.h"
+                }, 
+                "ParseManager.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseManager.h", 
+                    "key": "ParseManager.h"
+                }, 
+                "ParseTwitterUtils.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseTwitterUtils.h", 
+                    "key": "ParseTwitterUtils.h"
+                }, 
+                "ParseFacebookUtils.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseFacebookUtils.h", 
+                    "key": "ParseFacebookUtils.h"
+                }, 
+                "FBPlacePickerViewController.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBPlacePickerViewController.h", 
+                    "key": "FBPlacePickerViewController.h"
+                }, 
                 "ParseUser.h": {
                     "prefix": "ParseBridge/Bridge/", 
                     "suffix": "ParseUser.h", 
                     "key": "ParseUser.h"
+                }, 
+                "NSError+FBError.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "NSError+FBError.h", 
+                    "key": "NSError+FBError.h"
+                }, 
+                "FBConnect.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBConnect.h", 
+                    "key": "FBConnect.h"
+                }, 
+                "FBRequest.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBRequest.h", 
+                    "key": "FBRequest.h"
+                }, 
+                "FBSessionTokenCachingStrategy.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSessionTokenCachingStrategy.h", 
+                    "key": "FBSessionTokenCachingStrategy.h"
+                }, 
+                "LocationCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "LocationCallback.h", 
+                    "key": "LocationCallback.h"
+                }, 
+                "FBRequestConnection+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBRequestConnection+Internal.h", 
+                    "key": "FBRequestConnection+Internal.h"
+                }, 
+                "DeleteCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "DeleteCallback.h", 
+                    "key": "DeleteCallback.h"
+                }, 
+                "RequestPasswordResetCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "RequestPasswordResetCallback.h", 
+                    "key": "RequestPasswordResetCallback.h"
+                }, 
+                "FBOpenGraphActionShareDialogParams.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBOpenGraphActionShareDialogParams.h", 
+                    "key": "FBOpenGraphActionShareDialogParams.h"
+                }, 
+                "ParseBridgeLoginVC.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridgeLoginVC.h", 
+                    "key": "ParseBridgeLoginVC.h"
+                }, 
+                "FBErrorUtility.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBErrorUtility.h", 
+                    "key": "FBErrorUtility.h"
+                }, 
+                "ParseAnalytics.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseAnalytics.h", 
+                    "key": "ParseAnalytics.h"
+                }, 
+                "ParseCloud.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseCloud.h", 
+                    "key": "ParseCloud.h"
+                }, 
+                "FBPlacePickerViewController+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBPlacePickerViewController+Internal.h", 
+                    "key": "FBPlacePickerViewController+Internal.h"
+                }, 
+                "FBAppLinkData.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppLinkData.h", 
+                    "key": "FBAppLinkData.h"
+                }, 
+                "FunctionCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "FunctionCallback.h", 
+                    "key": "FunctionCallback.h"
+                }, 
+                "FBGraphLocation.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphLocation.h", 
+                    "key": "FBGraphLocation.h"
+                }, 
+                "FBProfilePictureView.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBProfilePictureView.h", 
+                    "key": "FBProfilePictureView.h"
+                }, 
+                "FBDialogsParams+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBDialogsParams+Internal.h", 
+                    "key": "FBDialogsParams+Internal.h"
+                }, 
+                "FBFriendPickerViewController.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFriendPickerViewController.h", 
+                    "key": "FBFriendPickerViewController.h"
+                }, 
+                "ParseAnonymousUtils.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseAnonymousUtils.h", 
+                    "key": "ParseAnonymousUtils.h"
+                }, 
+                "FBURLConnection.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBURLConnection.h", 
+                    "key": "FBURLConnection.h"
+                }, 
+                "FBUtility.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBUtility.h", 
+                    "key": "FBUtility.h"
+                }, 
+                "FBOpenGraphObject.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBOpenGraphObject.h", 
+                    "key": "FBOpenGraphObject.h"
+                }, 
+                "FBFrictionlessRecipientCache.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFrictionlessRecipientCache.h", 
+                    "key": "FBFrictionlessRecipientCache.h"
+                }, 
+                "Facebook.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "Facebook.h", 
+                    "key": "Facebook.h"
+                }, 
+                "FBGraphObjectTableSelection.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphObjectTableSelection.h", 
+                    "key": "FBGraphObjectTableSelection.h"
+                }, 
+                "FBError.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBError.h", 
+                    "key": "FBError.h"
+                }, 
+                "MySignUpCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "MySignUpCallback.h", 
+                    "key": "MySignUpCallback.h"
+                }, 
+                "FBTestSession.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBTestSession.h", 
+                    "key": "FBTestSession.h"
+                }, 
+                "ParseQuery.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseQuery.h", 
+                    "key": "ParseQuery.h"
+                }, 
+                "ProgressCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ProgressCallback.h", 
+                    "key": "ProgressCallback.h"
+                }, 
+                "FBSettings+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSettings+Internal.h", 
+                    "key": "FBSettings+Internal.h"
+                }, 
+                "facebook_ios_sdk_Prefix.pch": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "facebook_ios_sdk_Prefix.pch", 
+                    "key": "facebook_ios_sdk_Prefix.pch"
+                }, 
+                "ParseACL.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "ParseACL.h", 
+                    "key": "ParseACL.h"
+                }, 
+                "FBLoginDialogParams.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBLoginDialogParams.h", 
+                    "key": "FBLoginDialogParams.h"
+                }, 
+                "FacebookSDK.h": {
+                    "prefix": "FacebookSDK/", 
+                    "suffix": "FacebookSDK.h", 
+                    "key": "FacebookSDK.h"
+                }, 
+                "FBPlacePickerCacheDescriptor.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBPlacePickerCacheDescriptor.h", 
+                    "key": "FBPlacePickerCacheDescriptor.h"
+                }, 
+                "FBLoginDialog.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBLoginDialog.h", 
+                    "key": "FBLoginDialog.h"
+                }, 
+                "FBFrictionlessDialogSupportDelegate.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBFrictionlessDialogSupportDelegate.h", 
+                    "key": "FBFrictionlessDialogSupportDelegate.h"
+                }, 
+                "FBGraphObjectTableCell.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBGraphObjectTableCell.h", 
+                    "key": "FBGraphObjectTableCell.h"
+                }, 
+                "FBAppCall.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBAppCall.h", 
+                    "key": "FBAppCall.h"
+                }, 
+                "FBViewController+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBViewController+Internal.h", 
+                    "key": "FBViewController+Internal.h"
+                }, 
+                "FBSession+Internal.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSession+Internal.h", 
+                    "key": "FBSession+Internal.h"
+                }, 
+                "FBSessionManualTokenCachingStrategy.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBSessionManualTokenCachingStrategy.h", 
+                    "key": "FBSessionManualTokenCachingStrategy.h"
+                }, 
+                "ParseBridgeVC.h": {
+                    "prefix": "ParseBridge/", 
+                    "suffix": "ParseBridgeVC.h", 
+                    "key": "ParseBridgeVC.h"
+                }, 
+                "SendCallback.h": {
+                    "prefix": "ParseBridge/Bridge/", 
+                    "suffix": "SendCallback.h", 
+                    "key": "SendCallback.h"
+                }, 
+                "FBLogger.h": {
+                    "prefix": "facebook-ios-sdk/src/", 
+                    "suffix": "FBLogger.h", 
+                    "key": "FBLogger.h"
                 }
             }
+        }, 
+        {
+            "type": "I", 
+            "header_path": "FacebookSDK"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Base64"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Cryptography"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKIntegrationTests"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FBUserSettingsViewResources.bundle"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Framework"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Package"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/tests"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/Contents"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBDialog"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBFriendPickerView"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBLoginView"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBPlacePickerView"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBProfilePictureView"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FBUserSettingsViewResources.bundle/Contents"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FBUserSettingsViewResources.bundle/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Framework/Resources"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/Package/FacebookSDK.pmdoc"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/Contents/Resources"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBDialog/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBFriendPickerView/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBLoginView/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBPlacePickerView/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FacebookSDKResources.bundle/FBProfilePictureView/images"
+        }, 
+        {
+            "type": "I", 
+            "header_path": "facebook-ios-sdk/src/FBUserSettingsViewResources.bundle/Contents/Resources"
         }
     ], 
     "modules": [], 
@@ -427,8 +925,8 @@
         "SystemConfiguration", 
         "UIKit", 
         "Foundation", 
-        "FacebookSDK", 
-        "Parse"
+        "Parse", 
+        "FacebookSDK"
     ], 
     "config": {
         "APPLICATION_IDENTIFIER": "com.SpencerBarron.ParseBridge", 

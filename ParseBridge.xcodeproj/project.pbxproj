@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		090B03EC17DED25700E89B81 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090B03EB17DED25700E89B81 /* Parse.framework */; };
+		090B03EF17E00BAF00E89B81 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090B03EE17E00BAF00E89B81 /* FacebookSDK.framework */; };
 		092CFB1D17CF108A0020DD97 /* ParseBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */; };
 		098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FC17533CA900EF7EE1 /* UIKit.framework */; };
 		098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FC5FE17533CA900EF7EE1 /* Foundation.framework */; };
@@ -40,7 +41,6 @@
 		099CA77417D4684F007C2D9E /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77017D4684F007C2D9E /* Logout.png */; };
 		099CA77517D4684F007C2D9E /* LogoutDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77117D4684F007C2D9E /* LogoutDown.png */; };
 		099CA77C17D5CA6E007C2D9E /* ParseBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CA77B17D5CA6E007C2D9E /* ParseBridge.storyboard */; };
-		09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */; };
 		09F2689017D8625100931604 /* ParseBridgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2688F17D8625100931604 /* ParseBridgeViewController.xib */; };
 		09F2689417D8690E00931604 /* ParseBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2689217D8690D00931604 /* ParseBridgeVC.m */; };
 		09F2689517D8690E00931604 /* ParseBridgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2689317D8690E00931604 /* ParseBridgeVC.xib */; };
@@ -88,6 +88,7 @@
 		090A0E8717C1F0430023C28B /* CountCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CountCallback.m; path = Bridge/CountCallback.m; sourceTree = "<group>"; };
 		090A0E8917C1F0630023C28B /* CountCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CountCallback.h; path = Bridge/CountCallback.h; sourceTree = "<group>"; };
 		090B03EB17DED25700E89B81 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		090B03EE17E00BAF00E89B81 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		092CFB1A17CF10870020DD97 /* ParseBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBridgeViewController.h; sourceTree = "<group>"; };
 		092CFB1B17CF10880020DD97 /* ParseBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgeViewController.m; sourceTree = "<group>"; };
 		098A2D4B17B0C79200B99928 /* Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Parse.m; path = Bridge/Parse.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -144,13 +145,12 @@
 		09A1401D17BF51A100A3F1AE /* DeleteCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DeleteCallback.m; path = Bridge/DeleteCallback.m; sourceTree = "<group>"; };
 		09A1401E17BF51A700A3F1AE /* MyLogInCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyLogInCallback.m; path = Bridge/MyLogInCallback.m; sourceTree = "<group>"; };
 		09A1401F17BF51B000A3F1AE /* MyLogInCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyLogInCallback.h; path = Bridge/MyLogInCallback.h; sourceTree = "<group>"; };
-		09A1402017BF525000A3F1AE /* SaveCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SaveCallback.m; path = Bridge/SaveCallback.m; sourceTree = "<group>"; };
-		09A1402117BF525100A3F1AE /* SaveCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaveCallback.h; path = Bridge/SaveCallback.h; sourceTree = "<group>"; };
+		09A1402017BF525000A3F1AE /* MySaveCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MySaveCallback.m; path = Bridge/MySaveCallback.m; sourceTree = "<group>"; };
+		09A1402117BF525100A3F1AE /* MySaveCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MySaveCallback.h; path = Bridge/MySaveCallback.h; sourceTree = "<group>"; };
 		09A5883A17BB4116004F48C1 /* ParseInstallation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseInstallation.h; path = Bridge/ParseInstallation.h; sourceTree = "<group>"; };
 		09A5883B17BB4116004F48C1 /* ParseInstallation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseInstallation.m; path = Bridge/ParseInstallation.m; sourceTree = "<group>"; };
 		09A5883C17BB517B004F48C1 /* PushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PushService.h; path = Bridge/PushService.h; sourceTree = "<group>"; };
 		09A5883D17BB517B004F48C1 /* PushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PushService.m; path = Bridge/PushService.m; sourceTree = "<group>"; };
-		09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		09A9B9AD17B8DA1A00ACA1BD /* ParseACL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseACL.h; path = Bridge/ParseACL.h; sourceTree = "<group>"; };
 		09A9B9AE17B8DA1B00ACA1BD /* ParseACL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ParseACL.m; path = Bridge/ParseACL.m; sourceTree = "<group>"; };
 		09A9B9AF17B8DA1C00ACA1BD /* ParseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParseHeaders.h; path = Bridge/ParseHeaders.h; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 				098A2D7E17B0CF4600B99928 /* SystemConfiguration.framework in Frameworks */,
 				098A2D6617B0CEDA00B99928 /* UIKit.framework in Frameworks */,
 				098A2D6717B0CEDA00B99928 /* Foundation.framework in Frameworks */,
-				09A9B9A917B8B26A00ACA1BD /* FacebookSDK.framework in Frameworks */,
 				090B03EC17DED25700E89B81 /* Parse.framework in Frameworks */,
+				090B03EF17E00BAF00E89B81 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +293,7 @@
 		099DAEA3178FC1CF00CBF872 /* FaceBook */ = {
 			isa = PBXGroup;
 			children = (
-				09A9B9A817B8B26A00ACA1BD /* FacebookSDK.framework */,
+				090B03EE17E00BAF00E89B81 /* FacebookSDK.framework */,
 			);
 			name = FaceBook;
 			sourceTree = "<group>";
@@ -339,8 +339,8 @@
 				09A1401D17BF51A100A3F1AE /* DeleteCallback.m */,
 				09A1401E17BF51A700A3F1AE /* MyLogInCallback.m */,
 				09A1401F17BF51B000A3F1AE /* MyLogInCallback.h */,
-				09A1402017BF525000A3F1AE /* SaveCallback.m */,
-				09A1402117BF525100A3F1AE /* SaveCallback.h */,
+				09A1402017BF525000A3F1AE /* MySaveCallback.m */,
+				09A1402117BF525100A3F1AE /* MySaveCallback.h */,
 			);
 			name = callbacks;
 			sourceTree = "<group>";
@@ -529,15 +529,24 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ParseBridge\"",
-					"\"$(SRCROOT)/../../FacebookSDK\"",
+					"\"$(SRCROOT)/facebook-ios-sdk\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseBridge/ParseBridge-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}/FacebookSDK\"/**",
+					"\"${SRCROOT}/facebook-ios-sdk/src\"/**",
+				);
 				INFOPLIST_FILE = "ParseBridge/ParseBridge-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"\"${SRCROOT}/FacebookSDK\"/**",
+					"\"${SRCROOT}/facebook-ios-sdk/src\"/**",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/FacebookSDK\"/** \"${SRCROOT}/facebook-ios-sdk/src\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -553,17 +562,26 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ParseBridge\"",
-					"\"$(SRCROOT)/../../FacebookSDK\"",
+					"\"$(SRCROOT)/facebook-ios-sdk\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseBridge/ParseBridge-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}/FacebookSDK\"/**",
+					"\"${SRCROOT}/facebook-ios-sdk/src\"/**",
+				);
 				INFOPLIST_FILE = "ParseBridge/ParseBridge-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"\"${SRCROOT}/FacebookSDK\"/**",
+					"\"${SRCROOT}/facebook-ios-sdk/src\"/**",
+				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DDEBUG",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/FacebookSDK\"/** \"${SRCROOT}/facebook-ios-sdk/src\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -571,7 +589,7 @@
 		7A3FC61417533CA900EF7EE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -589,6 +607,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
@@ -599,7 +618,7 @@
 		7A3FC61517533CA900EF7EE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -610,6 +629,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;

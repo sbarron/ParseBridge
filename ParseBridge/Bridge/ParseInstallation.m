@@ -26,7 +26,7 @@
 
 #import "ParseInstallation.h"
 #import "ParseException.h"
-#import "SaveCallBack.h"
+#import "MySaveCallBack.h"
 #import "ParseQuery.h"
 
 @implementation ParseInstallation

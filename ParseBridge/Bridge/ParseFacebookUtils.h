@@ -26,25 +26,28 @@
 
 #import <BridgeKit/JavaObject.h>
 #import "ParseUser.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-@class MyLogInCallback;
 @class SaveCallback;
 @class AndroidActivity;
+@class LogInCallback;
 
 @interface ParseFacebookUtils : JavaObject
 
-+ (void)initializeFacebook:(NSString*)appId;
++(void)initializeFacebook;
++(void)initializeWithApplicationId:(NSString*)appId;
 
-+ (void)initializeFacebookWithUrlShemeSuffix:(NSString *)urlSchemeSuffix;
++(void)logIn:(AndroidActivity*)activity callback:(LogInCallback*)callback;
++(void)logInWithPermission:(NSArray*)permissions activity:(AndroidActivity*)activity callback:(LogInCallback*)callback;
 
-+ (BOOL)handleOpenURL:(NSURL *)url;
++(void)linkWithUser:(ParseUser*)user activity:(AndroidActivity*)activity callback:(SaveCallback*)callback;
 
-+ (BOOL)isLinkedWithUser:(ParseUser*)user;
-
-+ (void)logInWithPermissions:(NSArray *)permissions;
-+ (void)logIn:(AndroidActivity*)activity callback:(MyLogInCallback*)callback;
-+ (void)linkUser:(id)user permissions:(NSArray *)permissions block:(id)block;
++(void)unlinkInBackground:(ParseUser*)user;
++(void)unlinkInBackground:(ParseUser*)user callback:(SaveCallback*)callback;
 
 + (void)saveLatestSessionDataWithCallback:(ParseUser*)user callback:(SaveCallback*)callback;
 + (void)saveLatestSessionData:(ParseUser*)user;
 @end
+
+
+

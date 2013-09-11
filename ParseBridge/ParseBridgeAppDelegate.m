@@ -17,7 +17,7 @@
 #else
 #import <Parse/Parse.h>
 #endif
-
+ 
 #import <FacebookSDK/FacebookSDK.h>
 
 #define PARSE_APPLICATION_ID     @"mANv6XA4LjD2mCEWqCI57Y1EiMUhwTZ2ljohI1oj"
@@ -83,8 +83,9 @@
     
     [Parse init:activity applicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
 	
+	[ParseFacebookUtils initializeFacebook];
 	//[self registerMethodsTest];
-	[self runParseTest];
+	//[self runParseTest];
 	
 	//ParseACL defaultACL = new ParseACL();
 	// Optionally enable public read access while disabling public write access.
@@ -99,7 +100,7 @@
     [Parse setApplicationId:PARSE_APPLICATION_ID
                   clientKey:PARSE_CLIENT_KEY];
 				
-	//[PFFacebookUtils initializeFacebook];
+	[PFFacebookUtils initializeFacebook];
 	//[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
 	
 	// Set default ACLs
